@@ -1,0 +1,20 @@
+el:
+  customtext:
+    blue_section:
+      proposals_title: Submit your Proposal
+      poll_title: Vote a Proposal
+      main_title: You dream a better Cyprus, together we make it happen
+    proposal_pages:
+      created_date_label: Created Date GR
+      tags_label: Tags
+    common_forms:
+      mandatory_form: All fields are mandatory.
+    sitemessages:
+      page_title: ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ
+      tagline: Βοηθήστε την Κύπρο να βρει τον Ππούσουλα της και κάντε τις ιδέες σας πραγματικότητα!
+      main_title: Έχετε οποιαδήποτε απορία;
+      subtitle: Στείλτε μας ένα μήνυμα και θα σας απαντήσουμε το συντομότερο δυνατόν.
+      label_name: Ονομα
+      label_email: Email
+      label_message: Το μήνυμά σας
+      connect_with: Connect with us

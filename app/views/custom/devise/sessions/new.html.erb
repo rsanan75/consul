@@ -1,0 +1,46 @@
+<% provide :title do %><%= t("devise_views.sessions.new.title") %><% end %>
+
+
+<%= render "devise/omniauth_form" %>
+
+<div class="small-12 medium-12 large-8 column pad-l-0">
+          <div class="login-box-right">
+            <div class="row">
+              <div class="small-12 medium-10 medium-offset-1 column">
+<h2><%= t("devise_views.sessions.new.title") %></h2>
+<h5>
+  <%= t("devise_views.shared.links.signup",
+      signup_link: link_to(t("devise_views.shared.links.signup_link"), new_user_registration_path)).html_safe %>
+</h5>
+<hr class="footer-devider">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="row">
+    <div class="small-12 medium-8 medium-offset-2 column constyle-form-input">
+      <%= f.text_field :login, autofocus: true, placeholder: t("devise_views.sessions.new.login_label") %>
+    </div>
+
+    <div class="small-12 medium-8 medium-offset-2 column constyle-form-input">
+      <%= f.password_field :password, autocomplete: "off", placeholder: t("devise_views.sessions.new.password_label") %>
+      <%= link_to t("devise_views.shared.links.new_password"), new_password_path(resource_name), class: "float-right reset-txt" %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="small-12 medium-8 medium-offset-2 column constyle-form-remember">
+        <%= f.label :remember_me do %>
+          <%= f.check_box :remember_me, title: t("devise_views.sessions.new.remember_me"), label: false %>
+          <span class="checkbox"><%= t("devise_views.sessions.new.remember_me") %></span>
+        <% end %>
+      </div>
+    <% end -%>
+
+    <div class="small-12 medium-5 small-centered constyle-form-submit">
+      <%= f.submit(t("devise_views.sessions.new.submit"), class: "button expanded") %>
+    </div>
+    <div class="small-12 medium-12 constyle-form">
+                      <h6><%= render "devise/shared/links" %></h6></div>
+  </div>
+<% end %>
+</div>
+          </div>
+        </div></div>
+

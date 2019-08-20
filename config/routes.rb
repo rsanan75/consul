@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   draw :valuation
   draw :tracking
   draw :verification
+ draw :sitemessage 
 
   root "welcome#index"
   get "/welcome", to: "welcome#welcome"

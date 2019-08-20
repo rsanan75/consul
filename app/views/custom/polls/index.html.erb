@@ -1,0 +1,53 @@
+<% provide :title do %><%= t("polls.index.title") %><% end %>
+
+<%= render_custom_partial "meta_description" %>
+
+<% content_for :canonical do %>
+  <%= render "shared/canonical", href: polls_url %>
+<% end %>
+
+<%= render_custom_partial "social_meta_tags" %>
+
+<div class="help-header no-margin-top margin-bottom">
+  <div class="row">
+    <div class="small-12 column" data-magellan>
+      <h1 class="inline-block"><%= t("polls.index.title") %></h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="small-12 column">
+    <% if show_polls_description? %>
+		  <div class="polls-description">
+        <%= safe_html_with_links WYSIWYGSanitizer.new.sanitize(@active_poll.description) %>
+      </div>
+		<% end %>
+
+    <%= render "shared/filter_subnav", i18n_namespace: "polls.index" %>
+
+    <% if @polls.any? %>
+      <% polls_by_geozone_restriction = @polls.group_by(&:geozone_restricted) %>
+
+      <% if polls_by_geozone_restriction[false].present? %>
+        <%= render partial: "poll_group", locals: {poll_group: polls_by_geozone_restriction[false]} %>
+      <% end %>
+
+      <% if polls_by_geozone_restriction[true].present? %>
+        <%= render partial: "poll_group", locals: {poll_group: polls_by_geozone_restriction[true]} %>
+      <% end %>
+
+      <%= paginate @polls %>
+    <% else %>
+      <div class="callout primary margin-top">
+        <%= t("polls.index.no_polls") %>
+      </div>
+    <% end %>
+
+    <div id="section_help" class="margin" data-magellan-target="section_help">
+      
+      <%= render_custom_partial "footer" %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+en:
+  customtext:
+    blue_section:
+      proposals_title: Submit your Proposal
+      poll_title: Vote a Proposal
+      main_title: You dream a better Cyprus, together we make it happen
+    proposal_pages:
+      created_date_label: Created Date
+      tags_label: Tags
+    common_forms:
+      mandatory_form: All fields are mandatory
+    sitemessages:
+      page_title: Contact Us
+      tagline: Help Cyprus find its direction while bringing your ideas to life!
+      main_title: Got a  question?
+      subtitle: Send us a message and we will respond as soon as possible.
+      label_name: Name
+      label_email: Email
+      label_message: Your message for us
+      connect_with: Connect with us
+    
+
+      

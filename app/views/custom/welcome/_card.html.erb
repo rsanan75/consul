@@ -1,0 +1,27 @@
+<% if card.description.present? %>
+<div class="small-12 medium-12 large-5 column">
+  <div class="about-box-left">
+    <div class="about-t-sec">
+      <h3><%= card.title %></h3>
+      <h6><%= card.description %></h6>
+    </div>
+    <div class="about-b-sec">
+    <%= link_to card.link_text, card.link_url, :class => "card_link" %>
+    </div>
+  </div>
+</div>
+<% else %>
+   <div class="small-12 medium-12 large-5 column">
+          <div class="about-box-right">
+            <div class="about-t-sec">
+            <%= link_to card.link_url, :class => 'play-btn' do %>
+              <%= image_tag("play-btn.png") %>
+            <% end %>
+            </div>
+            <div class="about-b-sec">
+              <p><%= card.title %></p>
+              <%= link_to card.link_text, card.link_url, :class => "card_link" %>
+            </div>
+          </div>
+        </div>
+<% end %>

@@ -1,0 +1,31 @@
+
+<div class="h-about-sec">
+  <div class="row">
+      <% @cards.each do |card| %>
+        <%= render "card", card: card %>
+      <% end %>       
+  </div>
+</div>
+<div class="h-blue-sec">
+  <div class="row">
+    <div class="small-12 medium-6 medium-offset-3 column">
+      <h2><%= t("customtext.blue_section.main_title") %></h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 medium-8 medium-offset-2 column">
+      <div class="row">
+        <div class="small-12 medium-6 column">
+          <%= layout_menu_link_to t("customtext.blue_section.proposals_title"), proposals_path, controller.class == ProposalsController,
+                                  accesskey: "3", :class => "btn-submit-h" %>
+        </div>
+        <div class="small-12 medium-6 column">
+        <%= layout_menu_link_to t("customtext.blue_section.poll_title"), polls_path, controller_name == "polls" || (controller_name == "questions" && controller.class.parent == Polls),
+                                  accesskey: "3", :class => "btn-submit-h" %>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    

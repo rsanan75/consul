@@ -22,6 +22,7 @@
 /config/deploy-secrets.yml
 /config/maintenance.yml
 
+
 /coverage
 
 /config/beta-testers.txt
@@ -38,3 +39,6 @@
 public/sitemap.xml
 public/system/
 /public/ckeditor_assets/
+public/assets
+config/environments/production.rb
+config/environments/development.rb

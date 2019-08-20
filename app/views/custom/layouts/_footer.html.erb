@@ -1,0 +1,49 @@
+<footer>
+  <div class="row">
+    <div class="footer-sections small-12 large-4 column">      
+      <%= link_to t("layouts.header.open_gov"), root_path, class: "title" %>
+      <p class="info">
+      
+      <% if I18n.locale == "en" %>
+        <%= t("layouts.footer.description") %>
+        <%= t("layouts.footer.open_source") %>
+        <%= t("layouts.footer.contact_us") %>
+        <%= t("layouts.footer.consul") %>
+        <%= link_to t("layouts.footer.open_source"), t("layouts.footer.open_source_url"), target: "blank", rel: "nofollow" %>
+        <%= t("layouts.footer.contact_us") %>
+        <%= link_to t("layouts.footer.consul"), t("layouts.footer.consul_url"), target: "blank", rel: "nofollow" %>
+      <% else %>
+       <%= t("layouts.footer.description") %>
+      <% end %>
+      </p>
+    </div>
+
+    <div class="footer-sections small-12 large-8 column">
+      <div class="small-12 medium-4 column">
+        <%= link_to t("layouts.footer.participation_title"), root_path, class: "title" %>
+        <p class="info"><%= t("layouts.footer.participation_text") %></p>
+      </div>
+    </div>
+  </div>
+<hr class="footer-devider">
+  <div class="subfooter row">
+    <div class="small-12 medium-5 column footer-sections copyright-section">
+      <p><%= t("layouts.footer.copyright") %>&nbsp;<%= Time.current.year %>&nbsp;</p>
+      <ul class="no-bullet inline-block">
+        <li class="inline-block"><%= link_to t("layouts.footer.conditions"), page_path("conditions") %>&nbsp;|</li>
+        <li class="inline-block"><%= link_to t("layouts.footer.accessibility"), page_path("accessibility") %></li>
+      </ul>
+    </div>
+
+    <div class="small-12 medium-7 column">
+      <div class="text-right">
+        <ul class="footer-logs-listing">
+        <li class="inline-block"><%= image_tag(image_path_for("footer-logo-1.png"), class: "footer-logos") %></li>
+        <li class="inline-block"><%= image_tag(image_path_for("footer-logo-2.png"), class: "footer-logos") %></li>
+        <li class="inline-block"><%= image_tag(image_path_for("footer-logo-3.png"), class: "footer-logos") %></li>
+          <%= raw content_block("footer", I18n.locale) %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

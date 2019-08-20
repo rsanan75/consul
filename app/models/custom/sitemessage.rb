@@ -1,0 +1,2 @@
+class Sitemessage < ApplicationRecord
+end

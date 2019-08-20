@@ -1,0 +1,94 @@
+<% provide :title do %><%= t("devise_views.users.registrations.new.title") %><% end %>
+
+<div class="login-sec">
+      <div class="row">
+        <div class="small-12 medium-12 large-4 column pad-r-0">
+          <div class="login-box-left">
+            <h2><%= t("devise_views.mailer.confirmation_instructions.title") %></h2>
+            <p>Help Cyprus find its direction while bringing your ideas to life!</p>
+          </div>
+        </div>
+        <div class="small-12 medium-12 large-8 column pad-l-0">
+          <div class="login-box-right">
+            <div class="row">
+              <div class="small-12 medium-10 medium-offset-1 column">
+                <h2><%= t("devise_views.users.registrations.new.title") %></h2>
+                <hr class="footer-devider">
+                
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="row">
+                    <div class="small-12 medium-12 column">
+                      <p class="sm-txt-one">* All fields are mandatory.</p>
+                      <p class="sm-txt-one">You need to be 18 years or older to register with us</p>
+                    </div>
+                  </div>
+  <%= render "shared/errors", resource: resource %>
+
+  
+
+  <div class="row">
+    <div class="small-12 column">
+
+      <%= f.hidden_field :use_redeemable_code %>
+      <%= f.hidden_field :locale, value: I18n.locale %>
+
+      <%= f.label :username %>
+      <p class="help-text" id="username-help-text"><%= t("devise_views.users.registrations.new.username_note") %></p>
+      <%= f.text_field :username,  autofocus: true, maxlength: User.username_max_length,
+                                   placeholder: t("devise_views.users.registrations.new.username_label"),
+                                   label: false,
+                                   aria: {describedby: "username-help-text"} %>
+
+      <%= f.invisible_captcha :address %>
+
+      <%= f.email_field :email,     placeholder: t("devise_views.users.registrations.new.email_label") %>
+      
+      <%= f.date_select(:date_of_birth,:start_year => 1950,:end_year => Date.today.year - 18) %>
+      
+      <%= f.select(:gender, options_for_select(["Male", "Female", "Other"]), {:class =>"gender_select"}) %>
+      <%= f.text_field :name %>
+      
+
+      <%= f.password_field :password, autocomplete: "off",
+                           placeholder: t("devise_views.users.registrations.new.password_label") %>
+
+      <%= f.password_field :password_confirmation, autocomplete: "off",
+                           label: t("devise_views.users.registrations.new.password_confirmation_label"),
+                           placeholder: t("devise_views.users.registrations.new.password_confirmation_label") %>
+
+      <% if resource.use_redeemable_code %>
+        <%= f.text_field :redeemable_code, placeholder: t("devise_views.users.registrations.new.redeemable_code") %>
+      <% end %>
+
+      <%= f.label :terms_of_service do %>
+        <%= f.check_box :terms_of_service, title: t("devise_views.users.registrations.new.terms_title"), label: false %>
+        <span class="checkbox">
+          <%= t("devise_views.users.registrations.new.terms",
+              terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/conditions",
+              title: t("shared.target_blank_html"),
+              target: "_blank")).html_safe %>
+        </span>
+      <% end %>
+      <div class="small-12 medium-6 small-centered">
+        <%= f.submit t("devise_views.users.registrations.new.submit"), class: "button expanded" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+              </div>
+            </div>
+            <%= render "devise/shared/links" %>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
