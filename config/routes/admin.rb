@@ -121,6 +121,7 @@ namespace :admin do
   end
 
   resources :users, only: [:index, :show]
+  resources :sitemessages, only: [:index]
 
   scope module: :poll do
     resources :polls do
