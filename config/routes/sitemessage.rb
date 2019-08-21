@@ -1,1 +1,1 @@
-resource :sitemessage
+resource :sitemessage, :path => "contact", only: [:create, :new, :show]
