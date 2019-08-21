@@ -1,9 +1,9 @@
 el:
   customtext:
     blue_section:
-      proposals_title: Submit your Proposal
-      poll_title: Vote a Proposal
-      main_title: You dream a better Cyprus, together we make it happen
+      proposals_title: Υποβάλετε την πρότασή σας
+      poll_title: Ψηφίστε 
+      main_title: Ονειρευτείτε μια καλύτερη Κύπρο. Μαζί κάνουμε τα όνειρα σας πραγματικότητα.   
     proposal_pages:
       created_date_label: Created Date GR
       tags_label: Tags
