@@ -655,10 +655,12 @@ hr.footer-devider {
 :lang(es) .subnavigation ul li { 
   margin: 0 15px
 }
-:lang(el) .subnavigation ul li { 
-  margin: 0 15px
+// :lang(el) .subnavigation ul li { 
+//   margin: 0 15px
+// }
+:lang(el) a.btn-submit-h {
+    font-size: 22px;
 }
-
 .sm-txt-one {
     font-size: 11px;
     color: #6c6d6d;
@@ -884,25 +886,25 @@ h2.sidebar-title {
     border-top: 0;
     font-weight: 700;
 }
-.related-content button, .button, .button.success
-{
-    background: #65bbb0;
-    border-radius: 10px;
-    color: #fff;
-    border: none;
-    text-align: center;
-    font-size: 14px;
-    padding: 0.6875rem 2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-}
-.button:hover, .button.success:hover, .button.success:focus
-{
-    color: #2f3b43;
-    background-color: #64bbb0;
-}
+// .related-content button, .button, .button.success
+// {
+//     background: #65bbb0;
+//     border-radius: 10px;
+//     color: #fff;
+//     border: none;
+//     text-align: center;
+//     font-size: 14px;
+//     padding: 0.6875rem 2rem;
+//     text-transform: uppercase;
+//     font-weight: bold;
+//     text-decoration: none;
+//     cursor: pointer;
+// }
+// .button:hover, .button.success:hover, .button.success:focus
+// {
+//     color: #2f3b43;
+//     background-color: #64bbb0;
+// }
 .proposal .supports .button-support {
     background: #65bbb0;
 }
@@ -1065,4 +1067,7 @@ a.is-active {
 }
 .footer-sections.copyright-section {
     padding-top: 25px;
+}
+a.disabled-title {
+    cursor: default;
 }

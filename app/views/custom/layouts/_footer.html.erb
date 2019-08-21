@@ -1,26 +1,15 @@
 <footer>
   <div class="row">
     <div class="footer-sections small-12 large-4 column">      
-      <%= link_to t("layouts.header.open_gov"), root_path, class: "title" %>
+      <%= link_to t("layouts.header.open_gov"), root_path, class: "title disabled-title", disabled: "disabled" %>
       <p class="info">
-      
-      <% if I18n.locale == "en" %>
         <%= t("layouts.footer.description") %>
-        <%= t("layouts.footer.open_source") %>
-        <%= t("layouts.footer.contact_us") %>
-        <%= t("layouts.footer.consul") %>
-        <%= link_to t("layouts.footer.open_source"), t("layouts.footer.open_source_url"), target: "blank", rel: "nofollow" %>
-        <%= t("layouts.footer.contact_us") %>
-        <%= link_to t("layouts.footer.consul"), t("layouts.footer.consul_url"), target: "blank", rel: "nofollow" %>
-      <% else %>
-       <%= t("layouts.footer.description") %>
-      <% end %>
       </p>
     </div>
 
     <div class="footer-sections small-12 large-8 column">
       <div class="small-12 medium-4 column">
-        <%= link_to t("layouts.footer.participation_title"), root_path, class: "title" %>
+        <%= link_to t("layouts.footer.participation_title"), root_path, class: "title disabled-title", disabled: "disabled" %>
         <p class="info"><%= t("layouts.footer.participation_text") %></p>
       </div>
     </div>

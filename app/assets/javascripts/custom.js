@@ -5,3 +5,17 @@
 //
 //
 
+jQuery(document).ready(function () {
+  jQuery(".subnavigation a").each(function () {
+    if (jQuery(this).attr("href") == window.location.pathname) {
+      jQuery(this).addClass("is-active");
+    }
+  });
+  jQuery("a.title.disabled-title").each(function() {
+    console.log("hey");
+    jQuery(this).removeAttr('href');
+  });
+  jQuery("a.title.disabled-title").on('click',function(e){
+    e.preventDefault();
+  });
+});
