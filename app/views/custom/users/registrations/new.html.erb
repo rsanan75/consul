@@ -47,7 +47,7 @@
       <%= f.date_select(:date_of_birth,:start_year => 1950,:end_year => Date.today.year - 18) %>
       
       <%= f.select(:gender, options_for_select(["Male", "Female", "Other"]), {:class =>"gender_select"}) %>
-      <%= f.text_field :name %>
+      
       
 
       <%= f.password_field :password, autocomplete: "off",

@@ -1071,3 +1071,8 @@ a.is-active {
 a.disabled-title {
     cursor: default;
 }
+.custom-page a.button.warning {
+    background-color: #65bbb0;
+    color: #fff;
+    font-weight: 600;
+}
