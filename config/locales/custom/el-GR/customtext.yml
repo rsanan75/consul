@@ -17,4 +17,59 @@ el:
       label_name: Ονομα
       label_email: Email
       label_message: Το μήνυμά σας
+      label_date: Ημερομηνία υποβολής
       connect_with: Connect with us
+      admin_label_message: μήνυμά
+    registration_page:
+      select_placeholder: Επέλεξε ένα
+      welcome_title: Καλως ΗΡΘΑΤΕ!
+      page_title: Δημιουργήστε το λογαριασμό σας
+      welcome_subtitle: Βοηθήστε την Κύπρο να βρει τον Ππούσουλα της και κάντε τις ιδέες σας πραγματικότητα! 
+      mandatory_text: Ολα τα πεδία είναι υποχρεωτικά.
+      age_consent: Πρέπει να είστε 18 ετών και άνω για να εγγραφείτε μαζί μας
+      label_name: Όνομα
+      label_surname: Επώνυμο
+      label_residence: Τόπος Διαμονής
+      label_identify_yourself: Πως αυτοπροσδιορίζεσαι;
+      label_date_of_birth: Ημερομηνία Γέννησης
+      label_gender: Φύλο
+      label_native_language: Μητρική Γλώσσα 
+      label_education: Εκπαίδευση 
+      select_options_gender:
+        male: Γυναίκα
+        female: Άντρας 
+        other: Άλλο
+      select_options_native_language:
+        english: Αγγλικά
+        greek: Ελληνικά 
+        turkish: Τουρκικά
+        other: Άλλο
+      select_options_residence:
+        nicosia: Λευκωσία
+        limassol: Λεμεσός
+        larnaca: Λάρνακα
+        famagusta: Αμμόχωστος
+        paphos: Πάφος
+        kyrenia: Κερύνεια
+        morphou: Μόρφου
+        karpasia: Καρπασία
+      select_options_education:
+        illiterate: Τίποτα από τα παρακάτω / αναλφάβητος
+        can_read_write: Μπορώ να διαβάσω και να γράψω
+        primary: Έχω τελειώσει το Δημοτικό 
+        lower_secondary: Έχω τελειώσει το Γυμνάσιο
+        upper_secondary: Έχω τελειώσει το Λύκειο
+        degree: Έχω ολοκληρώσει Πανεπιστημιακές σπουδές
+        post_graduate: Έχω ολοκληρώσει Μεταπτυχιακές σπουδές
+      select_options_identify_yourself:
+        greek_cypriot: Ελληνοκύπριος/α
+        turkish_cypriot: Τουρκοκύπριος/α
+        armenian: Αρμένιος/ισσα
+        maronite: Μαρωνίτης/ισσα 
+        latin: Λατίνος/να
+        turkish: Τούρκος/αλα
+        greek: Έλληνας/ιδα
+        other: Άλλο
+    admin:
+      sitemessages:
+        title: Επικοινωνήστε μαζί μας

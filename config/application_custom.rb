@@ -7,10 +7,10 @@ module Consul
       "tr",]
     config.i18n.available_locales = available_locales
     config.i18n.fallbacks = {
-      "fr"    => "es",
-      "gl"    => "es",
-      "it"    => "es",
-      "pt-BR" => "es"
+      "fr"    => "en",
+      "gl"    => "en",
+      "it"    => "en",
+      "pt-BR" => "en"
     }
     config.assets.precompile += Ckeditor.assets
     config.assets.precompile += %w( ckeditor/* )

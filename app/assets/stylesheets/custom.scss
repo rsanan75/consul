@@ -692,11 +692,13 @@ hr.footer-devider {
 .custom-page p {
     font-size: 1rem;
 }
-.proposal-form .back, .proposal-form .icon-angle-left {
+.back:not([class^="icon-"]) {
+    text-decoration: none;
+}
+.back, .proposal-form .back, .proposal-form .icon-angle-left {
     color:#3f62a6;
     text-decoration: none;
     font-weight: 700;
-    padding-left:5px;
 }
 .proposal-form form label {
    color:#3f62a6;
@@ -715,7 +717,7 @@ hr.footer-devider {
     margin-bottom:20px;
 }
 
-.proposal-form .button {
+.proposal-form .button, .new_comment .button {
     background: #65bbb0;
     border-radius: 10px;
     color: #fff;
@@ -728,7 +730,7 @@ hr.footer-devider {
     text-decoration: none;
 }
 
-.proposal-form .button:hover
+.proposal-form .button:hover, .new_comment .button:hover
 {
     color: #2f3b43;
     background-color: #64bbb0;
@@ -755,11 +757,11 @@ hr.footer-devider {
     margin-bottom: 0;
 }
 
-.proposal-show .back, .proposal-show .icon-angle-left {
-    color:#3f62a6;
-    text-decoration: none;
-    font-weight: 700;
-}
+// .proposal-show .back, .proposal-show .icon-angle-left {
+//     color:#3f62a6;
+//     text-decoration: none;
+//     font-weight: 700;
+// }
 .proposal-show h1, .proposal-show .h1 {
     font-size: 2.125rem;
 }
@@ -767,8 +769,11 @@ hr.footer-devider {
     color: #0a0a0a;
     font-weight:700;
 }
-.proposal-show .sidebar-divider {
-    border-top: 5px solid #65bbb0;
+.communities-show aside h2 {
+    border-top:none;
+}
+.proposal-show .sidebar-divider, .proposals-listing .sidebar-divider, .communities-show .sidebar-divider {
+    border-top: 4px solid #65bbb0;
 }
 .proposal-show .sidebar-title {
     color:#65bbb0;
@@ -794,7 +799,14 @@ hr.footer-devider {
 .proposal-show .supports .total-supports, .proposal-show .supports abbr {
     color:#3f62a6;
 }
-.proposal-show .supports .button-support, .proposal-show .button.hollow,.button.hollow   {
+#related_content .button {
+    background: #65bbb0;
+}
+.proposal-show .add-related-content {
+    color: #3f62a6;
+    font-weight: 600;
+}
+.proposal-show .supports .button-support, .proposal-show .button.hollow, .proposals-listing .button, .edit_proposal .button, .new_user .button, .poll .button, .jumbo.light .button, .account .button, .activity .button, .proposal-dashboard .button, .communities-show .button, .new_proposal_notification .button, .new_topic .button {
     background: #65bbb0;
     border-radius: 10px;
     color: #fff;
@@ -807,9 +819,12 @@ hr.footer-devider {
     text-decoration: none;
 }
 
-.proposal-show .supports .button-support:hover, .proposal-show .button.hollow:hover {
+.proposal-show .supports .button-support:hover, .proposal-show .button.hollow:hover, .proposals-listing .button:hover, .edit_proposal .button:hover, .new_user .button:hover, .poll .button:hover, .jumbo.light .button:hover, .account .button:hover, .activity .button:hover,.proposal-dashboard .button:hover, .communities-show .button:hover, .new_proposal_notification .button:hover, .new_topic .button:hover {
     color: #2f3b43;
     background-color: #64bbb0;
+}
+.proposal-show .supports .progress .meter {
+    background: #65bbb0;
 }
 .proposal-show .supports .progress {
     background: #64bbb0;
@@ -840,7 +855,7 @@ hr.footer-devider {
 .proposal-show .documents ul li:not(:first-child) {
     border-top: 1px solid #dfe1ed;
 }
-.proposal-show .delete {
+.proposal-show .delete, .edit_proposal .delete, .account .delete {
     border-bottom:0;
 }
 .proposal-show .geozone {
@@ -1008,15 +1023,15 @@ div#proposals-list .proposal {
     background: #64bbb0;
    height: 0;
 }
-.submenu {
+.submenu, .menu.simple {
         border-bottom: 1px solid #64bbb0;
     text-transform: capitalize;
 }
-.submenu .is-active {
+.submenu .is-active, .menu.simple li.is-active {
     border-bottom: 4px solid #64bbb0;
     margin-bottom: -4px;
 }
-.submenu a:hover {
+.submenu a:hover, .menu.simple a:hover {
     text-decoration: none;
 }
 .advanced-search-form {
@@ -1075,4 +1090,70 @@ a.disabled-title {
     background-color: #65bbb0;
     color: #fff;
     font-weight: 600;
+}
+.auth-page .push {
+    min-height: 0;
+}
+.auth-page .login-box-left {
+    min-height: 66rem;
+}
+.auth-page .login-box-right {
+    min-height: 66rem;
+}
+.dob-arrange select {
+    width: 25%;
+    height: 2.5rem;
+    margin-bottom: 0;
+}
+.dob-arrange select:nth-child(3) {
+    width: 45%;
+}
+
+select {
+    height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-box-right form .select-styleOne {
+    border: none;
+    border-radius: 7px;
+    overflow: hidden;
+    background: #e0e0e0 image-url("icon-select.png") no-repeat 97% center;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+.login-box-right form .select-styleOne select {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #999;
+    padding: 0.5rem;
+    border: none;
+    width: 100%;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    height: 3rem;
+    margin: 0;
+}
+.login-box-right form .dob-arrange select {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #999;
+    padding: 0.5rem;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    height: 3rem;
+    margin: 0;
+    background: #e0e0e0 image-url("icon-select.png") no-repeat 97% center;
+    border-radius: 7px;
+    background-size: 24px;
 }

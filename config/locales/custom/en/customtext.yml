@@ -16,8 +16,63 @@ en:
       subtitle: Send us a message and we will respond as soon as possible.
       label_name: Name
       label_email: Email
+      label_date: Date submitted
       label_message: Your message for us
+      admin_label_message: Message
       connect_with: Connect with us
+    registration_page:
+      select_placeholder: Select one
+      welcome_title: Welcome!
+      page_title: Create your Account
+      welcome_subtitle: Help Cyprus find its direction while bringing your ideas to life!
+      mandatory_text: All fields are mandatory.
+      age_consent: You need to be 18 years or older to register with us
+      label_name: Name
+      label_surname: Surname
+      label_residence: Place of Residence
+      label_identify_yourself: How would you identify yourself?
+      label_date_of_birth: Date of Birth
+      label_gender: Gender
+      label_native_language: Native Language
+      label_education: Education
+      select_options_gender:
+        male: Male
+        female: Female
+        other: Other
+      select_options_native_language:
+        english: English
+        greek: Greek
+        turkish: Turkish
+        other: Other
+      select_options_residence:
+        nicosia: Nicosia
+        limassol: Limassol
+        larnaca: Larnaca
+        famagusta: Famagusta
+        paphos: Paphos
+        kyrenia: Kyrenia
+        morphou: Morphou
+        karpasia: Karpasia
+      select_options_education:
+        illiterate: None of the below / illiterate
+        can_read_write: Can read and write
+        primary: Completed primary school
+        lower_secondary: Completed lower secondary
+        upper_secondary: Completed upper secondary (Lyceum)
+        degree: Completed University degree
+        post_graduate: Completed post graduate degree
+      select_options_identify_yourself:
+        greek_cypriot: Greek Cypriot
+        turkish_cypriot: Turkish Cypriot
+        armenian: Armenian
+        maronite: Maronite
+        latin: Latin
+        turkish: Turkish
+        greek: Greek
+        other: Other
+    admin:
+      sitemessages:
+        title: Contact us list
     
 
       

@@ -1,9 +1,9 @@
 tr:
   customtext:
     blue_section:
-      proposals_title: Submit your Proposal
-      poll_title: Vote a Proposal
-      main_title: You dream a better Cyprus, together we make it happen
+      proposals_title: Önerini paylaş
+      poll_title: Önerilere oy ver
+      main_title: Siz daha iyi bir Kıbrıs hayal edin, hep birlikte gerçekleştirelim.
     proposal_pages:
       created_date_label: Created Date TR
       tags_label: Tags
@@ -17,4 +17,59 @@ tr:
       label_name: İsim
       label_email: E-posta adresi
       label_message: Bize mesajınız
+      label_date: İletilen Tarih
       connect_with: Connect with us
+      admin_label_message: Mesajınız
+    registration_page:
+      select_placeholder: Birini seç
+      welcome_title: Hoşgeldiniz!
+      page_title: Hesabını oluştur
+      welcome_subtitle: Help Cyprus find its direction while bringing your ideas to life!
+      mandatory_text: Tüm alanlar zorunlu.
+      age_consent: Bize kayıt olmak için 18 yaşında veya daha büyük olmanız gerekir
+      label_name: İsim 
+      label_surname: Soyisim
+      label_residence: Yaşadığı yer
+      label_identify_yourself: Kendinizi nasıl tanımlarsınız?
+      label_date_of_birth: Doğum tarihi
+      label_gender: Cinsiyet
+      label_native_language: Ana dil
+      label_education: Eğitim durumu
+      select_options_gender:
+        male: Erkek 
+        female: Kadın
+        other: Diğer
+      select_options_native_language:
+        english: İngilizce
+        greek: Yunanca
+        turkish: Türkçe
+        other: Diğer
+      select_options_residence:
+        nicosia: Lefkoşa
+        limassol: Limasol
+        larnaca: Larnaka
+        famagusta: Mağusa
+        paphos: Baf
+        kyrenia: Girne
+        morphou: Güzelyurt
+        karpasia: Karpaz
+      select_options_education:
+        illiterate: Hiç okula gitmedim / İlkokul terk
+        can_read_write: Can read and write
+        primary: İlkokul mezunu
+        lower_secondary: Ortaokul mezunu
+        upper_secondary: Lise mezunu
+        degree: Üniversite mezunu
+        post_graduate: Lisans üstü eğitim
+      select_options_identify_yourself:
+        greek_cypriot: Kıbrıslı Rum
+        turkish_cypriot: Kıbrıslı Türk
+        armenian: Ermeni
+        maronite: Maronit
+        latin: Latin
+        turkish: Türk
+        greek: Yunan
+        other: Diğer
+    admin:
+      sitemessages:
+        title: Bize ulaşın listesi

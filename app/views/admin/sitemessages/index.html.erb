@@ -1,19 +1,18 @@
 
 
-<h2>Contact us list</h2>
+<h2><%= t("customtext.admin.sitemessages.title") %></h2>
 
 <% if @sitemessages.any? %>
-  
 <h3 class="inline-block"><%= page_entries_info @sitemessages, entry_name: 'items' %></h3>
 <%= link_to "Download Contact us list", url_for(params.permit(:page).merge(:format => "csv")), class: "small float-right clear" %>
 
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Date</th>
-        <th>Message</th> 
+        <th><%= t("customtext.sitemessages.label_name") %></th>
+        <th><%= t("customtext.sitemessages.label_email") %></th>
+        <th><%= t("customtext.sitemessages.label_date") %></th>
+        <th><%= t("customtext.sitemessages.admin_label_message") %></th> 
       </tr>
     </thead>
 

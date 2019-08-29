@@ -1,94 +1,172 @@
-<% provide :title do %><%= t("devise_views.users.registrations.new.title") %><% end %>
-
+<% provide :title do %><%= t("customtext.registration_page.page_title") %><% end %>
 <div class="login-sec">
-      <div class="row">
-        <div class="small-12 medium-12 large-4 column pad-r-0">
-          <div class="login-box-left">
-            <h2><%= t("devise_views.mailer.confirmation_instructions.title") %></h2>
-            <p>Help Cyprus find its direction while bringing your ideas to life!</p>
-          </div>
-        </div>
-        <div class="small-12 medium-12 large-8 column pad-l-0">
-          <div class="login-box-right">
-            <div class="row">
-              <div class="small-12 medium-10 medium-offset-1 column">
-                <h2><%= t("devise_views.users.registrations.new.title") %></h2>
-                <hr class="footer-devider">
-                
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-<div class="row">
-                    <div class="small-12 medium-12 column">
-                      <p class="sm-txt-one">* All fields are mandatory.</p>
-                      <p class="sm-txt-one">You need to be 18 years or older to register with us</p>
-                    </div>
-                  </div>
-  <%= render "shared/errors", resource: resource %>
-
-  
-
   <div class="row">
-    <div class="small-12 column">
-
-      <%= f.hidden_field :use_redeemable_code %>
-      <%= f.hidden_field :locale, value: I18n.locale %>
-
-      <%= f.label :username %>
-      <p class="help-text" id="username-help-text"><%= t("devise_views.users.registrations.new.username_note") %></p>
-      <%= f.text_field :username,  autofocus: true, maxlength: User.username_max_length,
-                                   placeholder: t("devise_views.users.registrations.new.username_label"),
-                                   label: false,
-                                   aria: {describedby: "username-help-text"} %>
-
-      <%= f.invisible_captcha :address %>
-
-      <%= f.email_field :email,     placeholder: t("devise_views.users.registrations.new.email_label") %>
-      
-      <%= f.date_select(:date_of_birth,:start_year => 1950,:end_year => Date.today.year - 18) %>
-      
-      <%= f.select(:gender, options_for_select(["Male", "Female", "Other"]), {:class =>"gender_select"}) %>
-      
-      
-
-      <%= f.password_field :password, autocomplete: "off",
-                           placeholder: t("devise_views.users.registrations.new.password_label") %>
-
-      <%= f.password_field :password_confirmation, autocomplete: "off",
-                           label: t("devise_views.users.registrations.new.password_confirmation_label"),
-                           placeholder: t("devise_views.users.registrations.new.password_confirmation_label") %>
-
-      <% if resource.use_redeemable_code %>
-        <%= f.text_field :redeemable_code, placeholder: t("devise_views.users.registrations.new.redeemable_code") %>
-      <% end %>
-
-      <%= f.label :terms_of_service do %>
-        <%= f.check_box :terms_of_service, title: t("devise_views.users.registrations.new.terms_title"), label: false %>
-        <span class="checkbox">
-          <%= t("devise_views.users.registrations.new.terms",
-              terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/conditions",
-              title: t("shared.target_blank_html"),
-              target: "_blank")).html_safe %>
-        </span>
-      <% end %>
-      <div class="small-12 medium-6 small-centered">
-        <%= f.submit t("devise_views.users.registrations.new.submit"), class: "button expanded" %>
+    <div class="small-12 medium-12 large-4 column pad-r-0">
+      <div class="login-box-left">
+        <h2><%= t("customtext.registration_page.welcome_title") %></h2>
+        <p><%= t("customtext.registration_page.welcome_subtitle") %></p>
       </div>
     </div>
-  </div>
-<% end %>
+    <div class="small-12 medium-12 large-8 column pad-l-0">
+      <div class="login-box-right">
+        <div class="row">
+          <div class="small-12 medium-10 medium-offset-1 column">
+            <h2><%= t("customtext.registration_page.page_title") %></h2>
+            <hr class="footer-devider">
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <div class="row">
+              <div class="small-12 medium-12 column">
+                <p class="sm-txt-one">*<%= t("customtext.registration_page.mandatory_text") %></p>
+                <p class="sm-txt-one"><%= t("customtext.registration_page.age_consent") %></p>
+              </div>
+            </div>
+            <%= render "shared/errors", resource: resource %>
+            <div class="row">
+              <div class="small-12 medium-6 column constyle-form-input">
+                <label><%= t("customtext.registration_page.label_name") %><span class="required_symb">*</span></label><%= f.text_field :name, label: false, required: true, placeholder: t("customtext.registration_page.label_name") %>
+              </div>
+              <div class="small-12 medium-6 column constyle-form-input">
+                <label><%= t("customtext.registration_page.label_surname") %><span class="required_symb">*</span></label><%= f.text_field :surname, label: false, required: true, placeholder: t("customtext.registration_page.label_surname")  %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-6 column dob-arrange">
+                <label><%= t("customtext.registration_page.label_date_of_birth") %><span class="required_symb">*</span></label>
+                <%= f.date_select :date_of_birth,:start_year => 1950,:end_year => Date.today.year - 18, label: false, required: true %>
+              </div>
+              <div class="small-12 medium-6 column">
+                <label><%= t("customtext.registration_page.label_gender") %><span class="required_symb">*</span></label>
+                <div class="select-styleOne"><%= f.select :gender, options_for_select([
+                                                                        [t("customtext.registration_page.select_options_gender.female"),"Female"], 
+                                                                        [t("customtext.registration_page.select_options_gender.male"),"Male"], 
+                                                                        [t("customtext.registration_page.select_options_gender.other"),"Other"]]), 
+                                                                    :class =>"gender_select", 
+                                                                    label: false, 
+                                                                    required: true,
+                                                                    include_blank: "-" + t("customtext.registration_page.select_placeholder") + "-" %></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-6 column ">
+                <label><%= t("customtext.registration_page.label_native_language") %><span class="required_symb">*</span></label>
+                <div class="select-styleOne">
+                <%= f.select :native_language, options_for_select([
+                                                [t("customtext.registration_page.select_options_native_language.english"),"English"], 
+                                                [t("customtext.registration_page.select_options_native_language.greek"),"Greek"], 
+                                                [t("customtext.registration_page.select_options_native_language.turkish"),"Turkish"], 
+                                                [t("customtext.registration_page.select_options_native_language.other"),"Other"]
+                                              ]), 
+                                              :class =>"education_select", 
+                                              label: false, 
+                                              required: true,
+                                              include_blank: "-" + t("customtext.registration_page.select_placeholder") + "-" %></div>
+              </div>
+              <div class="small-12 medium-6 column">
+                <label><%= t("customtext.registration_page.label_residence") %><span class="required_symb">*</span></label>
+                <div class="select-styleOne"><%= f.select :residence, options_for_select([
+                                                                        [t("customtext.registration_page.select_options_residence.nicosia"),"Nicosia"], 
+                                                                        [t("customtext.registration_page.select_options_residence.limassol"),"Limassol"], 
+                                                                        [t("customtext.registration_page.select_options_residence.larnaca"),"Larnaca"], 
+                                                                        [t("customtext.registration_page.select_options_residence.famagusta"),"Famagusta"], 
+                                                                        [t("customtext.registration_page.select_options_residence.paphos"),"Paphos"], 
+                                                                        [t("customtext.registration_page.select_options_residence.kyrenia"),"Kyrenia"], 
+                                                                        [t("customtext.registration_page.select_options_residence.morphou"),"Morphou"], 
+                                                                        [t("customtext.registration_page.select_options_residence.karpasia"),"Karpasia"]]), 
+                                                                      :class =>"residence_select", 
+                                                                      label: false,
+                                                                      required: true,
+                                                                      include_blank: "-" + t("customtext.registration_page.select_placeholder") + "-" %></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-6 column">
+                <label><%= t("customtext.registration_page.label_education") %><span class="required_symb">*</span></label>
+                <div class="select-styleOne"><%= f.select :education, options_for_select([
+                                                                        [t("customtext.registration_page.select_options_education.illiterate"),"None of the below / illiterate"], 
+                                                                        [t("customtext.registration_page.select_options_education.can_read_write"),"Can read and write"], 
+                                                                        [t("customtext.registration_page.select_options_education.primary"),"Completed primary school"], 
+                                                                        [t("customtext.registration_page.select_options_education.lower_secondary"),"Completed lower secondary"], 
+                                                                        [t("customtext.registration_page.select_options_education.upper_secondary"),"Completed upper secondary (Lyceum)"], 
+                                                                        [t("customtext.registration_page.select_options_education.degree"),"Completed University degree"], 
+                                                                        [t("customtext.registration_page.select_options_education.post_graduate"),"Completed post graduate degree"]
+                                                                        ]),
+                                                                      :class =>"education_select", 
+                                                                      label: false,
+                                                                      required: true,
+                                                                      include_blank: "-" + t("customtext.registration_page.select_placeholder") + "-" %></div>
+              </div>
+              <div class="small-12 medium-6 column">
+                <label><%= t("customtext.registration_page.label_identify_yourself") %><span class="required_symb">*</span></label>
+                <div class="select-styleOne">
+                <%= f.select :identify_yourself, options_for_select([
+                                                                     [t("customtext.registration_page.select_options_identify_yourself.greek_cypriot"),"Greek Cypriot"],
+                                                                     [t("customtext.registration_page.select_options_identify_yourself.turkish_cypriot"),"Turkish Cypriot"],
+                                                                     [t("customtext.registration_page.select_options_identify_yourself.armenian"),"Armenian"],
+                                                                     [t("customtext.registration_page.select_options_identify_yourself.maronite"),"Maronite"],
+                                                                     [t("customtext.registration_page.select_options_identify_yourself.latin"),"Latin"],
+                                                                     [t("customtext.registration_page.select_options_identify_yourself.turkish"),"Turkish"],
+                                                                     [t("customtext.registration_page.select_options_identify_yourself.greek"),"Greek"],
+                                                                     [t("customtext.registration_page.select_options_identify_yourself.other"),"Other"]
+                                                                     ]), 
+                                                  :class =>"education_select",
+                                                  label: false,
+                                                  required: true,
+                                                  include_blank: "-" + t("customtext.registration_page.select_placeholder") + "-" %></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-6 column constyle-form-input">
+                <%= f.hidden_field :use_redeemable_code %>
+                <%= f.hidden_field :locale, value: I18n.locale %>
+                <label><%= t("devise_views.users.registrations.new.username_label") %><span class="required_symb">*</span></label>
+                <%= f.text_field :username,  maxlength: User.username_max_length,
+                  placeholder: t("devise_views.users.registrations.new.username_label"),
+                  label: false,
+                  aria: {describedby: "username-help-text"},
+                  required: true %>
+                <%= f.invisible_captcha :address %>
+              </div>
+              <div class="small-12 medium-6 column constyle-form-input">
+                <label><%= t("devise_views.users.registrations.new.email_label") %><span class="required_symb">*</span></label>
+                <%= f.email_field :email,  placeholder: t("devise_views.users.registrations.new.email_label"), label: false,required: true %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-6 column constyle-form-input">
+                <label><%=  t("devise_views.users.registrations.new.password_label") %><span class="required_symb">*</span></label>
+                <%= f.password_field :password, autocomplete: "off",
+                  placeholder: t("devise_views.users.registrations.new.password_label"),required: true,label: false %>
+              </div>
+              <div class="small-12 medium-6 column constyle-form-input">
+                <label><%=  t("devise_views.users.registrations.new.password_confirmation_label") %><span class="required_symb">*</span></label>
+                <%= f.password_field :password_confirmation, autocomplete: "off",
+                  label: false,required: true,
+                  placeholder: t("devise_views.users.registrations.new.password_confirmation_label") %>
+              </div>
+              <% if resource.use_redeemable_code %>
+              <%= f.text_field :redeemable_code, placeholder: t("devise_views.users.registrations.new.redeemable_code") %>
+              <% end %>
+              <div class="small-12 column">
+                <%= f.label :terms_of_service do %>
+                <%= f.check_box :terms_of_service, title: t("devise_views.users.registrations.new.terms_title"), label: false %>
+                <span class="checkbox">
+                <%= t("devise_views.users.registrations.new.terms",
+                  terms: link_to(t("devise_views.users.registrations.new.terms_link"), "/conditions",
+                  title: t("shared.target_blank_html"),
+                  target: "_blank")).html_safe %>
+                </span>
+              </div>
+              <% end %>
+              <div class="small-12 medium-6 small-centered">
+                <%= f.submit t("devise_views.users.registrations.new.submit"), class: "button expanded" %>
               </div>
             </div>
             <%= render "devise/shared/links" %>
           </div>
-
+          <% end %>
         </div>
-
       </div>
     </div>
-
-
-
-
-
-
-
+  </div>
+</div>
+</div>

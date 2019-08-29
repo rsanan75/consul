@@ -59,7 +59,7 @@
                                            namespace: "proposals" %>
   <% end %>
 
-  <div class="row">
+  <div class="row proposals-listing">
     <div id="proposals" class="proposals-list small-12 medium-9 column">
 
       <% if has_banners? %>
@@ -129,7 +129,7 @@
     </div>
 
     <div class="small-12 medium-3 column">
-      <aside class="margin-bottom">
+      <aside class="margin-bottom ">
         <%= link_to t("proposals.index.start_proposal"),
                     new_proposal_path,
                     class: "button expanded" %>
