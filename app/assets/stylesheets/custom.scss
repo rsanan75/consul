@@ -1161,3 +1161,6 @@ select {
 .auth-page #ui-datepicker-div {
     display: none !important;
 }
+.auth-page input::placeholder {
+    color: #999;
+}
