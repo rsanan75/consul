@@ -3,6 +3,7 @@
 // * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
+
 body {
     font-family: 'Open Sans', sans-serif !important;
 }
@@ -1156,4 +1157,7 @@ select {
     background: #e0e0e0 image-url("icon-select.png") no-repeat 97% center;
     border-radius: 7px;
     background-size: 24px;
+}
+.auth-page #ui-datepicker-div {
+    display: none !important;
 }

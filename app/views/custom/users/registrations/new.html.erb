@@ -30,9 +30,9 @@
               </div>
             </div>
             <div class="row">
-              <div class="small-12 medium-6 column dob-arrange">
+              <div class="small-12 medium-6 column dob-arrange constyle-form-input">
                 <label><%= t("customtext.registration_page.label_date_of_birth") %><span class="required_symb">*</span></label>
-                <%= f.date_select :date_of_birth,:start_year => 1950,:end_year => Date.today.year - 18, label: false, required: true %>
+                <%= f.date_field :date_of_birth,:start_year => 1950,:end_year => Date.today.year - 18, label: false, required: true, class: 'datepicker' %>
               </div>
               <div class="small-12 medium-6 column">
                 <label><%= t("customtext.registration_page.label_gender") %><span class="required_symb">*</span></label>
