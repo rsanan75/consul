@@ -555,7 +555,7 @@ hr.footer-devider {
     font-size: 16px;
     font-weight: 600;
     line-height: 1.5;
-    color: #0a0a0a;
+    color: #999;
     -webkit-transition: none;
     -moz-transition: none;
     transition: none;
@@ -1162,5 +1162,5 @@ select {
     display: none !important;
 }
 .auth-page input::placeholder {
-    color: #999;
+    color: #999 !important;
 }
