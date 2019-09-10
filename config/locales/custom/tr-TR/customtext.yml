@@ -21,10 +21,11 @@ tr:
       connect_with: Connect with us
       admin_label_message: Mesajınız
     registration_page:
+      general_click_here: Buraya TIKLAYIN
       select_placeholder: Birini seç
       welcome_title: Hoşgeldiniz!
       page_title: Hesabını oluştur
-      welcome_subtitle: Help Cyprus find its direction while bringing your ideas to life!
+      welcome_subtitle: Fikirlerinizi hayata geçirirken, Kıbrıs'ın yön bulmasına yardımcı olun!
       mandatory_text: Tüm alanlar zorunlu.
       age_consent: Bize kayıt olmak için 18 yaşında veya daha büyük olmanız gerekir
       label_name: İsim 
@@ -34,7 +35,8 @@ tr:
       label_date_of_birth: Doğum tarihi
       label_gender: Cinsiyet
       label_native_language: Ana dil
-      label_education: Eğitim durumu
+      label_education: Eğitim durumu 
+      label_education_suffix:  – tamamladığınız en yüksek dereceyi seçiniz
       select_options_gender:
         male: Erkek 
         female: Kadın
@@ -62,6 +64,7 @@ tr:
         degree: Üniversite mezunu
         post_graduate: Lisans üstü eğitim
       select_options_identify_yourself:
+        cypriot: Kıbrıslı
         greek_cypriot: Kıbrıslı Rum
         turkish_cypriot: Kıbrıslı Türk
         armenian: Ermeni

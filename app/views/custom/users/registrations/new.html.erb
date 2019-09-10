@@ -80,10 +80,9 @@
             </div>
             <div class="row">
               <div class="small-12 medium-6 column">
-                <label><%= t("customtext.registration_page.label_education") %><span class="required_symb">*</span></label>
+                <label><%= t("customtext.registration_page.label_education") %><small><%= t("customtext.registration_page.label_education_suffix") %></small><span class="required_symb">*</span></label>
                 <div class="select-styleOne"><%= f.select :education, options_for_select([
                                                                         [t("customtext.registration_page.select_options_education.illiterate"),"None of the below / illiterate"], 
-                                                                        [t("customtext.registration_page.select_options_education.can_read_write"),"Can read and write"], 
                                                                         [t("customtext.registration_page.select_options_education.primary"),"Completed primary school"], 
                                                                         [t("customtext.registration_page.select_options_education.lower_secondary"),"Completed lower secondary"], 
                                                                         [t("customtext.registration_page.select_options_education.upper_secondary"),"Completed upper secondary (Lyceum)"], 
@@ -99,6 +98,7 @@
                 <label><%= t("customtext.registration_page.label_identify_yourself") %><span class="required_symb">*</span></label>
                 <div class="select-styleOne">
                 <%= f.select :identify_yourself, options_for_select([
+                                                                     [t("customtext.registration_page.select_options_identify_yourself.cypriot"),"Cypriot"],
                                                                      [t("customtext.registration_page.select_options_identify_yourself.greek_cypriot"),"Greek Cypriot"],
                                                                      [t("customtext.registration_page.select_options_identify_yourself.turkish_cypriot"),"Turkish Cypriot"],
                                                                      [t("customtext.registration_page.select_options_identify_yourself.armenian"),"Armenian"],

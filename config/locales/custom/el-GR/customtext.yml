@@ -21,6 +21,7 @@ el:
       connect_with: Connect with us
       admin_label_message: μήνυμά
     registration_page:
+      general_click_here: Κάντε κλικ ΕΔΩ
       select_placeholder: Επέλεξε ένα
       welcome_title: Καλως ΗΡΘΑΤΕ!
       page_title: Δημιουργήστε το λογαριασμό σας
@@ -35,6 +36,7 @@ el:
       label_gender: Φύλο
       label_native_language: Μητρική Γλώσσα 
       label_education: Εκπαίδευση 
+      label_education_suffix:   – pick highest level achieved
       select_options_gender:
         male: Γυναίκα
         female: Άντρας 
@@ -62,6 +64,7 @@ el:
         degree: Έχω ολοκληρώσει Πανεπιστημιακές σπουδές
         post_graduate: Έχω ολοκληρώσει Μεταπτυχιακές σπουδές
       select_options_identify_yourself:
+        cypriot: Kύπριος
         greek_cypriot: Ελληνοκύπριος/α
         turkish_cypriot: Τουρκοκύπριος/α
         armenian: Αρμένιος/ισσα

@@ -21,6 +21,7 @@ en:
       admin_label_message: Message
       connect_with: Connect with us
     registration_page:
+      general_click_here: Click here
       select_placeholder: Select one
       welcome_title: Welcome!
       page_title: Create your Account
@@ -34,7 +35,8 @@ en:
       label_date_of_birth: Date of Birth
       label_gender: Gender
       label_native_language: Native Language
-      label_education: Education
+      label_education: Education 
+      label_education_suffix:   – pick highest level achieved
       select_options_gender:
         male: Male
         female: Female
@@ -54,7 +56,7 @@ en:
         morphou: Morphou
         karpasia: Karpasia
       select_options_education:
-        illiterate: None of the below / illiterate
+        illiterate: No formal education / Incomplete primary school
         can_read_write: Can read and write
         primary: Completed primary school
         lower_secondary: Completed lower secondary
@@ -62,6 +64,7 @@ en:
         degree: Completed University degree
         post_graduate: Completed post graduate degree
       select_options_identify_yourself:
+        cypriot: Cypriot
         greek_cypriot: Greek Cypriot
         turkish_cypriot: Turkish Cypriot
         armenian: Armenian
