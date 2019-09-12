@@ -829,7 +829,7 @@ hr.footer-devider {
 }
 .proposal-show .supports .progress {
     background: #64bbb0;
-    height: 2.875rem;
+    height: 2rem;
     border: 0;
 }
 .proposal-show h2 {
@@ -1001,9 +1001,13 @@ div#proposals-list .proposal {
 }
 
 .proposal .supports .progress {
-    height: 2.575rem;
+    height: 2rem;
     background: #64bbb0;
     border: 1px solid #64bbb0;
+}
+.number-supports {
+    color: #fff;
+    font-weight: 600;
 }
 .proposal .supports .percentage {
     right: 53px;
