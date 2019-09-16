@@ -1,4 +1,4 @@
-resources :polls, only: [:show, :index] do
+resources :polls, :path => "voting", only: [:show, :index] do
   member do
     get :stats
     get :results
@@ -14,3 +14,4 @@ resources :polls, only: [:show, :index] do
     end
   end
 end
+
