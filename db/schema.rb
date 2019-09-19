@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190813101442) do
+ActiveRecord::Schema.define(version: 20190919124912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -420,6 +420,24 @@ ActiveRecord::Schema.define(version: 20190813101442) do
   create_table "campaigns", force: :cascade do |t|
     t.string   "name"
     t.string   "track_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "campaing_translations", force: :cascade do |t|
+    t.integer  "campaing_id", null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "title"
+    t.text     "description"
+    t.index ["campaing_id"], name: "index_campaing_translations_on_campaing_id", using: :btree
+    t.index ["locale"], name: "index_campaing_translations_on_locale", using: :btree
+  end
+
+  create_table "campaings", force: :cascade do |t|
+    t.datetime "starts_at"
+    t.datetime "ends_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
