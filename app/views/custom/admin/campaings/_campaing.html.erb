@@ -1,0 +1,18 @@
+<tr>
+  <td><%= campaing.title %></td>
+  <td><%= campaing.description %></td>
+  <td><%= l campaing.starts_at %></td>
+  <td><%= l campaing.ends_at %></td>
+  <td>
+    <div class="small-12 medium-6 column">
+      <%= link_to t("admin.campaings.index.edit"), edit_admin_campaing_path(campaing),
+                  class: "button hollow expanded" %>
+    </div>
+    <div class="small-12 medium-6 column">
+      <%= link_to t("admin.campaings.index.delete"), admin_campaing_path(campaing),
+                  method: :delete,
+                  class: "button hollow alert expanded",
+                  data: { confirm: t("admin.actions.confirm") } %>
+    </div>
+  </td>
+</tr>

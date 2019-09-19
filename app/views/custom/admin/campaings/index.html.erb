@@ -1,0 +1,19 @@
+<%= link_to t("admin.campaings.index.create"),
+              new_admin_campaing_path, class: "button float-right" %>
+
+<h2 class="inline-block"><%= t("admin.campaings.index.title") %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t("admin.campaings.index.campaing.title")%></th>
+      <th><%= t("admin.campaings.index.campaing.description")%></th>
+      <th><%= t("admin.campaings.index.campaing.starts_at")%></th>
+      <th><%= t("admin.campaings.index.campaing.ends_at")%></th>
+      <th class="small-4"><%= t("admin.actions.actions")%></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @campaings %>
+  </tbody>
+</table>
