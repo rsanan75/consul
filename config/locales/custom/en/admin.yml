@@ -1,0 +1,33 @@
+en:
+  admin:
+    campaings:
+      create:
+        notice: New campaing was created succesfully!
+      destroy:
+        notice: Campaing deleted successfully!
+      edit:
+        editing: Edit campaing
+      errors:
+        error:
+          one: Error
+          other: Errors
+      form:
+        placeholder:
+          ends_at: Begining fo the campaing
+          title: Title of the campaing
+          starts_at: Begining fo the campaing
+        submit_button: Save
+      index:
+        create: Create
+        edit: Edit
+        delete: Delete
+        title: Manage campaings
+        campaing:
+          ends_at: Ends at
+          description: Description
+          starts_at: Starts at
+          title: Title
+      new:
+        creating: Create campaing
+      update:
+        notice: Campaing updated successfully!

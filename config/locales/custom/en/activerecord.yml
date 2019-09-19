@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    models:
+      campaing:
+        one: "campaing"
+        other: "campaings"
+    attributes:
+      campaing:
+        ends_at: Ends at
+        description: Description
+        starts_at: Starts at
+        title: Title
+    errors:
+      models:
+        campaing:
+          attributes:
+            starts_at:
+              range: "Starts at date should be previous to ends at"
