@@ -10,6 +10,7 @@ FactoryBot.define do
     published_at         { Time.current }
 
     association :author, factory: :user
+    association :campaing, factory: :campaing
 
     trait :hidden do
       hidden_at { Time.current }

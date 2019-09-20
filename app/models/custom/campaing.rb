@@ -4,6 +4,8 @@ class Campaing < ApplicationRecord
   include Globalizable
   include Measurable
 
+  has_many :proposals
+
   validates :starts_at, presence: true
   validates :ends_at, presence: true
   validate :check_dates, if: -> { starts_at && ends_at }
