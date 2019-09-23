@@ -38,4 +38,14 @@ describe Campaing do
 
     expect(campaing).not_to be_valid
   end
+
+  describe ".current" do
+    it "Should return only active campaings" do
+      active_campaign = create(:campaing, starts_at: 1.week.ago, ends_at: 1.week.from_now)
+      past_campaign = create(:campaing, starts_at: 1.year.ago, ends_at: 6.months.ago)
+      future_campaign = create(:campaing, starts_at: 1.year.from_now, ends_at: 2.years.from_now)
+
+      expect(described_class.current).to eq([active_campaign])
+    end
+  end
 end
