@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190813101442) do
+ActiveRecord::Schema.define(version: 20190920143050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -420,6 +420,24 @@ ActiveRecord::Schema.define(version: 20190813101442) do
   create_table "campaigns", force: :cascade do |t|
     t.string   "name"
     t.string   "track_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "campaing_translations", force: :cascade do |t|
+    t.integer  "campaing_id", null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "title"
+    t.text     "description"
+    t.index ["campaing_id"], name: "index_campaing_translations_on_campaing_id", using: :btree
+    t.index ["locale"], name: "index_campaing_translations_on_locale", using: :btree
+  end
+
+  create_table "campaings", force: :cascade do |t|
+    t.datetime "starts_at"
+    t.datetime "ends_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -1393,9 +1411,11 @@ ActiveRecord::Schema.define(version: 20190813101442) do
     t.integer  "community_id"
     t.datetime "published_at"
     t.boolean  "selected",                       default: false
+    t.integer  "campaing_id"
     t.index ["author_id", "hidden_at"], name: "index_proposals_on_author_id_and_hidden_at", using: :btree
     t.index ["author_id"], name: "index_proposals_on_author_id", using: :btree
     t.index ["cached_votes_up"], name: "index_proposals_on_cached_votes_up", using: :btree
+    t.index ["campaing_id"], name: "index_proposals_on_campaing_id", using: :btree
     t.index ["community_id"], name: "index_proposals_on_community_id", using: :btree
     t.index ["confidence_score"], name: "index_proposals_on_confidence_score", using: :btree
     t.index ["geozone_id"], name: "index_proposals_on_geozone_id", using: :btree
@@ -1849,6 +1869,7 @@ ActiveRecord::Schema.define(version: 20190813101442) do
   add_foreign_key "poll_recounts", "poll_officer_assignments", column: "officer_assignment_id"
   add_foreign_key "poll_voters", "polls"
   add_foreign_key "polls", "budgets"
+  add_foreign_key "proposals", "campaings"
   add_foreign_key "proposals", "communities"
   add_foreign_key "related_content_scores", "related_contents"
   add_foreign_key "related_content_scores", "users"

@@ -1,4 +1,10 @@
 Rails.application.configure do
+  # Some tests require the following languages (en, es, fr, nl, pt-BR)
+  # so we override the available languages for the test environment.
+  config.i18n.default_locale = :en
+
+  config.i18n.available_locales = %w[de en es fr nl pt-BR zh-CN]
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Some tests require the following languages (en, es, fr, nl, pt-BR)

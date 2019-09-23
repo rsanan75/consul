@@ -31,6 +31,8 @@ namespace :admin do
 
   resources :debates, only: [:index, :show]
 
+  resources :campaings, except: :show
+
   resources :proposals, only: [:index, :show, :update] do
     member { patch :toggle_selection }
     resources :milestones, controller: "proposal_milestones"
