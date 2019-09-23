@@ -22,7 +22,9 @@ set :pty, true
 set :use_sudo, false
 
 set :linked_files, %w[config/database.yml config/secrets.yml config/unicorn.rb config/environments/production.rb]
-set :linked_dirs, %w{log tmp public/system public/assets public/ckeditor_assets}
+
+set :linked_dirs, %w[log tmp public/system public/assets public/ckeditor_assets]
+
 
 set :keep_releases, 5
 
@@ -31,12 +33,12 @@ set :local_user, ENV["USER"]
 set :delayed_job_workers, 2
 set :delayed_job_roles, :background
 
-set(:config_files, %w(
+set(:config_files, %w[
   log_rotation
   database.yml
   secrets.yml
   unicorn.rb
-))
+])
 
 set :whenever_roles, -> { :app }
 
@@ -51,7 +53,6 @@ namespace :deploy do
   after :published, "refresh_sitemap"
 
   after :finishing, "deploy:cleanup"
-
 
   desc "Deploys and runs the tasks needed to upgrade to a new release"
   task :upgrade do

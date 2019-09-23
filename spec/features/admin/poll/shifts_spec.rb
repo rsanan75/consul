@@ -48,6 +48,8 @@ describe "Admin shifts" do
       click_link "Manage shifts"
     end
 
+    expect(page).to have_content "This booth has no shifts"
+
     fill_in "search", with: officer.email
     click_button "Search"
     click_link "Edit shifts"
@@ -71,6 +73,8 @@ describe "Admin shifts" do
     within("#booth_#{booth.id}") do
       click_link "Manage shifts"
     end
+
+    expect(page).to have_css(".shift", count: 1)
 
     fill_in "search", with: officer.email
     click_button "Search"
@@ -115,6 +119,8 @@ describe "Admin shifts" do
       click_link "Manage shifts"
     end
 
+    expect(page).to have_css(".shift", count: 2)
+
     fill_in "search", with: officer.email
     click_button "Search"
     click_link "Edit shifts"
@@ -122,6 +128,24 @@ describe "Admin shifts" do
     expect(page).to have_select("shift_date_vote_collection_date", options: ["Select day", *vote_collection_dates])
     select "Recount & Scrutiny", from: "shift_task"
     expect(page).to have_select("shift_date_recount_scrutiny_date", options: ["Select day", *recount_scrutiny_dates])
+  end
+
+  scenario "Change option from Recount & Scrutinity to Collect Votes", :js do
+    booth = create(:poll_booth)
+    officer = create(:poll_officer)
+
+    create(:poll_shift, :vote_collection_task, officer: officer, booth: booth)
+    create(:poll_shift, :recount_scrutiny_task, officer: officer, booth: booth)
+
+    visit new_admin_booth_shift_path(booth, officer_id: officer.id)
+
+    select "Recount & Scrutiny", from: "shift_task"
+
+    expect(page).to have_select("shift_date_recount_scrutiny_date", options: ["Select day"])
+
+    select "Collect Votes", from: "shift_task"
+
+    expect(page).to have_select("shift_date_vote_collection_date", options: ["Voting days ended"])
   end
 
   scenario "Error on create", :js do
@@ -135,6 +159,8 @@ describe "Admin shifts" do
     within("#booth_#{booth.id}") do
       click_link "Manage shifts"
     end
+
+    expect(page).to have_content "This booth has no shifts"
 
     fill_in "search", with: officer.email
     click_button "Search"
