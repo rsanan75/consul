@@ -1,4 +1,18 @@
-<% if card.description.present? %>
+<% if card.label == 'youtube_links' %>
+   <div class="small-12 medium-12 large-5 column">
+          <div class="about-box-right">
+            <div class="about-t-sec">
+            <%= link_to card.link_text, target: "_blank", :class => 'play-btn' do %>
+              <%= image_tag("play-btn.png") %>
+            <% end %>
+            </div>
+            <div class="about-b-sec">
+              <p><%= card.title %></p>
+              <%= link_to card.description, card.link_text, target: "_blank", :class => "card_link" %>
+            </div>
+          </div>
+        </div>
+<% else %>
 <div class="small-12 medium-12 large-5 column">
   <div class="about-box-left">
     <div class="about-t-sec">
@@ -10,18 +24,4 @@
     </div>
   </div>
 </div>
-<% else %>
-   <div class="small-12 medium-12 large-5 column">
-          <div class="about-box-right">
-            <div class="about-t-sec">
-            <%= link_to card.link_url, :class => 'play-btn' do %>
-              <%= image_tag("play-btn.png") %>
-            <% end %>
-            </div>
-            <div class="about-b-sec">
-              <p><%= card.title %></p>
-              <%= link_to card.link_text, card.link_url, :class => "card_link" %>
-            </div>
-          </div>
-        </div>
 <% end %>
