@@ -4,5 +4,5 @@ Proposal.class_eval do
   belongs_to :campaing
 
   scope :from_current_campaigns, -> { joins(:campaing).merge(Campaing.current) }
-  validates :campaing, presence: true
+  validates :campaing_id, presence: true
 end
