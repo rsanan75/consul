@@ -62,6 +62,8 @@
   <div class="row proposals-listing">
     <div id="proposals" class="proposals-list small-12 medium-9 column">
 
+      <%= render partial: "campaing", collection: @campaigns %>
+
       <% if has_banners? %>
         <%= render "shared/banner" %>
       <% end %>
