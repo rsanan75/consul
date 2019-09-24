@@ -89,4 +89,19 @@ describe "Proposals" do
       expect(page).to have_content "can't be blank"
     end
   end
+
+  context "update" do
+    let!(:current_campaign) { create(:campaing, starts_at: 1.day.ago, ends_at: 1.day.from_now) }
+
+    scenario "Should allow user to choose a campaing between the active ones" do
+      proposal = create(:proposal)
+      login_as(proposal.author)
+      visit edit_proposal_path(proposal)
+
+      select current_campaign.title, from: "proposal_campaing_id"
+      click_button "Save changes"
+
+      expect(page).to have_content "Proposal updated successfully."
+    end
+  end
 end
