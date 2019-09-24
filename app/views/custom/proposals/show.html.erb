@@ -24,6 +24,7 @@
         <%= back_link_to proposals_path unless preview %>
 
         <h1><%= @proposal.title %></h1>
+        <p><%= t ("proposals.show.campaing")%> <%= link_to @proposal.campaing.title, campaing_path(@proposal.campaing) %></p>
         <% if @proposal.retired? %>
           <div data-alert class="callout alert margin-top proposal-retired">
             <strong>

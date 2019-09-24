@@ -36,6 +36,18 @@ describe "Proposals" do
     end
   end
 
+  context "Show" do
+    let!(:current_campaign) { create(:campaing, starts_at: 1.day.ago, ends_at: 1.day.from_now) }
+
+    scenario "Should show proposal campaing information" do
+      proposal = create(:proposal)
+      login_as(proposal.author)
+      visit proposal_path(proposal)
+
+      expect(page).to have_content proposal.campaing.title
+    end
+  end
+
   context "create" do
     let!(:current_campaign1) { create(:campaing, starts_at: 1.day.ago, ends_at: 1.day.from_now) }
     let!(:current_campaign2) { create(:campaing, starts_at: 1.day.ago, ends_at: 1.day.from_now) }
