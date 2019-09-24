@@ -36,4 +36,45 @@ describe "Proposals" do
     end
   end
 
+  context "create" do
+    let!(:current_campaign1) { create(:campaing, starts_at: 1.day.ago, ends_at: 1.day.from_now) }
+    let!(:current_campaign2) { create(:campaing, starts_at: 1.day.ago, ends_at: 1.day.from_now) }
+
+    before do
+      author = create(:user)
+      login_as(author)
+    end
+
+    scenario "Should allow user to choose a campaing between the active ones" do
+      visit new_proposal_path
+
+      select current_campaign1.title, from: "proposal_campaing_id"
+      fill_in "Proposal title", with: "Help refugees"
+      fill_in "Proposal summary", with: "In summary, what we want is..."
+      fill_in "Proposal text", with: "This is very important because..."
+      fill_in "proposal_video_url", with: "https://www.youtube.com/watch?v=yPQfcG-eimk"
+      fill_in "proposal_responsible_name", with: "Isabel Garcia"
+      fill_in "proposal_tag_list", with: "Refugees, Solidarity"
+      check "proposal_terms_of_service"
+      click_button "Create proposal"
+
+      expect(page).to have_content "Proposal created successfully."
+    end
+
+    scenario "Should show validation error when user does not select any campaing" do
+      visit new_proposal_path
+
+      fill_in "Proposal title", with: "Help refugees"
+      fill_in "Proposal summary", with: "In summary, what we want is..."
+      fill_in "Proposal text", with: "This is very important because..."
+      fill_in "proposal_video_url", with: "https://www.youtube.com/watch?v=yPQfcG-eimk"
+      fill_in "proposal_responsible_name", with: "Isabel Garcia"
+      fill_in "proposal_tag_list", with: "Refugees, Solidarity"
+      check "proposal_terms_of_service"
+      click_button "Create proposal"
+
+      expect(page).not_to have_content "Proposal created successfully."
+      expect(page).to have_content "can't be blank"
+    end
+  end
 end
