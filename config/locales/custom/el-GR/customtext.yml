@@ -76,3 +76,5 @@ el:
     admin:
       sitemessages:
         title: Επικοινωνήστε μαζί μας
+      download_users:
+        title: Download users

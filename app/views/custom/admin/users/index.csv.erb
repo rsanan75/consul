@@ -1,0 +1,8 @@
+<% if @users.any? %>
+        <%= t("customtext.registration_page.label_name") %>,<%= t("customtext.registration_page.label_surname") %>,<%= t("customtext.registration_page.label_date_of_birth") %>,<%= t("customtext.registration_page.label_gender") %>,<%= t("customtext.registration_page.label_native_language") %>,<%= t("customtext.registration_page.label_residence") %>,<%= t("customtext.registration_page.label_education") %>,<%= t("customtext.registration_page.label_identify_yourself") %>,<%= t("admin.users.columns.email") %>
+      <% @users.each do |user| %>
+          <%= user.givename %>,<%= user.surname %>,<%= user.date_of_birth %>,<%= user.gender %>,<%= user.native_language %>,<%= user.residence %>,<%= user.education %>,<%= user.identify_yourself %>,<%= user.email %>
+      <% end %>
+<% else %>
+    <%= t("admin.users.index.no_users") %>
+<% end %>

@@ -76,3 +76,5 @@ tr:
     admin:
       sitemessages:
         title: Bize ulaşın listesi
+      download_users:
+        title: Download users
