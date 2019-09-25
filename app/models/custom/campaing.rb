@@ -11,6 +11,8 @@ class Campaing < ApplicationRecord
   validate :check_dates, if: -> { starts_at && ends_at }
   validates_translation :title, presence: true, length: { in: 4..Campaing.title_max_length }
 
+  scope :current, -> { where("starts_at <= :date AND :date <= ends_at", date: Time.current)}
+
   private
 
     def check_dates

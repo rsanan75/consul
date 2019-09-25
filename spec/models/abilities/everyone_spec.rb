@@ -26,6 +26,9 @@ describe Abilities::Everyone do
 
   it { should be_able_to(:index, Budget) }
 
+  it { should be_able_to(:show, Campaing) }
+  it { should be_able_to(:index, Campaing) }
+
   it { should_not be_able_to(:manage, Dashboard::Action) }
   it { should_not be_able_to(:manage, LocalCensusRecord) }
   it { should_not be_able_to(:create, LocalCensusRecords::Import) }

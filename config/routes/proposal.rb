@@ -1,3 +1,5 @@
+resources :campaings, only: :show
+
 resources :proposals do
   resource :dashboard, only: [:show], controller: "dashboard" do
     collection do
