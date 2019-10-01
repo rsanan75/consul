@@ -73,6 +73,8 @@ tr:
         turkish: Türk
         greek: Yunan
         other: Diğer
+    campaigns:
+      title: Campaigns
     admin:
       sitemessages:
         title: Bize ulaşın listesi

@@ -73,6 +73,8 @@ el:
         turkish: Τούρκος/αλα
         greek: Έλληνας/ιδα
         other: Άλλο
+    campaigns:
+      title: Campaigns
     admin:
       sitemessages:
         title: Επικοινωνήστε μαζί μας
