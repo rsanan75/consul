@@ -1,6 +1,6 @@
 resources :campaings, only: :show
 
-resources :proposals do
+resources :proposals, :path => "campaigns" do
   resource :dashboard, only: [:show], controller: "dashboard" do
     collection do
       patch :publish

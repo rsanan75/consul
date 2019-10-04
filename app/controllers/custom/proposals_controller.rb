@@ -5,7 +5,11 @@ ProposalsController.class_eval do
 
   def index
     @resources = resource_model.all
-    @resources = @resources.from_current_campaigns
+    if params[:retired].present?
+      @resources = resource_model.all.retired
+    else 
+      @resources = @resources.from_current_campaigns
+    end
     @resources = @current_order == "recommendations" && current_user.present? ? @resources.recommendations(current_user) : @resources.for_render
     @resources = @resources.search(@search_terms) if @search_terms.present?
     @resources = @advanced_search_terms.present? ? @resources.filter(@advanced_search_terms) : @resources
@@ -36,7 +40,11 @@ ProposalsController.class_eval do
   private
 
     def set_campaings
-      @campaigns = Campaing.current
+      if params[:retired].present?
+        @campaigns = Campaing.where(":date >= ends_at", date: Time.current)
+      else 
+        @campaigns = Campaing.current
+      end
     end
 
     def proposal_params

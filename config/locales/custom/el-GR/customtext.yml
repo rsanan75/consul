@@ -75,6 +75,7 @@ el:
         other: Άλλο
     campaigns:
       title: Campaigns
+      retired_title: Retired Campaigns
     admin:
       sitemessages:
         title: Επικοινωνήστε μαζί μας

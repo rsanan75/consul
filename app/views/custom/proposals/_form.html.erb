@@ -5,7 +5,7 @@
   <%= render "shared/errors", resource: @proposal %>
 
   <div class="small-12 medium-6 column">
-    <%= f.select :campaing_id, campaing_select_options, { include_blank: t("campaings.none") } %>
+    <%= f.select :campaing_id, campaing_select_options %>
   </div>
 
   <div class="row column">

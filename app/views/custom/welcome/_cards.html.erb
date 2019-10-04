@@ -1,9 +1,18 @@
 
 <div class="h-about-sec">
   <div class="row">
-      <% @cards.each do |card| %>
+  <% @sorted_cards = @cards.sort_by { |obj| obj.created_at }.reverse! %>
+      <% card_loop = 1 %>
+      <% last_card = '' %>
+      <% @sorted_cards.each do |card| %>
+        <% if card_loop == 2 %>
+         <% last_card = card %>
+        <% else %>
         <%= render "card", card: card %>
-      <% end %>       
+        <% end %>
+        <% card_loop = card_loop + 1 %>
+      <% end %>     
+      <%= render "card", card: last_card %>  
   </div>
 </div>
 <div class="h-blue-sec">

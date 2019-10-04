@@ -5,17 +5,17 @@
   <%= render "errors" %>
 
   <div class="row">
-    <% starts_at = @campaing.starts_at.present? ? I18n.localize(@campaing.starts_at) : "" %>
     <div class="small-12 medium-3 column">
       <%= f.text_field :starts_at,
                         placeholder: t("admin.campaings.form.placeholder.starts_at"),
-                        value: starts_at %>
+                        value: @campaing.starts_at.present? ? l(@campaing.starts_at.to_date) : nil,  
+                        class: "js-calendar-full" %>
     </div>
-    <% ends_at = @campaing.ends_at.present? ? I18n.localize(@campaing.ends_at) : ""%>
     <div class="small-12 medium-3 column end">
       <%= f.text_field :ends_at,
                        placeholder: t("admin.campaings.form.placeholder.ends_at"),
-                       value: ends_at %>
+                       value: @campaing.ends_at.present? ? l(@campaing.ends_at.to_date) : nil, 
+                       class: "js-calendar-full" %>
     </div>
   </div>
 

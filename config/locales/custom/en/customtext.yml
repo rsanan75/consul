@@ -73,6 +73,9 @@ en:
         turkish: Turkish
         greek: Greek
         other: Other
+    campaigns:
+      title: Campaigns
+      retired_title: Retired Campaigns
     admin:
       sitemessages:
         title: Contact us list

@@ -75,6 +75,7 @@ tr:
         other: Diğer
     campaigns:
       title: Campaigns
+      retired_title: Retired Campaigns
     admin:
       sitemessages:
         title: Bize ulaşın listesi
