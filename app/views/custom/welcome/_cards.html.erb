@@ -25,7 +25,7 @@
     <div class="small-12 medium-8 medium-offset-2 column">
       <div class="row">
         <div class="small-12 medium-6 column">
-          <%= layout_menu_link_to t("customtext.blue_section.proposals_title"), proposals_path, controller.class == ProposalsController,
+          <%= layout_menu_link_to t("customtext.blue_section.proposals_title"), new_proposal_path, controller.class == ProposalsController,
                                   accesskey: "3", :class => "btn-submit-h" %>
         </div>
         <div class="small-12 medium-6 column">
