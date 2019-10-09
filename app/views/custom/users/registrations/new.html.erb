@@ -1,14 +1,16 @@
 <% provide :title do %><%= t("customtext.registration_page.page_title") %><% end %>
-<div class="login-sec">
+<div class="login-sec signup-page">
   <div class="row">
     <div class="small-12 medium-12 large-4 column pad-r-0">
       <div class="login-box-left">
         <h2><%= t("customtext.registration_page.welcome_title") %></h2>
         <p><%= t("customtext.registration_page.welcome_subtitle") %></p>
+        
       </div>
     </div>
     <div class="small-12 medium-12 large-8 column pad-l-0">
       <div class="login-box-right">
+      <%= render "devise/omniauth_form" %>
         <div class="row">
           <div class="small-12 medium-10 medium-offset-1 column">
             <h2><%= t("customtext.registration_page.page_title") %></h2>
