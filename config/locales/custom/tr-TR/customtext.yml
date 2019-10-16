@@ -1,12 +1,15 @@
 tr:
   customtext:
+    footer:
+      legal: Yasal çerçeve
     blue_section:
       proposals_title: Önerini paylaş
       poll_title: Önerilere oy ver
       main_title: Siz daha iyi bir Kıbrıs hayal edin, hep birlikte gerçekleştirelim.
     proposal_pages:
-      created_date_label: Created Date TR
+      created_date_label: Paylaşıldığı tarih
       tags_label: Tags
+      proposal_shortlink_label: View Proposals
     common_forms:
       mandatory_form: All fields are mandatory.
     sitemessages:
@@ -74,8 +77,9 @@ tr:
         greek: Yunan
         other: Diğer
     campaigns:
-      title: Campaigns
+      title: ÖNERİ ÇAĞRISI
       retired_title: Retired Campaigns
+      end_date: Ended on
     admin:
       sitemessages:
         title: Bize ulaşın listesi

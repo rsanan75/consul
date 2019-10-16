@@ -171,7 +171,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .about-box-left .about-t-sec {
     background: #e3e3db image-url("about-bg-logo.png") left center no-repeat;
     padding: 30px;
-    height: 200px;
+    min-height: 250px;
 }
 .about-box-left .about-t-sec h3 {
     font-size: 24px;
@@ -210,7 +210,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .about-box-right .about-t-sec {
     background: #e3e3db image-url("video-sec-bg-img.png") no-repeat center center;
     padding: 30px;
-    height: 200px;
+    min-height: 250px;
     position: relative;
 }
 .about-box-right .about-t-sec .play-btn {
@@ -1001,9 +1001,10 @@ div#proposals-list .proposal {
 }
 
 .proposal .supports .progress {
-    height: 2rem;
+    min-height: 2rem;
     background: #64bbb0;
     border: 1px solid #64bbb0;
+    height: auto;
 }
 .number-supports {
     color: #fff;
@@ -1195,4 +1196,38 @@ select {
 .signup-page .login-box-right h2 {
     margin-top:25px;
 }
+details.retired-campaign  {
+    border: 1px solid #65bbb0;
+    margin: 25px 0;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+details.retired-campaign summary {
+    background: #e7f2fc;
+    padding: 10px;
+}
+h6.campaign-title-preview {
+    display: inline-block;
+}
+h5.campaign-title {
+    display: inline-block;
+}
+li.proposal-short-link a {
+    color: #65bbb0;
+}
+html[lang="el"] a.card_link {
+    font-size: 20px;
+}
 
+html[lang="el"] .about-box-right .about-b-sec p {
+    font-size: 20px;
+}
+.shared-order-links .submenu li:last-child {
+    display: none;
+}
+@media print, screen and (min-width: 40em) {
+    html[lang="el"] .subnavigation ul li {
+        margin: 0 15px;
+    }
+}

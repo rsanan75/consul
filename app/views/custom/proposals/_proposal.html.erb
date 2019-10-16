@@ -48,10 +48,11 @@
                           namespaced_proposal_path(proposal, anchor: "comments") %>
 
               
-              Created Date: <%= l proposal.created_at.to_date %>
-
-              
+              <%= t("customtext.proposal_pages.created_date_label") %>:<%= proposal.created_at.strftime("%d/%m/%Y") %>              
             </p>
+            <% if proposal.retired? %>
+                <span><%= t ("proposals.show.campaing")%> <h6 class="campaign-title-preview"><%= proposal.campaing.title %></h6></span>
+              <% end %>
             <div class="proposal-description">
               <p><%= proposal.summary %></p>
               <div class="truncate"></div>
@@ -62,6 +63,16 @@
       </div>
 
       <% if show_proposal_votes? %>
+            
+      <% if proposal.retired? %>
+          <div id="<%= dom_id(proposal) %>_votes"
+             class="small-12 medium-3 column supports-container">
+              <div class="padding text-center">
+              <strong><%= t("proposals.proposal.supports", count: proposal.total_votes) %></strong>
+              <p><%= t("proposals.show.retired_warning") %></p>
+            </div>
+              </div>
+      <% else %>
         <div id="<%= dom_id(proposal) %>_votes"
              class="small-12 medium-3 column supports-container">
           <% if proposal.successful? %>
@@ -80,6 +91,7 @@
                       { proposal: proposal, vote_url: vote_proposal_path(proposal, value: "yes") } %>
           <% end %>
         </div>
+        <% end %>
       <% end %>
 
     </div>

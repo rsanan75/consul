@@ -8,7 +8,7 @@
   <% end %>&nbsp;&nbsp;&nbsp;
   <span class="icon-comments"></span>&nbsp;
   <%= link_to t("proposals.show.comments", count: @proposal.comments_count), "#comments" %>&nbsp;&nbsp;&nbsp;
-  <small class="proposal-created-date"><%= t("customtext.proposal_pages.created_date_label") %>:</small> <%= l @proposal.created_at.to_date %>
+  <small class="proposal-created-date"><%= t("customtext.proposal_pages.created_date_label") %>:</small> <%= proposal.created_at.strftime("%d/%m/%Y") %>
   
 
   

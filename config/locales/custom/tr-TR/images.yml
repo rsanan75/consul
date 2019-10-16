@@ -2,11 +2,11 @@ tr:
   images:
     remove_image: Görseli kaldır
     form:
-      title: Açıklayıcı görsel
+      title: Açıklayıcı resim
       title_placeholder: Görsel için açıklama ekle
       attachment_label: Görsel seç
       delete_button: Görseli kaldır
-      note: "Burada belirtilen kriterlere uygun bir görsel yükleyebilirsiniz: %{accepted_content_types}, %{max_file_size} MB'ye kadar."
+      note: "%{max_file_size} MB'ye kadar %{accepted_content_types} formatında resim ekleyebilirsiniz."
       add_new_image: Görsel ekle
       admin_title: "Görsel"
       admin_alt_text: "Görsel için alternatif metin"

@@ -1,9 +1,9 @@
 el:
   account:
     show:
-      change_credentials_link: Αλλαγή διαπιστευτηρίων μου
-      email_on_comment_label: Ειδοποίηση μέσω email όταν κάποιος σχολιάζει προτάσεις ή συζητήσεις μου
-      email_on_comment_reply_label: Ειδοποίηση μέσω email όταν κάποιος απαντά σε σχόλια μου
+      change_credentials_link: Αλλαγή των στοιχείων πρόσβασης μου
+      email_on_comment_label: Επιθυμώ να λαμβάνω ειδοποίηση μέσω email όταν κάποιος σχολιάζει προτάσεις ή συζητήσεις μου.
+      email_on_comment_reply_label: Επιθυμώ να λαμβάνω ειδοποίηση μέσω email όταν κάποιος απαντά σε σχόλια μου.
       erase_account_link: Διαγράψτε το λογαριασμό μου
       finish_verification: Ολοκλήρωση επιβεβαίωσης
       notifications: Ειδοποιήσεις
@@ -11,29 +11,29 @@ el:
       organization_responsible_name_placeholder: Εκπρόσωπος της οργάνωσης/συλλόγου
       personal: Προσωπικά στοιχεία
       phone_number_label: Αριθμός τηλεφώνου
-      public_activity_label: Κρατήστε τη λίστα των δραστηριοτήτων μου δημόσια
-      public_interests_label: Κρατήστε τις ετικέτες από τα στοιχεία που θα ακολουθώ δημόσια
+      public_activity_label: Επιθυμώ η λίστα των δραστηριοτήτων μου να εμφανίζεται δημοσίως.
+      public_interests_label: Επιθυμώ οι ετικέτες των στοιχείων που ακολουθώ να εμφανίζονται δημοσίως
       public_interests_my_title_list: Ετικέτες στοιχείων που ακολουθείτε
       public_interests_user_title_list: Ετικέτες στοιχείων που ακολουθεί αυτός ο χρήστης
-      save_changes_submit: Αποθηκεύστε τις αλλαγές
-      subscription_to_website_newsletter_label: Ενημέρωση μέσω E-mail σχετικά με πληροφορίες που αφορούν την ιστοσελίδα 
-      email_on_direct_message_label: Ενημέρωση μέσω E-mail σχετικά με άμεσα μηνύματα
-      email_digest_label: Αποστολή περίληψης των ειδοποιήσεων σχετικά με την πρόταση
+      save_changes_submit: ΑΠΟΘΗΚΕΥΣΗ ΑΛΛΑΓΩΝ
+      subscription_to_website_newsletter_label: Επιθυμώ να λαμβάνω ειδοποίηση μέσω emai για γενικές πληροφορίες σχετικές με την ιστοσελίδα.
+      email_on_direct_message_label: Επιθυμώ να λαμβάνω email σχετικά με τα άμεσα μηνύματα
+      email_digest_label: Επιθυμώ να λαμβάνω μέσω email περίληψη των ειδοποιήσεων σχετικά με τις πρότασης.
       official_position_badge_label: Εμφάνιση σήματος επίσημης θέσης
       recommendations: Συστάσεις
       show_debates_recommendations: Εμφάνιση συστάσεων για συζητήσεις
       show_proposals_recommendations: Προβολή συστάσεων για προτάσεις
       title: Ο λογαριασμός μου
-      user_permission_debates: Συμμετοχή στις συζητήσεις
+      user_permission_debates: Συμμετέχετε στις συζητήσεις
       user_permission_info: Με το λογαριασμό σας, μπορείτε να...
-      user_permission_proposal: Δημιουργία νέων προτάσεων
-      user_permission_support_proposal: Υποστήριξη προτάσεων
+      user_permission_proposal: Δημιουργήσετε νέες προτάσεις
+      user_permission_support_proposal: Υποστήριξετε προτάσεις
       user_permission_title: Συμμετοχή
-      user_permission_verify: Για να εκτελέσετε όλες τις ενέργειες, επαληθεύστε το λογαριασμό σας.
-      user_permission_verify_info: "* Μόνο για τους χρήστες που βρίσκονται στην απογραφή."
-      user_permission_votes: Συμμετοχή στην τελική ψηφοφορία
+      user_permission_verify: Για να εκτελέσετε αυτές τις ενέργειες, πρέπει πρώτα να επαληθεύστε το λογαριασμό σας.
+      user_permission_verify_info: "*Μόνο για χρήστες του Ππούσουλας"
+      user_permission_votes: Συμμετάσχετε στην τελική ψηφοφορία
       username_label: Όνομα χρήστη
-      verified_account: Ο λογαριασμός σας έχει επαληθευθεί
+      verified_account: Ο λογαριασμός σας έχει επαληθευθεί.
       verify_my_account: Επαλήθευση του λογαριασμού μου
   application:
     close: Κλείσιμο
@@ -69,10 +69,10 @@ el:
       comment_as_moderator: Σχολιάστε ως συντονιστής
       leave_comment: Σχολιάστε
     orders:
-      most_voted: Πιο ψηφισμένα
-      newest: Τα νεότερα πρώτα
-      oldest: Τα παλιότερα πρώτα
-      most_commented: Με τα περισσότερα σχόλια
+      most_voted: Πιο πρόσφατα πρώτα
+      newest: Vεότερα πρώτα
+      oldest: Παλαιότερα πρώτα
+      most_commented: Με τις περισσότερες ψήφους
     select_order: Ταξινόμηση κατά
     show:
       return_to_commentable: "Πήγαινε πίσω στο "
@@ -265,10 +265,10 @@ el:
   notifications:
     index:
       empty_notifications: Δεν έχετε νέες ειδοποιήσεις.
-      mark_all_as_read: Σημειώστε ως διαβασμένα
-      read: Διαβασμένο
+      mark_all_as_read: Σημειώστε όλες ως διαβασμένες
+      read: Διαβασμένες
       title: Ειδοποιήσεις
-      unread: Αδιάβαστο
+      unread: Αδιάβαστες
     notification:
       action:
         comments_on:
@@ -547,7 +547,7 @@ el:
       comments: Σχόλια
       latest_comments: Πρόσφατα μηνύματα
     messages:
-      send_notification: Αποστολή μηνύματος στους υποστηρικτές της πρότασης
+      send_notification: Αποστολή μηνύματος στους υποστηρικτές τις πρότασης
       previous_notifications: Προβολή προηγούμενων ειδοποιήσεων
     polls:
       index:
@@ -577,7 +577,7 @@ el:
         success_notice: Η έρευνα διαγράφηκε επιτυχώς
         unable_notice: Δεν μπορείτε να διαγράψετε έρευνα η οποία εμπεριέχει ανταποκρίσεις
       form:
-        name: Τίτλος έρευνας
+        name: Τίτλος Δημοσκόπησης
         add_question: Προσθήκη ερώτησης
       question_fields:
         remove_question: Κατάργηση ερώτησης
@@ -587,17 +587,17 @@ el:
     poster:
       index:
         title: Προεπισκόπηση αφίσας
-        poster_title: "Μη συνεχίσετε να ψάχνετε,"
-        poster_subtitle: "υποστήριξε με! ;)"
-        intro_text_html: "<strong> Συμμετέχω στο %{org}</strong> με την δική μου πρότασή πολιτών. Ο μόνος τρόπος να καταφέρουμε να δημιουργήσουμε την Κύπρο που θέλουμε είναι με το να προσθέσεις και εσύ τη δική σου.  "
+        poster_title: "Δείξτε τη στήριξη σας "
+        poster_subtitle: "έμπρακτα! ;)"
+        intro_text_html: "<strong>Συμμετέχω στον Ππούσουλα</strong> με την πρότασή που υπέβαλα στο Ανοικτό Κάλεσμα Υποβολής Προτάσεων. Μέσω της στήριξης σας η πρόταση μου βρίσκεται ένα βήμα πιο κοντά στο να γίνει πραγματικότητα. Μέσω αυτής της συνέργιας μπορούμε να μαζί να φτιάξουμε την Κύπρο που όλοι θέλουμε.  "
         proposal_code: "Κωδικός πρότασης: %{code}"
         support: Στηρίξτε την πρότασή μου
-        footer_html: "<strong> Επισκεψου το %{link} και υποστηρίξε αυτήν την πρόταση. </strong> Πρέπει να καταφέρουμε να λάβουμε αρκετή στήριξη. Η απόφαση είναι στα χέρια σου. Σε ευχαριστώ!"
+        footer_html: "<strong> Επισκεφτείτε το %{link} και στηρίξτε αυτήν την πρόταση. Ευχαριστώ! </strong>"
       new:
         title: Αφίσα της πρότασής σας
       options:
         preview: Προεπισκόπηση
-        download: Κατεβάστε το
+        download: Πραγματοποίηση Λήψης
     mailing:
       index:
         title: Προεπισκόπηση email
@@ -744,15 +744,15 @@ el:
     author_info:
       author_deleted: Χρήστης διεγραμμένος
       email_deleted: Το E-mail έχει διαγραφεί
-    back: Πήγαινε πίσω
+    back: Πίσω
     check: Επιλέξτε
     check_all: Όλα
     check_none: Κανένα
     collective: Συλλογικός
     flag: Επισήμανση ως ακατάλληλου
-    follow: "Ακολούθησε"
+    follow: "Ακολουθήστε"
     following: "Ακολουθεί"
-    follow_entity: "Ακολούθησε %{entity}"
+    follow_entity: "Ακολουθήστε %{entity}"
     followable:
       budget_investment:
         create:
@@ -814,7 +814,7 @@ el:
       see_more: Δείτε περισσότερες προτάσεις
       hide: Κρύψτε τις συστάσεις
     download:
-      title: "Παργματοποιήσεις λήψης"
+      title: "Λήψεις"
       link:
         proposal: "Πραγματοποίηση λήψης προτάσεων"
         debate: "Πραγματοποίηση λήψης συζητήσεων"

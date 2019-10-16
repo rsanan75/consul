@@ -16,7 +16,7 @@ en:
       public_interests_my_title_list: Tags of elements you follow
       public_interests_user_title_list: Tags of elements this user follows
       save_changes_submit: Save changes
-      subscription_to_website_newsletter_label: Receive by email website relevant information
+      subscription_to_website_newsletter_label: Receive by email platform relevant information
       email_on_direct_message_label: Receive emails about direct messages
       email_digest_label: Receive a summary of proposal notifications
       official_position_badge_label: Show official position badge
@@ -30,7 +30,7 @@ en:
       user_permission_support_proposal: Support proposals
       user_permission_title: Participation
       user_permission_verify: To perform all the actions verify your account.
-      user_permission_verify_info: "* Only for users on Census."
+      user_permission_verify_info: "* Only for users on Pusula."
       user_permission_votes: Participate on final voting
       username_label: Username
       verified_account: Account verified
@@ -466,7 +466,7 @@ en:
       login_to_comment: You must %{signin} or %{signup} to leave a comment.
       notifications_tab: Notifications
       milestones_tab: Milestones
-      retired_warning: "The author considers this proposal should not receive more supports."
+      retired_warning: "The proposal is expired and not accepting anymore support."
       retired_warning_link_to_explanation: Read the explanation before voting for it.
       retired: Proposal retired by the author
       share: Share
@@ -592,14 +592,13 @@ en:
     poster:
       index:
         title: Poster preview
-        poster_title: "Do not keep looking,"
-        poster_subtitle: "back me up! ;)"
+        poster_title: "Take action to support my proposal! ;),"
+        poster_subtitle: 
         intro_text_html:
-          "<strong>I am participating in %{org}</strong> with my own citizen proposal and only if you also add you can I achieve the
-          necessary support to make the city we all want."
+          "<strong>I have submitted my proposal on the Pusula/ Ππούσουλας Platform for a better Cyprus. Through your support, my proposal is one step closer to becoming a reality."
         proposal_code: "Code of the proposal: %{code}"
         support: Support my proposal
-        footer_html: "<strong>Visit %{link} and support this proposal.</strong> We need to be many. Decide your too. Thank you!"
+        footer_html: "<strong>Visit %{link} and support this proposal.</strong> Thank you!"
       new:
         title: Poster of your proposal
       options:
@@ -617,13 +616,13 @@ en:
         sent: The email has been sent
     mailer:
       forward:
-        subtitle_html: "If you support me, <br>we will achieve it."
+        subtitle_html: "To achieve, <br> I need your support."
         support_button: Support this proposal
         share_in: Share in
         hi: "Hello!"
-        introduction: I am writing to let you know that I am participating in %{org}, the platform we can decide which city we want. And for that, I created my own citizen proposal and now, I'm going to need your support! But do not worry because It is very simple.
-        support: "You just have to click on the button that you will see below 'Support this proposal' and you can inform yourself about before promoting it. Only the proposals that achieve the maximum support will be carried out by the City Council, and I thought that you, I'm sure you help me achieve it!"
-        share: "And if you also do me the great favor of sharing my proposal with your friends, family and contacts, it would be perfect!"
+        introduction: "I am writing to inform you that I am participating in Pusula/Ππούσουλας Platform, where we can share our ideas for a better Cyprus. I have just created a proposal and I need your support!"  
+        support: "After reading my proposal, you just need to click on the button that says, 'Support this proposal'. The proposal which receives the highest number of votes will be implemented. I hope you will help me achieve it."
+        share: "And it’d be great if you can share my proposal on social media with your friends, family and contacts!"
   polls:
     all: "All"
     no_dates: "no date assigned"
@@ -975,7 +974,7 @@ en:
       user_permission_proposal: Create new proposals
       user_permission_support_proposal: Support proposals*
       user_permission_verify: "To perform the following actions verify your account."
-      user_permission_verify_info: "* Only for users on Census."
+      user_permission_verify_info: "* Only for users on Pusula."
       user_permission_verify_my_account: Verify my account
       user_permission_votes: Participate on final voting
   invisible_captcha:

@@ -67,13 +67,13 @@ tr:
     form:
       comment_as_admin: Yönetici olarak yorum yap
       comment_as_moderator: Moderatör olarak yorum yap
-      leave_comment: Yorum paylaş
+      leave_comment: Yorumunuzu paylaşın
     orders:
-      most_voted: En çok oylanan
-      newest: Önce en yeniler
-      oldest: Önce en eskiler
+      most_voted: En çok oy alana göre sırala
+      newest: En yeniye göre sırala
+      oldest: En eskiye göre sırala
       most_commented: En çok yorumlanan
-    select_order: Buna göre sırala
+    select_order: Sıralama şekli 
     show:
       return_to_commentable: "Geri dön "
   comments_helper:
@@ -381,7 +381,7 @@ tr:
       retired_proposals: Geri çekilen öneriler
       retired_proposals_link: "Fikir yaratıcısı tarafından geri çekilen öneriler"
       selected_proposals: Seçilen öneriler
-      selected_proposals_link: Seçilen önerileri görüntüle
+      selected_proposals_link: Seçilen önerileri görüntüle 
       archived_proposals: Arşivlenmiş öneriler
       proposals_lists: Öneri listeleri
       retired_links:
@@ -514,7 +514,7 @@ tr:
       and: ve
       view_resource: Kaynak görüntüle
       resource_requested: Kaynak zaten talep edildi
-      request_resource: Kaynak talep et
+      request_resource: KAYNAK GÖSTER
       resource_locked: Kaynak bağlandı
     recommended_actions:
       title: Önerilen eylemler
@@ -540,7 +540,7 @@ tr:
       locked_resource: Kaynak bağlandı
       ideal_time: İdeal zaman
     community:
-      access_community: Topluma erişim
+      access_community: TOPLULUĞA KATIL
       latest_activity: "Toplum tarafından yapılan son etkinlik: %{at}"
       participants: Katılımcılar
       debates: Tartışmalar
@@ -751,7 +751,7 @@ tr:
     flag: Uygunsuz olarak işaretle
     follow: "Takip et"
     following: "Takip ediliyor"
-    follow_entity: "Takip et %{entity}"
+    follow_entity: "%{entity} Takip et"
     followable:
       budget_investment:
         create:
@@ -760,7 +760,7 @@ tr:
           notice_html: "Bu yatırım projesini takip etmeyi bıraktınız! </br> Artık bu projeyle ilgili bildirimleri almayacaksınız."
       proposal:
         create:
-          notice_html: "Şimdi bu vatandaş önerisini takip ediyorsunuz! </br> Gelişmelerden haberdar olmanız için değişiklikleri size bildireceğiz."
+          notice_html: "Bu öneriyi takip etmeye başladınız! Gelişmelerden sizi haberdar edeceğiz."
         destroy:
           notice_html: "Bu vatandaş önerisini takip etmeyi bıraktınız! </br> Artık bu öneriyle ilgili bildirimleri almayacaksınız."
     hide: Gizle
@@ -822,7 +822,7 @@ tr:
         investments: "Projeleri indir"
     translations:
       select_language_prompt: Dil seç
-      remove_language: Dili kaldır
+      remove_language: Dil seçimini kaldır
       add_language: Dil ekle
       languages_in_use_html:
         zero: "<span class='js-languages-count'>0</span> kullanılan diller"
@@ -880,19 +880,19 @@ tr:
       filters:
         comments:
           one: 1 Yorum
-          other: "%{count} Yorumlar"
+          other: "%{count} Yorum"
         debates:
           one: 1 Tartışma
           other: "%{count} Tartışmalar"
         proposals:
           one: 1 Öneri
-          other: "%{count} Öneriler"
+          other: "%{count} Öneri"
         budget_investments:
           one: 1 Yatırım
           other: "%{count} Yatırımlar"
         follows:
-          one: 1 Takip Etme
-          other: "%{count} Takip Etme"
+          one: 1 Takip edilen
+          other: "%{count} Takip edilen"
       no_activity: Kullanıcının genel etkinliği yok
       no_private_messages: "Bu kullanıcı özel mesajları kabul etmiyor."
       private_activity: Bu kullanıcı etkinlik listesini gizli tutmaya karar verdi.
@@ -904,7 +904,7 @@ tr:
       published: Yayınlandı
       see: "Öneriyi gör"
       actions: Eylemler
-      retired_help_text: Geri çekilen öneriler için gösterge panosu mevcut değil
+      retired_help_text: Geri çekilen öneriler için kontrol paneli etkin değil
   votes:
     agree: Kabul ediyorum
     anonymous: Oy kullanmak için çok fazla isimsiz oy kullanıldı %{verify_account}.

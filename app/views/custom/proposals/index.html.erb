@@ -60,7 +60,7 @@
   <% end %>
 
   <div class="row proposals-listing">
-    <div id="proposals" class="proposals-list small-12 medium-9 column">
+    
         
 <% if params[:retired].present? && params[:retired] == 'all' %>
 <ul class="no-bullet submenu">
@@ -74,6 +74,9 @@
         <span>
           Completed
 </span></a>    </li>
+<li class="inline-block float-right proposal-short-link">
+          <a href="#proposals"><%= t("customtext.proposal_pages.proposal_shortlink_label") %></a>
+        </li>
 </ul>
  <%= render partial: "campaing", collection: @campaigns %>
 <% else %>
@@ -88,6 +91,9 @@
         <span>
           Completed
 </span></a>    </li>
+        <li class="inline-block float-right proposal-short-link">
+          <a href="#proposals"><%= t("customtext.proposal_pages.proposal_shortlink_label") %></a>
+        </li>
 </ul>
       <%= render partial: "campaing", collection: @campaigns %>
 <% end %>
@@ -113,8 +119,16 @@
       
 
       <% unless params[:selected].present? %>
-        <%= render "shared/order_links", i18n_namespace: "proposals.index" %>
+            <% if params[:retired].present? && params[:retired] == 'all' %>
+            <% else %>
+            <div class="shared-order-links"><%= render "shared/order_links", i18n_namespace: "proposals.index" %></div>
+            <% end %>
       <% end %>
+      <% if params[:retired].present? && params[:retired] == 'all' %>
+      <div id="proposals" class="proposals-list small-12 medium-12 column">
+            <% else %>
+            <div id="proposals" class="proposals-list small-12 medium-9 column">
+            <% end %>
 
       <% if @proposals.any? %>
         <div class="show-for-small-only">
@@ -149,7 +163,8 @@
         <% end %>
       </div>
     </div>
-
+<% if params[:retired].present? && params[:retired] == 'all' %>
+            <% else %>
     <div class="small-12 medium-3 column">
       <aside class="margin-bottom ">
         <%= link_to t("proposals.index.start_proposal"),
@@ -174,6 +189,6 @@
         <%= render "shared/download_links", downloadable: "proposal" %>
       </aside>
     </div>
-
+<% end %>
   </div>
 </main>

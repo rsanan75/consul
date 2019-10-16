@@ -1,5 +1,7 @@
 en:
   customtext:
+    footer:
+      legal: Legal
     blue_section:
       proposals_title: Submit your Proposal
       poll_title: Vote a Proposal
@@ -7,6 +9,7 @@ en:
     proposal_pages:
       created_date_label: Created Date
       tags_label: Tags
+      proposal_shortlink_label: View Proposals
     common_forms:
       mandatory_form: All fields are mandatory
     sitemessages:
@@ -76,6 +79,7 @@ en:
     campaigns:
       title: Campaigns
       retired_title: Retired Campaigns
+      end_date: Ended on
     admin:
       sitemessages:
         title: Contact us list

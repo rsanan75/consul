@@ -41,9 +41,9 @@ ProposalsController.class_eval do
 
     def set_campaings
       if params[:retired].present?
-        @campaigns = Campaing.where(":date >= ends_at", date: Time.current)
+        @campaigns = Campaing.where(":date >= ends_at", date: Time.current).order(ends_at: :desc)
       else 
-        @campaigns = Campaing.current
+        @campaigns = Campaing.current.order(ends_at: :desc)
       end
     end
 

@@ -1,5 +1,7 @@
 el:
   customtext:
+    footer:
+      legal: Νομικό πλαίσιο
     blue_section:
       proposals_title: Υποβάλετε την πρότασή σας
       poll_title: Ψηφίστε 
@@ -7,8 +9,9 @@ el:
     proposal_pages:
       created_date_label: Created Date GR
       tags_label: Tags
+      proposal_shortlink_label: View Proposals
     common_forms:
-      mandatory_form: All fields are mandatory.
+      mandatory_form: Όλα τα πεδία είναι υποχρεωτικά
     sitemessages:
       page_title: ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ
       tagline: Βοηθήστε την Κύπρο να βρει τον Ππούσουλα της και κάντε τις ιδέες σας πραγματικότητα!
@@ -18,7 +21,7 @@ el:
       label_email: Email
       label_message: Το μήνυμά σας
       label_date: Ημερομηνία υποβολής
-      connect_with: Connect with us
+      connect_with: Συνδεθείτε μαζί μάς
       admin_label_message: μήνυμά
     registration_page:
       general_click_here: Κάντε κλικ ΕΔΩ
@@ -74,8 +77,9 @@ el:
         greek: Έλληνας/ιδα
         other: Άλλο
     campaigns:
-      title: Campaigns
+      title: ΚΑΛΕΣΜΑ ΥΠΟΒΟΛΗΣ ΠΡΟΤΑΣΕΩΝ
       retired_title: Retired Campaigns
+      end_date: Ended on
     admin:
       sitemessages:
         title: Επικοινωνήστε μαζί μας

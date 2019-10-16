@@ -17,8 +17,8 @@ el:
         alert: Δεν μπορεί να καταστρέψει το έγγραφο.
         confirm: Είστε βέβαιοι ότι θέλετε να διαγράψετε το έγγραφο; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί!
     buttons:
-      download_document: Κατεβάστε το αρχείο
-      destroy_document: Καταστροφή εγγράφου
+      download_document: Πραγματοποίηση λήψης αρχείου
+      destroy_document: Διαγραφή εγγράφου
     errors:
       messages:
         in_between: πρέπει να είναι μεταξύ %{min} και %{max}
