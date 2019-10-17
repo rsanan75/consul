@@ -1223,8 +1223,19 @@ html[lang="el"] a.card_link {
 html[lang="el"] .about-box-right .about-b-sec p {
     font-size: 20px;
 }
+html[lang="el"] .about-box-left .about-t-sec {
+min-height: 258px;
+}
+
 .shared-order-links .submenu li:last-child {
     display: none;
+}
+.dashboard-poster-preview .poster-header p {
+    font-size: 17px;
+    margin: 0 auto;
+}
+form .checkbox, form .radio {
+    display: inline;
 }
 @media print, screen and (min-width: 40em) {
     html[lang="el"] .subnavigation ul li {

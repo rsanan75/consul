@@ -69,10 +69,10 @@ el:
       comment_as_moderator: Σχολιάστε ως συντονιστής
       leave_comment: Σχολιάστε
     orders:
-      most_voted: Πιο πρόσφατα πρώτα
-      newest: Vεότερα πρώτα
+      most_voted: Με τις περισσότερες ψήφους 
+      newest: Πιο πρόσφατα πρώτα
       oldest: Παλαιότερα πρώτα
-      most_commented: Με τις περισσότερες ψήφους
+      most_commented: Οι περισσότεροι σχολίασαν
     select_order: Ταξινόμηση κατά
     show:
       return_to_commentable: "Πήγαινε πίσω στο "
