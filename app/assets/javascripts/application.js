@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require jquery-ui/widgets/datepicker
 //= require jquery-ui/i18n/datepicker-en-GB
+//= require jquery-ui/i18n/datepicker-el
+//= require jquery-ui/i18n/datepicker-es
+//= require jquery-ui/i18n/datepicker-tr
 //= require jquery-ui/widgets/autocomplete
 //= require jquery-ui/widgets/sortable
 //= require jquery-fileupload/basic

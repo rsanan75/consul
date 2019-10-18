@@ -1163,9 +1163,7 @@ select {
     border-radius: 7px;
     background-size: 24px;
 }
-.auth-page #ui-datepicker-div {
-    display: none !important;
-}
+
 .auth-page input::placeholder {
     color: #999 !important;
 }
@@ -1236,6 +1234,10 @@ min-height: 258px;
 }
 form .checkbox, form .radio {
     display: inline;
+}
+.error {
+    clear:both;
+    float:left;
 }
 @media print, screen and (min-width: 40em) {
     html[lang="el"] .subnavigation ul li {

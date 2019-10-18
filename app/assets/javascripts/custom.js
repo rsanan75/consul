@@ -18,4 +18,9 @@ jQuery(document).ready(function () {
   jQuery("a.title.disabled-title").on('click',function(e){
     e.preventDefault();
   });
-});
+  jQuery(".subnavigation a, .subfooter a").each(function () {
+    if (jQuery(this).attr("href") == window.location.pathname) {
+      jQuery(this).addClass("is-active");
+    }
+  });
+}); 

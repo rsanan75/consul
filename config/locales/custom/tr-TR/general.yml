@@ -11,14 +11,14 @@ tr:
       organization_responsible_name_placeholder: Kurum/topluluk temsilcisi
       personal: Kişisel bilgiler
       phone_number_label: Telefon numarası
-      public_activity_label: Etkinlikler listemi herkese açık tut
-      public_interests_label: Takip ettiğim öğelerin etiketlerini herkese açık tut
+      public_activity_label: Etkinlikler listemi herkese açık hale getir
+      public_interests_label: Takip ettiklerimi herkese açık hale getir
       public_interests_my_title_list: Takip ettiğiniz öğelerin etiketleri
       public_interests_user_title_list: Bu kullanıcının takip ettiği öğelerin etiketleri
       save_changes_submit: Değişiklikleri kaydet
-      subscription_to_website_newsletter_label: Platform ile ilgili bilgileri e-postayla al
-      email_on_direct_message_label: Doğrudan mesajlarla ilgili e-posta al
-      email_digest_label: Öneri bildirimlerinin özetini al
+      subscription_to_website_newsletter_label: Platformla ilgili bilgileri bana e-posta ile gönder
+      email_on_direct_message_label: Doğrudan mesajları e-posta ile bildir
+      email_digest_label: Öneri bildirimlerinin özetini gönder
       official_position_badge_label: Resmi pozisyon rozetini göster
       recommendations: Tavsiyeler
       show_debates_recommendations: Tartışma tavsiyelerini göster
@@ -30,7 +30,7 @@ tr:
       user_permission_support_proposal: Önerileri destekle
       user_permission_title: Katılım
       user_permission_verify: Tüm eylemleri gerçekleştirmek için hesabınızı doğrulayın.
-      user_permission_verify_info: "* Sadece Pusula'daki kullanıcılar için."
+      user_permission_verify_info: "* Sadece Pusula’daki kullanıcılar için."
       user_permission_votes: Son oylamaya katıl
       username_label: Kullanıcı adı
       verified_account: Hesap doğrulandı
@@ -81,7 +81,7 @@ tr:
     comment_link: Yorum
     comments_title: Yorumlar
     reply_button: Yanıtı yayınla
-    reply_link: Yanıt
+    reply_link: Yanıt ver
   debates:
     create:
       form:
@@ -180,12 +180,12 @@ tr:
     conditions: Kullanım şartları ve koşulları
     debate: Tartışma
     direct_message: özel mesaj
-    error: hata
-    errors: hatalar
-    not_saved_html: "bu %{resource} 'un kaydedilmesini engelledi. <br>Lütfen nasıl düzeltileceğini öğrenmek için işaretli alanları kontrol edin:"
+    error: teknik sorun nedeniyle
+    errors: teknik sorun nedeniyle 
+    not_saved_html: "bu %{resource} gönderilemedi. <br>Bu sorunların nasıl düzeltileceğini öğrenmek için lütfen işaretli alanları kontrol edin."
     policy: Gizlilik Politikası
     proposal: Öneri
-    proposal_notification: "Bildirim"
+    proposal_notification: "mesajınız"
     budget/investment: Yatırım
     budget/group: Bütçe Grubu
     budget/heading: Bütçe Başlığı
@@ -540,15 +540,15 @@ tr:
       locked_resource: Kaynak bağlandı
       ideal_time: İdeal zaman
     community:
-      access_community: TOPLULUĞA KATIL
+      access_community: Öneri topluluğuna katıl
       latest_activity: "Toplum tarafından yapılan son etkinlik: %{at}"
-      participants: Katılımcılar
-      debates: Tartışmalar
-      comments: Yorumlar
+      participants: Katılımcı
+      debates: Tartışma
+      comments: Yorum 
       latest_comments: En son gönderilen mesajlar
     messages:
-      send_notification: Öneriyi destekleyenlere mesaj gönder
-      previous_notifications: Önceki bildirimleri görüntüle
+      send_notification: Bu öneriyi destekleyenlere mesaj gönder
+      previous_notifications: Daha önceki bildirimleri göster
     polls:
       index:
         title: Anketler
@@ -566,12 +566,12 @@ tr:
         submit: Anketi güncelle
       poll:
         responses:
-          one: "%{count} yanıt"
-          other: "%{count} yanıt"
+          one: "%{count} Cevap"
+          other: "%{count} Cevap"
         view_results: Sonuçları görüntüle
         edit_poll: Anketi düzenle
-        show_results: Sonuçları görüntüle
-        show_results_help: Bu kutuyu işaretlerseniz sonuçlar herkese açık olacak ve tüm kullanıcılar bunları görebilecek
+        show_results: SONUÇLARI GÖR
+        show_results_help: Eğer bu kutuyu işaretlerseniz, sonuçlar herkese açık olacaktır, ve tüm kullanıcılar sonuçları görebilecektir.
         delete: Anketi sil
         alert_notice: Bu işlem anketi ve onunla ilişkili tüm soruları silecektir.
         success_notice: Anket başarıyla silindi
@@ -586,12 +586,12 @@ tr:
         remove_answer: Cevabı kaldır
     poster:
       index:
-        title: Görsel önizlemesi
-        poster_subtitle: "bana destek verin! ;)"
-        intro_text_html: "<strong> Kendi vatandaş önerim ile %{org}</strong>'ya katılıyorum ve yalnızca sizin sayenizde hepimizin istediği değişimi gerçekleştirmek için gerekli desteğe ulaşabilirim."
+        title: Önerimi desteklemek
+        poster_subtitle: "için harekete geçin! ;)"
+        intro_text_html: "Daha iyi bir Kıbrıs için önerimi Pusula Platform’unda paylaştım. Sizin desteğinizle, önerim gerçekleşmeye bir adım daha yaklaşacak."
         proposal_code: "Öneri kodu: %{code}"
         support: Önerimi destekle
-        footer_html: "<strong> Bu bağlantıyı %{link} ziyaret edin ve önerimi destekleyin.</strong> Çok fazla desteğe ihtiyacım var. Senin de destekle. Teşekkür ederim!"
+        footer_html: "<strong> %{link} </strong> adresine giderek bu öneriyi destekleyebilirsiniz. Teşekkürler!"
       new:
         title: Önerinizin görseli
       options:
@@ -601,21 +601,21 @@ tr:
       index:
         title: E-posta önizleme
       new:
-        title: Paylaşılacak e-posta örneği
+        title: Gönderilecek e-posta örneği
       mailing_options:
-        send: '%{address} adresine gönder'
+        send: '%{address}’e gönder'
         preview: Önizleme
       create:
         sent: E-posta gönderildi
     mailer:
       forward:
-        subtitle_html: "Beni destekliyorsanız, <br> başaracağız."
+        subtitle_html: "Başarmak için desteğinize <br> ihtiyacım var."
         support_button: Bu öneriyi destekle
         share_in: Paylaş
         hi: "Merhaba!"
-        introduction: Kıbrıs'taki günlük yaşamı önemli derecede iyileştirebilmeyi hedefleyen bir platform olan %{org} 'a katıldığımı size bildirmek için yazıyorum. Bunun için kendi teklifimi oluşturdum ve şimdi de desteğinize ihtiyacım olacak! Ama endişelenmeyin, çünkü çok basit.
-        support: "'Bu öneriyi destekle' seçeneğinin altında göreceğiniz butonu tıklamanız yeterlidir ve bunu yapmadan önce öneriyle ilgili bilgi edinebilirsiniz. Yalnızca, en fazla desteği alan öneri uygulanacak ve bunu başarmama yardım edeceğinizden eminim!"
-        share: "Ve eğer bana iyilik yaparak teklifimi arkadaşlarınla, ailenle ve yakınlarınla paylaşırsan, mükemmel olacak!"
+        introduction: Ben, daha iyi bir Kıbrıs için fikirlerimizi paylaşabileceğimiz Pusula Platformu’na katıldım. Yeni bir öneri paylaştım ve sizin desteğinize ihtiyacım var! 
+        support: "Önerimi okuduktan sonra yapmanız gereken tek şey ‘Bu öneriyi destekle’ butonuna tıklamak. Eğer isterseniz, önerimi sosyal medya üzerinde de paylaşabilirsiniz. En fazla oy alan öneri gerçeğe dönüştürülecek. Bunu aşarmam için bana destek olacağınızı umuyorum."
+        share: "Ayrıca önerimi sosyal medyada arkadaşlarınız, aileniz ve kişilerinizle paylaşırsanız harika olur!"
   polls:
     all: "Tüm"
     no_dates: "tarih belirtilmemiş"
@@ -712,7 +712,7 @@ tr:
       title_label: "Başlık"
       body_label: "Mesaj"
       submit_button: "Mesaj gönder"
-      info_about_receivers_html: "Bu mesaj <strong>%{count} sayıda kişiye gönderilecek </strong> ve %{proposal_page} 'da görünecektir.<br> Mesajlar anında gönderilmez, kullanıcılar düzenli aralıklarla tüm bildirimleri içeren bir e-posta alır."
+      info_about_receivers_html: "Bu mesaj <strong>%{count} kişiye gönderilecek ve öneriler sayfasında yayınlanacaktır.<br> Mesajlar kullancılara doğrudan gönderilmez, tüm öneri bildirimlerini içeren ve düzenli olarak gönderilen bir e-posta aracılığıyla gönderilir."
       proposal_page: "öneri'ler sayfası"
     show:
       back: "Faaliyetlerime geri dön"

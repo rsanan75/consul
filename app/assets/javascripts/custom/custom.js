@@ -10,12 +10,5 @@ jQuery(document).ready(function () {
     if (jQuery(this).attr("href") == window.location.pathname) {
       jQuery(this).addClass("is-active");
     }
-    $(".datepicker").datepicker({
-      changeMonth: true,
-      changeYear: true,
-      showButtonPanel: true,
-      minDate: "-100Y",
-      maxDate: "-18Y"
-    });
   });
 });
