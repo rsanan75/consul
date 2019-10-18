@@ -14,6 +14,11 @@ a {
     color: #3f62a6;
     text-decoration: none;
 }
+.menu-icon.dark:hover::after, .menu-icon.dark::after {
+    background: #65bbb0;
+    -webkit-box-shadow: 0 7px 0 #65bbb0, 0 14px 0 #65bbb0;
+    box-shadow: 0 7px 0 #65bbb0, 0 14px 0 #65bbb0;
+}
 .top-links {
     background: #22363f;
     color: #fff;
