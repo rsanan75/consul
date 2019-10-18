@@ -1187,6 +1187,12 @@ select {
 .auth-page .login-box-left {
     min-height: 72rem;
 }
+html[lang="el"] .auth-page .login-box-left {
+    min-height: 76rem;
+}
+html[lang="el"] .auth-page .login-box-right {
+    min-height: 76rem;
+}
 .social-icons-container {
     margin: 0 auto;
     text-align:center;
@@ -1221,7 +1227,7 @@ html[lang="el"] a.card_link {
 html[lang="el"] .about-box-right .about-b-sec p {
     font-size: 20px;
 }
-html[lang="el"] .about-box-left .about-t-sec {
+html[lang="el"] .about-box-left .about-t-sec, html[lang="el"] .about-box-right .about-t-sec{
 min-height: 258px;
 }
 
