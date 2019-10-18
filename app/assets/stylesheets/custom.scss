@@ -1250,3 +1250,52 @@ form .checkbox, form .radio {
         margin: 0 15px;
     }
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.h-blue-sec {
+    padding: 50px 0;
+}
+.h-blue-sec a.btn-submit-h {
+    margin: 20px 0
+}
+.h-about-sec {
+    padding: 50px 0;
+}    
+.footer .footer-sections {
+    padding: 0 15px;
+    /* margin: 0 15px; */
+}
+.footer .footer-sections .column { 
+margin: 0;
+padding: 0;
+}
+.footer .subfooter .text-right {
+    text-align: left;
+}
+main {
+    padding: 0 10px;
+}
+.login-sec.contactus-page {
+    padding-top: 1rem;
+}
+.login-box-left {
+    padding: 0px;
+    padding-bottom:30px;
+}
+.login-box-right {
+    padding: 0 30px;
+}
+.auth-page .login-box-left {
+    min-height:0;
+
+}
+.auth-page .login-box-right {
+    min-height:0;
+}
+.login-sec {
+    padding-bottom:25px;
+}
+.auth-form {
+    padding-top: 1rem;
+    margin: 0;
+}
+}
