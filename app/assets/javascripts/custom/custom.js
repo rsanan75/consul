@@ -11,4 +11,18 @@ jQuery(document).ready(function () {
       jQuery(this).addClass("is-active");
     }
   });
+  jQuery("a.title.disabled-title").each(function () {
+    jQuery(this).removeAttr('href');
+  });
+  jQuery("a.title.disabled-title").on('click', function (e) {
+    e.preventDefault();
+  });
+  jQuery(".subnavigation a, .subfooter a").each(function () {
+    if (jQuery(this).attr("href") == window.location.pathname) {
+      jQuery(this).addClass("is-active");
+    }
+  });
+  jQuery('span[data-responsive-toggle="responsive-menu"]').on('click', function () {
+    jQuery('#responsive-menu').toggle();
+  });
 });
