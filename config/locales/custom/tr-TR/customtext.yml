@@ -58,6 +58,7 @@ tr:
         kyrenia: Girne
         morphou: Güzelyurt
         karpasia: Karpaz
+        other: Diğer (Diyaspora)
       select_options_education:
         illiterate: Hiç okula gitmedim / İlkokul terk
         can_read_write: Can read and write

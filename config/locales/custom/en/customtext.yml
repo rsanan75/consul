@@ -58,6 +58,7 @@ en:
         kyrenia: Kyrenia
         morphou: Morphou
         karpasia: Karpasia
+        other: Other (Diaspora)
       select_options_education:
         illiterate: No formal education / Incomplete primary school
         can_read_write: Can read and write

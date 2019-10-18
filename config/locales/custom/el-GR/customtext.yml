@@ -58,6 +58,7 @@ el:
         kyrenia: Κερύνεια
         morphou: Μόρφου
         karpasia: Καρπασία
+        other: Άλλο (Διασπορά)
       select_options_education:
         illiterate: Τίποτα από τα παρακάτω / αναλφάβητος
         can_read_write: Μπορώ να διαβάσω και να γράψω
