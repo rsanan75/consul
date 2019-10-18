@@ -25,4 +25,7 @@ jQuery(document).ready(function () {
   jQuery('span[data-responsive-toggle="responsive-menu"]').on('click', function () {
     jQuery('#responsive-menu').toggle();
   });
+  jQuery('.menu-icon').on('click', function () {
+    jQuery('#responsive-menu').toggle();
+  });
 });
