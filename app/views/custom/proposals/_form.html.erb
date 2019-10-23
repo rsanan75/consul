@@ -33,8 +33,13 @@
       </div>
 
       <div class="ckeditor small-12 column">
+        <%= translations_form.label :description %>
+        <p class="help-text">
+          <%= t("customtext.proposal_pages.description_note") %>
+        </p>
         <%= translations_form.cktext_area :description,
                                           maxlength: Proposal.description_max_length,
+                                          label: false,
                                           ckeditor: { language: I18n.locale } %>
       </div>
     <% end %>

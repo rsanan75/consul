@@ -10,6 +10,9 @@ en:
       created_date_label: Created Date
       tags_label: Tags
       proposal_shortlink_label: View Proposals
+      active_tab_label: Active
+      completed_tab_label: Completed
+      description_note: (maximum 6,000 characters)
     common_forms:
       mandatory_form: All fields are mandatory
     sitemessages:
@@ -21,6 +24,7 @@ en:
       label_email: Email
       label_date: Date submitted
       label_message: Your message for us
+      label_submit: Submit
       admin_label_message: Message
       connect_with: Connect with us
     registration_page:
@@ -40,6 +44,8 @@ en:
       label_native_language: Native Language
       label_education: Education 
       label_education_suffix:   – pick highest level achieved
+      label_user_id: User ID
+      label_created: Created
       select_options_gender:
         male: Male
         female: Female

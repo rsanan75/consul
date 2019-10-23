@@ -9,9 +9,12 @@ el:
     proposal_pages:
       created_date_label: Created Date GR
       tags_label: Tags
-      proposal_shortlink_label: View Proposals
+      proposal_shortlink_label: Προβολή Προτάσεων
+      active_tab_label: Ενεργά
+      completed_tab_label: Ολοκληρωμένα
+      description_note: (έως 6,000 χαρακτήρες)
     common_forms:
-      mandatory_form: Όλα τα πεδία είναι υποχρεωτικά
+      mandatory_form: Bu alanları doldurmanız gerekiyor.
     sitemessages:
       page_title: ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ
       tagline: Βοηθήστε την Κύπρο να βρει τον Ππούσουλα της και κάντε τις ιδέες σας πραγματικότητα!
@@ -21,7 +24,8 @@ el:
       label_email: Email
       label_message: Το μήνυμά σας
       label_date: Ημερομηνία υποβολής
-      connect_with: Συνδεθείτε μαζί μάς
+      label_submit: Gönder
+      connect_with: Bizimle iletişime geçin
       admin_label_message: μήνυμά
     registration_page:
       general_click_here: Κάντε κλικ ΕΔΩ
@@ -40,6 +44,8 @@ el:
       label_native_language: Μητρική Γλώσσα 
       label_education: Εκπαίδευση 
       label_education_suffix:   – pick highest level achieved
+      label_user_id: User ID
+      label_created: Created
       select_options_gender:
         male: Γυναίκα
         female: Άντρας 

@@ -9,7 +9,10 @@ tr:
     proposal_pages:
       created_date_label: Paylaşıldığı tarih
       tags_label: Tags
-      proposal_shortlink_label: View Proposals
+      proposal_shortlink_label: Önerileri görüntüle
+      active_tab_label: Etkin
+      completed_tab_label: Tamamlanmış
+      description_note: (En fazla 6,000 karakter)
     common_forms:
       mandatory_form:  Όλα τα πεδία είναι υποχρεωτικά
     sitemessages:
@@ -21,6 +24,7 @@ tr:
       label_email: E-posta adresi
       label_message: Bize mesajınız
       label_date: İletilen Tarih
+      label_submit: Αποστολή’
       connect_with: Συνδεθείτε μαζί μάς
       admin_label_message: Mesajınız
     registration_page:
@@ -40,6 +44,8 @@ tr:
       label_native_language: Ana dil
       label_education: Eğitim durumu 
       label_education_suffix:  – tamamladığınız en yüksek dereceyi seçiniz
+      label_user_id: User ID
+      label_created: Created
       select_options_gender:
         male: Erkek 
         female: Kadın
