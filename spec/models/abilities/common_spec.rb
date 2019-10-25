@@ -15,10 +15,10 @@ describe Abilities::Common do
   let(:own_comment)  { create(:comment,  author: user) }
   let(:own_proposal) { create(:proposal, author: user) }
 
-  let(:accepting_budget) { create(:budget, phase: "accepting") }
-  let(:reviewing_budget) { create(:budget, phase: "reviewing") }
-  let(:selecting_budget) { create(:budget, phase: "selecting") }
-  let(:balloting_budget) { create(:budget, phase: "balloting") }
+  let(:accepting_budget) { create(:budget, :accepting) }
+  let(:reviewing_budget) { create(:budget, :reviewing) }
+  let(:selecting_budget) { create(:budget, :selecting) }
+  let(:balloting_budget) { create(:budget, :balloting) }
 
   let(:investment_in_accepting_budget) { create(:budget_investment, budget: accepting_budget) }
   let(:investment_in_reviewing_budget) { create(:budget_investment, budget: reviewing_budget) }
@@ -32,7 +32,7 @@ describe Abilities::Common do
   let(:ballot_in_selecting_budget) { create(:budget_ballot, budget: selecting_budget) }
   let(:ballot_in_balloting_budget) { create(:budget_ballot, budget: balloting_budget) }
 
-  let(:current_poll)  { create(:poll) }
+  let(:current_poll) { create(:poll) }
   let(:expired_poll) { create(:poll, :expired) }
   let(:expired_poll_from_own_geozone) { create(:poll, :expired, geozone_restricted: true, geozones: [geozone]) }
   let(:expired_poll_from_other_geozone) { create(:poll, :expired, geozone_restricted: true, geozones: [create(:geozone)]) }
@@ -259,6 +259,11 @@ describe Abilities::Common do
       it { should_not be_able_to(:destroy, own_investment_in_selecting_budget) }
       it { should_not be_able_to(:destroy, own_investment_in_balloting_budget) }
 
+      it { should be_able_to(:edit, own_investment_in_accepting_budget) }
+      it { should_not be_able_to(:edit, own_investment_in_reviewing_budget) }
+      it { should_not be_able_to(:edit, own_investment_in_selecting_budget) }
+      it { should_not be_able_to(:edit, own_investment_in_balloting_budget) }
+
       it { should be_able_to(:create, ballot_in_balloting_budget) }
       it { should_not be_able_to(:create, ballot_in_accepting_budget) }
       it { should_not be_able_to(:create, ballot_in_selecting_budget) }
@@ -311,5 +316,4 @@ describe Abilities::Common do
     it { should be_able_to(:disable_recommendations, Debate) }
     it { should be_able_to(:disable_recommendations, Proposal) }
   end
-
 end

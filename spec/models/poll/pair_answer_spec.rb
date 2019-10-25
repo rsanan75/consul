@@ -1,9 +1,7 @@
 require "rails_helper"
 
 describe Poll::PairAnswer do
-
   describe "validations" do
-
     let(:pair_answer) { build(:poll_pair_answer) }
 
     it "is valid" do
@@ -50,26 +48,20 @@ describe Poll::PairAnswer do
     let(:pair_answer_2) { create(:poll_pair_answer) }
 
     describe "#by_author" do
-
       it "returns pair_answers associated to an user" do
         author = pair_answer_1.author
 
-        expect(described_class.by_author(author)).to include(pair_answer_1)
-        expect(described_class.by_author(author)).not_to include(pair_answer_2)
+        expect(Poll::PairAnswer.by_author(author)).to eq [pair_answer_1]
       end
-
     end
 
     describe "#by_question" do
-
       it "returns pair_answers associated to a question" do
         question = pair_answer_1.question
 
-        expect(described_class.by_question(question)).to include(pair_answer_1)
-        expect(described_class.by_question(question)).not_to include(pair_answer_2)
+        expect(Poll::PairAnswer.by_question(question)).to eq [pair_answer_1]
       end
     end
-
   end
 
   describe "#generate_pair" do
@@ -77,9 +69,8 @@ describe Poll::PairAnswer do
     let(:question) { create(:poll_question) }
 
     context "without question_answers" do
-
       it "assigns nil value to pair_answers" do
-        pair_answer = described_class.generate_pair(question, user)
+        pair_answer = Poll::PairAnswer.generate_pair(question, user)
 
         expect(pair_answer).to be_a Poll::PairAnswer
         expect(pair_answer.question).to eq(question)
@@ -93,7 +84,7 @@ describe Poll::PairAnswer do
       let!(:answer1) { create(:poll_question_answer, question: question) }
 
       it "assigns only right question if only has one question_answer" do
-        pair_answer = described_class.generate_pair(question, user)
+        pair_answer = Poll::PairAnswer.generate_pair(question, user)
 
         expect(pair_answer).to be_a Poll::PairAnswer
         expect(pair_answer.question).to eq(question)
@@ -105,7 +96,7 @@ describe Poll::PairAnswer do
       it "assigns random values if question has some question_answer" do
         create(:poll_question_answer, question: question)
 
-        pair_answer = described_class.generate_pair(question, user)
+        pair_answer = Poll::PairAnswer.generate_pair(question, user)
 
         expect(pair_answer).to be_a Poll::PairAnswer
         expect(pair_answer.question).to eq(question)
@@ -120,11 +111,8 @@ describe Poll::PairAnswer do
   describe "#answers" do
     let(:pair_answer) { create(:poll_pair_answer) }
 
-    it "returns and array of answers" do
-      expect(pair_answer.answers).to be_a Array
-      expect(pair_answer.answers[0]).to eq(pair_answer.answer_left)
-      expect(pair_answer.answers[1]).to eq(pair_answer.answer_right)
+    it "returns an array of answers" do
+      expect(pair_answer.answers).to eq [pair_answer.answer_left, pair_answer.answer_right]
     end
   end
-
 end

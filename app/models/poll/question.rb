@@ -63,6 +63,7 @@ class Poll::Question < ApplicationRecord
 
   def self.answerable_by(user)
     return none if user.nil? || user.unverified?
+
     where(poll_id: Poll.answerable_by(user).pluck(:id))
   end
 
@@ -75,8 +76,8 @@ class Poll::Question < ApplicationRecord
   end
 
   def answers_with_read_more?
-    question_answers.visibles.any? do |answer| answer.description.present? || answer.images.any? ||
-      answer.documents.present? || answer.videos.present?
+    question_answers.visibles.any? do |answer|
+      answer.description.present? || answer.images.any? || answer.documents.present? || answer.videos.present?
     end
   end
 
@@ -86,5 +87,9 @@ class Poll::Question < ApplicationRecord
 
   def is_positive_negative?
     votation_type.present? && enum_type == "positive_negative_open"
+  end
+
+  def possible_answers
+    question_answers.visibles.joins(:translations).pluck("poll_question_answer_translations.title")
   end
 end

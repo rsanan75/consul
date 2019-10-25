@@ -17,10 +17,12 @@ class Legislation::ProcessesController < Legislation::BaseController
 
     respond_to do |format|
       format.html
-      format.csv { send_data to_csv(process_for_download, Legislation::Process),
-                             type: "text/csv",
-                             disposition: "attachment",
-                             filename: "legislation_processes.csv" }
+      format.csv do
+        send_data to_csv(process_for_download, Legislation::Process),
+                  type: "text/csv",
+                  disposition: "attachment",
+                  filename: "legislation_processes.csv"
+      end
     end
   end
 
@@ -45,7 +47,7 @@ class Legislation::ProcessesController < Legislation::BaseController
     set_process
     @phase = :debate_phase
 
-    if @process.debate_phase.started? || (current_user && current_user.administrator?)
+    if @process.debate_phase.started? || (current_user&.administrator?)
       render :debate
     else
       render :phase_not_open
@@ -137,7 +139,7 @@ class Legislation::ProcessesController < Legislation::BaseController
       @proposals = @proposals.send(@current_filter).page(params[:page])
     end
 
-    if @process.proposals_phase.started? || (current_user && current_user.administrator?)
+    if @process.proposals_phase.started? || (current_user&.administrator?)
       legislation_proposal_votes(@proposals)
       render :proposals
     else
@@ -157,6 +159,7 @@ class Legislation::ProcessesController < Legislation::BaseController
 
     def set_process
       return if member_method?
+
       @process = ::Legislation::Process.find(params[:process_id])
     end
 end

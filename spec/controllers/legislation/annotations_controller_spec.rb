@@ -1,19 +1,18 @@
 require "rails_helper"
 
 describe Legislation::AnnotationsController do
-
   describe "POST create" do
-
-    let(:legal_process) { create(:legislation_process,
-                                 allegations_start_date: Date.current - 3.days,
-                                 allegations_end_date: Date.current + 2.days) }
-    let(:draft_version) { create(:legislation_draft_version, :published,
-                                                             process: legal_process,
-                                                             title: "Version 1") }
-    let(:final_version) { create(:legislation_draft_version, :published,
-                                                             :final_version,
-                                                             process: legal_process,
-                                                             title: "Final version") }
+    let(:legal_process) do
+      create(:legislation_process, allegations_start_date: Date.current - 3.days,
+             allegations_end_date: Date.current + 2.days)
+    end
+    let(:draft_version) do
+      create(:legislation_draft_version, :published, process: legal_process, title: "Version 1")
+    end
+    let(:final_version) do
+      create(:legislation_draft_version, :published, :final_version,
+             process: legal_process, title: "Final version")
+    end
     let(:user) { create(:user, :level_two) }
 
     it "creates an ahoy event" do
@@ -161,6 +160,5 @@ describe Legislation::AnnotationsController do
       expect(annotation.reload.comments_count).to eq(2)
       expect(annotation.comments.last.body).to eq("una anotacion")
     end
-
   end
 end

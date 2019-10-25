@@ -58,25 +58,24 @@ class Tracking::BudgetInvestmentsController < Tracking::BaseController
                               }
                             ]
 
-      filters = investment_headings.inject(all_headings_filter) do |filters, heading|
+      investment_headings.inject(all_headings_filter) do |filters, heading|
         filters << {
           name: heading.name,
           id: heading.id,
           count: investments.select { |i| i.heading_id == heading.id }.size
         }
-      end
-      filters.uniq
+      end.uniq
     end
 
     def restrict_access_to_assigned_items
       return if current_user.administrator? ||
                 Budget::TrackerAssignment.exists?(investment_id: params[:id],
                                                    tracker_id: current_user.tracker.id)
+
       raise ActionController::RoutingError.new("Not Found")
     end
 
     def heading_params
       params.permit(:heading_id)
     end
-
 end

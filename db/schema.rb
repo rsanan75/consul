@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190920143050) do
+ActiveRecord::Schema.define(version: 20191020153455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -170,10 +170,12 @@ ActiveRecord::Schema.define(version: 20190920143050) do
   end
 
   create_table "budget_groups", force: :cascade do |t|
-    t.integer "budget_id"
-    t.string  "name",                 limit: 50
-    t.string  "slug"
-    t.integer "max_votable_headings",            default: 1
+    t.integer  "budget_id"
+    t.string   "name",                 limit: 50
+    t.string   "slug"
+    t.integer  "max_votable_headings",            default: 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["budget_id"], name: "index_budget_groups_on_budget_id", using: :btree
   end
 
@@ -188,14 +190,16 @@ ActiveRecord::Schema.define(version: 20190920143050) do
   end
 
   create_table "budget_headings", force: :cascade do |t|
-    t.integer "group_id"
-    t.string  "name",                 limit: 50
-    t.bigint  "price"
-    t.integer "population"
-    t.string  "slug"
-    t.boolean "allow_custom_content",            default: false
-    t.text    "latitude"
-    t.text    "longitude"
+    t.integer  "group_id"
+    t.string   "name",                 limit: 50
+    t.bigint   "price"
+    t.integer  "population"
+    t.string   "slug"
+    t.boolean  "allow_custom_content",            default: false
+    t.text     "latitude"
+    t.text     "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["group_id"], name: "index_budget_headings_on_group_id", using: :btree
   end
 
@@ -294,6 +298,7 @@ ActiveRecord::Schema.define(version: 20190920143050) do
     t.datetime "ignored_flag_at"
     t.integer  "flags_count",                                 default: 0
     t.integer  "tracker_assignments_count"
+    t.integer  "original_heading_id"
     t.index ["administrator_id"], name: "index_budget_investments_on_administrator_id", using: :btree
     t.index ["author_id"], name: "index_budget_investments_on_author_id", using: :btree
     t.index ["community_id"], name: "index_budget_investments_on_community_id", using: :btree
@@ -420,24 +425,6 @@ ActiveRecord::Schema.define(version: 20190920143050) do
   create_table "campaigns", force: :cascade do |t|
     t.string   "name"
     t.string   "track_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "campaing_translations", force: :cascade do |t|
-    t.integer  "campaing_id", null: false
-    t.string   "locale",      null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "title"
-    t.text     "description"
-    t.index ["campaing_id"], name: "index_campaing_translations_on_campaing_id", using: :btree
-    t.index ["locale"], name: "index_campaing_translations_on_locale", using: :btree
-  end
-
-  create_table "campaings", force: :cascade do |t|
-    t.datetime "starts_at"
-    t.datetime "ends_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -772,8 +759,6 @@ ActiveRecord::Schema.define(version: 20190920143050) do
     t.string   "title"
     t.text     "changelog"
     t.text     "body"
-    t.text     "body_html"
-    t.text     "toc_html"
     t.datetime "hidden_at"
     t.index ["hidden_at"], name: "index_legislation_draft_version_translations_on_hidden_at", using: :btree
     t.index ["legislation_draft_version_id"], name: "index_900e5ba94457606e69e89193db426e8ddff809bc", using: :btree
@@ -790,8 +775,6 @@ ActiveRecord::Schema.define(version: 20190920143050) do
     t.datetime "hidden_at"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
-    t.text     "body_html"
-    t.text     "toc_html"
     t.index ["hidden_at"], name: "index_legislation_draft_versions_on_hidden_at", using: :btree
     t.index ["legislation_process_id"], name: "index_legislation_draft_versions_on_legislation_process_id", using: :btree
     t.index ["status"], name: "index_legislation_draft_versions_on_status", using: :btree
@@ -1411,11 +1394,9 @@ ActiveRecord::Schema.define(version: 20190920143050) do
     t.integer  "community_id"
     t.datetime "published_at"
     t.boolean  "selected",                       default: false
-    t.integer  "campaing_id"
     t.index ["author_id", "hidden_at"], name: "index_proposals_on_author_id_and_hidden_at", using: :btree
     t.index ["author_id"], name: "index_proposals_on_author_id", using: :btree
     t.index ["cached_votes_up"], name: "index_proposals_on_cached_votes_up", using: :btree
-    t.index ["campaing_id"], name: "index_proposals_on_campaing_id", using: :btree
     t.index ["community_id"], name: "index_proposals_on_community_id", using: :btree
     t.index ["confidence_score"], name: "index_proposals_on_confidence_score", using: :btree
     t.index ["geozone_id"], name: "index_proposals_on_geozone_id", using: :btree
@@ -1545,14 +1526,6 @@ ActiveRecord::Schema.define(version: 20190920143050) do
     t.string   "locale"
   end
 
-  create_table "sitemessages", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "stats_versions", force: :cascade do |t|
     t.string   "process_type"
     t.integer  "process_id"
@@ -1672,12 +1645,6 @@ ActiveRecord::Schema.define(version: 20190920143050) do
     t.boolean  "public_interests",                          default: false
     t.boolean  "recommended_debates",                       default: true
     t.boolean  "recommended_proposals",                     default: true
-    t.string   "identify_yourself"
-    t.string   "education"
-    t.string   "residence"
-    t.string   "native_language"
-    t.string   "name"
-    t.string   "surname"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["geozone_id"], name: "index_users_on_geozone_id", using: :btree
@@ -1869,7 +1836,6 @@ ActiveRecord::Schema.define(version: 20190920143050) do
   add_foreign_key "poll_recounts", "poll_officer_assignments", column: "officer_assignment_id"
   add_foreign_key "poll_voters", "polls"
   add_foreign_key "polls", "budgets"
-  add_foreign_key "proposals", "campaings"
   add_foreign_key "proposals", "communities"
   add_foreign_key "related_content_scores", "related_contents"
   add_foreign_key "related_content_scores", "users"

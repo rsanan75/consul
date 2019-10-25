@@ -1,5 +1,4 @@
 class Admin::CommentsController < Admin::BaseController
-
   include DownloadSettingsHelper
 
   def index
@@ -7,11 +6,13 @@ class Admin::CommentsController < Admin::BaseController
 
     respond_to do |format|
       format.html
-      format.csv { send_data to_csv(Comment.sort_by_newest, Comment),
-                            type: "text/csv",
-                            disposition: "attachment",
-                            filename: "comments.csv" }
+
+      format.csv do
+        send_data to_csv(Comment.sort_by_newest, Comment),
+                  type: "text/csv",
+                  disposition: "attachment",
+                  filename: "comments.csv"
+      end
     end
   end
-
 end

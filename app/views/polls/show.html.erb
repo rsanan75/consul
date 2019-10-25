@@ -41,7 +41,7 @@
     <div class="row margin">
       <div class="small-12 medium-9 column">
         <h3><%= t("polls.show.more_info_title") %></h3>
-        <%= safe_html_with_links simple_format(@poll.description) %>
+        <%= auto_link_already_sanitized_html simple_format(@poll.description) %>
       </div>
 
       <% if false %>
@@ -67,7 +67,7 @@
                     <div id="answer_description_<%= answer.id %>"
                          class="answer-description short answer-left-divider" data-toggler="short">
                         <% if answer.description.present? %>
-                          <%= answer.description %>
+                          <%= wysiwyg(answer.description) %>
                         <% end %>
 
                         <% if answer.images.any? %>

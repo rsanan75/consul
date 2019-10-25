@@ -1,7 +1,6 @@
 require "rails_helper"
 
 describe "Admin download user emails" do
-
   let(:admin_user) { create(:user, newsletter: false, email: "admin@consul.dev") }
 
   before do
@@ -10,7 +9,6 @@ describe "Admin download user emails" do
   end
 
   context "Download only emails from segment users with newsletter flag & present email " do
-
     before do
       create(:user, email: "user@consul.dev")
 
@@ -33,17 +31,11 @@ describe "Admin download user emails" do
       end
 
       header = page.response_headers["Content-Disposition"]
-      expect(header).to match /^attachment/
-      expect(header).to match /filename="Administrators.csv"$/
+      expect(header).to match(/^attachment/)
+      expect(header).to match(/filename="Administrators.csv"$/)
 
       file_contents = page.body.split(",")
-      expect(file_contents.count).to eq(2)
-      expect(file_contents).to include("admin_news1@consul.dev")
-      expect(file_contents).to include("admin_news2@consul.dev")
-      expect(file_contents).not_to include("admin@consul.dev")
-      expect(file_contents).not_to include("user@consul.dev")
-      expect(file_contents).not_to include("no_news@consul.dev")
-      expect(file_contents).not_to include("no_email@consul.dev")
+      expect(file_contents).to match_array ["admin_news1@consul.dev", "admin_news2@consul.dev"]
     end
   end
 end

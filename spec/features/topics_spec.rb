@@ -1,13 +1,11 @@
 require "rails_helper"
 
 describe "Topics" do
-
   context "Concerns" do
-    it_behaves_like "notifiable in-app", Topic
+    it_behaves_like "notifiable in-app", :topic_with_community
   end
 
   context "New" do
-
     scenario "Create new topic link should redirect to sign up for anonymous users", :js do
       proposal = create(:proposal)
       community = proposal.community
@@ -49,11 +47,9 @@ describe "Topics" do
       expect(page).to have_content "Enjoy this space, the voices that fill it, it's yours too."
       expect(page).to have_button("Create topic")
     end
-
   end
 
   context "Create" do
-
     scenario "Can create a new topic", :js do
       proposal = create(:proposal)
       community = proposal.community
@@ -77,11 +73,9 @@ describe "Topics" do
 
       expect(page).to have_content "You do not have permission to carry out the action 'new' on topic."
     end
-
   end
 
   context "Edit" do
-
     scenario "Can edit a topic" do
       proposal = create(:proposal)
       community = proposal.community
@@ -109,11 +103,9 @@ describe "Topics" do
 
       expect(page).to have_content "You do not have permission to carry out the action 'edit' on topic."
     end
-
   end
 
   context "Show" do
-
     scenario "Can show topic" do
       proposal = create(:proposal)
       community = proposal.community
@@ -124,38 +116,31 @@ describe "Topics" do
       expect(page).to have_content community.proposal.title
       expect(page).to have_content topic.title
     end
-
   end
 
   context "Destroy" do
-
     scenario "Can destroy a topic" do
-      proposal = create(:proposal)
-      community = proposal.community
       user = create(:user)
-      topic = create(:topic, community: community, author: user)
+      topic = create(:topic, :with_community, author: user)
+
       login_as(user)
-      visit community_topic_path(community, topic)
+      visit community_topic_path(topic.community, topic)
 
       click_link "Delete topic"
 
       expect(page).to have_content "Topic deleted successfully."
       expect(page).not_to have_content topic.title
-      expect(page).to have_current_path(community_path(community))
+      expect(page).to have_current_path(community_path(topic.community))
     end
 
     scenario "Can not destroy a topic when user logged is not an author" do
-      proposal = create(:proposal)
-      community = proposal.community
-      topic = create(:topic, community: community)
       user = create(:user)
-      login_as(user)
+      topic = create(:topic, :with_community)
 
-      visit community_path(community)
+      login_as(user)
+      visit community_path(topic.community)
 
       expect(page).not_to have_link "Delete"
     end
-
   end
-
 end

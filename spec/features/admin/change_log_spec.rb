@@ -7,18 +7,16 @@ describe "Admin change log" do
   end
 
   context "Investments Participatory Budgets" do
-
     before do
-      @admin = create(:administrator)
-      login_as(@admin.user)
+      login_as(create(:administrator).user)
     end
 
     scenario "No changes" do
       budget_investment = create(:budget_investment,
+                                 :unfeasible,
+                                 unfeasibility_explanation: "It is impossible",
                                  price: 1234,
                                  price_first_year: 1000,
-                                 feasibility: "unfeasible",
-                                 unfeasibility_explanation: "It is impossible",
                                  administrator: administrator)
 
       visit admin_budget_budget_investments_path(budget_investment.budget)
@@ -34,10 +32,10 @@ describe "Admin change log" do
 
     scenario "Changes" do
       budget_investment = create(:budget_investment,
+                                 :unfeasible,
+                                 unfeasibility_explanation: "It is impossible",
                                  price: 1234,
                                  price_first_year: 1000,
-                                 feasibility: "unfeasible",
-                                 unfeasibility_explanation: "It is impossible",
                                  administrator: administrator)
 
       visit admin_budget_budget_investments_path(budget_investment.budget)
@@ -50,7 +48,7 @@ describe "Admin change log" do
       expect(page).to have_content(budget_investment.heading.name)
       expect(page).to have_content("There are not changes logged")
 
-      budget_investment.update(title: "test")
+      budget_investment.update!(title: "test")
 
       visit admin_budget_budget_investments_path(budget_investment.budget)
 
@@ -66,6 +64,5 @@ describe "Admin change log" do
       expect(page).to have_content("Edited at")
       expect(page).to have_content("Edited by")
     end
-
   end
 end

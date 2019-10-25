@@ -74,6 +74,22 @@ FactoryBot.define do
     trait :with_milestone_tags do
       after(:create) { |proposal| proposal.milestone_tags << create(:tag, :milestone) }
     end
+
+    trait :with_image do
+      after(:create) { |proposal| create(:image, imageable: proposal) }
+    end
+
+    transient do
+      voters { [] }
+      followers { [] }
+    end
+
+    after(:create) do |proposal, evaluator|
+      evaluator.voters.each { |voter| create(:vote, votable: proposal, voter: voter) }
+      evaluator.followers.each { |follower| create(:follow, followable: proposal, user: follower) }
+    end
+
+    factory :retired_proposal, traits: [:retired]
   end
 
   factory :proposal_notification do

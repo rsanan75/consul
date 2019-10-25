@@ -9,10 +9,7 @@
   <div class="row">
     <%= f.translatable_fields do |translations_form| %>
       <div class="small-12 medium-9 column end">
-        <%= translations_form.text_field :name,
-            label: t("activerecord.attributes.budget.name"),
-            maxlength: Budget.title_max_length,
-            placeholder: t("activerecord.attributes.budget.name") %>
+        <%= translations_form.text_field :name, maxlength: Budget.title_max_length %>
       </div>
     <% end %>
   </div>
@@ -95,7 +92,7 @@
               <td>
                 <%= link_to t("admin.budgets.edit.edit_phase"),
                             edit_admin_budget_budget_phase_path(@budget, phase),
-                            method: :get, class: "button hollow expanded" %>
+                            class: "button hollow expanded" %>
               </td>
             </tr>
           <% end %>

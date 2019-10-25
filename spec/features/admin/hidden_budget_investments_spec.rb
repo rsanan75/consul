@@ -1,10 +1,8 @@
 require "rails_helper"
 
 describe "Admin hidden budget investments" do
-
   let(:budget)  { create(:budget) }
-  let(:group)   { create(:budget_group, name: "Music", budget: budget) }
-  let(:heading) { create(:budget_heading, name: "Black metal", price: 666666, group: group) }
+  let(:heading) { create(:budget_heading, budget: budget, price: 666666) }
 
   before do
     admin = create(:administrator)
@@ -102,5 +100,4 @@ describe "Admin hidden budget investments" do
     expect(current_url).to include("filter=with_confirmed_hide")
     expect(current_url).to include("page=2")
   end
-
 end

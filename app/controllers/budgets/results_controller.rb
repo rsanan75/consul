@@ -13,10 +13,12 @@ module Budgets
 
       respond_to do |format|
         format.html
-        format.csv { send_data to_csv(@investments.compatible, Budget::Investment),
-                               type: "text/csv",
-                               disposition: "attachment",
-                               filename: "budget_investment_results.csv" }
+        format.csv do
+          send_data to_csv(@investments.compatible, Budget::Investment),
+                    type: "text/csv",
+                    disposition: "attachment",
+                    filename: "budget_investment_results.csv"
+        end
       end
     end
 
@@ -32,6 +34,5 @@ module Budgets
           @heading = headings.find_by_slug_or_id(params[:heading_id]) || headings.first
         end
       end
-
   end
 end

@@ -11,7 +11,7 @@ shared_examples "nested documentable" do |login_as_name, documentable_factory_na
   else
     let!(:documentable)           { create(documentable_factory_name, author: user) }
   end
-  let!(:user_to_login)          { send(login_as_name) }
+  let!(:user_to_login) { send(login_as_name) }
 
   before do
     create(:administrator, user: administrator)
@@ -22,7 +22,6 @@ shared_examples "nested documentable" do |login_as_name, documentable_factory_na
   end
 
   describe "at #{path}" do
-
     scenario "Should show new document link when max documents allowed limit is not reached" do
       login_as user_to_login
       visit send(path, arguments)
@@ -251,10 +250,9 @@ shared_examples "nested documentable" do |login_as_name, documentable_factory_na
     end
 
     if path.include? "edit"
-
       scenario "Should show persisted documents and remove nested_field" do
-        login_as user_to_login
         create(:document, documentable: documentable)
+        login_as user_to_login
         visit send(path, arguments)
 
         expect(page).to have_css ".document", count: 1
@@ -262,16 +260,16 @@ shared_examples "nested documentable" do |login_as_name, documentable_factory_na
 
       scenario "Should not show add document button when
                 documentable has reached maximum of documents allowed", :js do
-        login_as user_to_login
         create_list(:document, documentable.class.max_documents_allowed, documentable: documentable)
+        login_as user_to_login
         visit send(path, arguments)
 
         expect(page).to have_css "#new_document_link", visible: false
       end
 
       scenario "Should show add document button after destroy one document", :js do
-        login_as user_to_login
         create_list(:document, documentable.class.max_documents_allowed, documentable: documentable)
+        login_as user_to_login
         visit send(path, arguments)
         last_document = all("#nested-documents .document").last
         within last_document do
@@ -282,23 +280,18 @@ shared_examples "nested documentable" do |login_as_name, documentable_factory_na
       end
 
       scenario "Should remove nested field after remove document", :js do
-        login_as user_to_login
         create(:document, documentable: documentable)
+        login_as user_to_login
         visit send(path, arguments)
         click_on "Remove document"
 
         expect(page).not_to have_css ".document"
       end
-
     end
 
     describe "When allow attached documents setting is disabled" do
       before do
         Setting["feature.allow_attached_documents"] = false
-      end
-
-      after do
-        Setting["feature.allow_attached_documents"] = true
       end
 
       scenario "Add new document button should not be available" do
@@ -308,9 +301,7 @@ shared_examples "nested documentable" do |login_as_name, documentable_factory_na
         expect(page).not_to have_content("Add new document")
       end
     end
-
   end
-
 end
 
 def documentable_redirected_to_resource_show_or_navigate_to

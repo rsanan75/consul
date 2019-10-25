@@ -12,16 +12,18 @@ class Admin::Legislation::ProcessesController < Admin::Legislation::BaseControll
                  .page(params[:page])
     respond_to do |format|
       format.html
-      format.csv { send_data to_csv(process_for_download, Legislation::Process),
-                            type: "text/csv",
-                            disposition: "attachment",
-                            filename: "legislation_processes.csv" }
+      format.csv do
+        send_data to_csv(process_for_download, Legislation::Process),
+                  type: "text/csv",
+                  disposition: "attachment",
+                  filename: "legislation_processes.csv"
+      end
     end
   end
 
   def create
     if @process.save
-      link = legislation_process_path(@process).html_safe
+      link = legislation_process_path(@process)
       notice = t("admin.legislation.processes.create.notice", link: link)
       redirect_to edit_admin_legislation_process_path(@process), notice: notice
     else
@@ -34,7 +36,7 @@ class Admin::Legislation::ProcessesController < Admin::Legislation::BaseControll
     if @process.update(process_params)
       set_tag_list
 
-      link = legislation_process_path(@process).html_safe
+      link = legislation_process_path(@process)
       redirect_back(fallback_location: (request.referer || root_path),
                     notice: t("admin.legislation.processes.update.notice", link: link))
     else
@@ -44,7 +46,7 @@ class Admin::Legislation::ProcessesController < Admin::Legislation::BaseControll
   end
 
   def destroy
-    @process.destroy
+    @process.destroy!
     notice = t("admin.legislation.processes.destroy.notice")
     redirect_to admin_legislation_processes_path, notice: notice
   end
@@ -91,7 +93,7 @@ class Admin::Legislation::ProcessesController < Admin::Legislation::BaseControll
 
     def set_tag_list
       @process.set_tag_list_on(:customs, process_params[:custom_list])
-      @process.save
+      @process.save!
     end
 
     def resource

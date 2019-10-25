@@ -1,12 +1,13 @@
-require: rubocop-rspec
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
 
 AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
   Exclude:
-    - "db/migrate/**/*"
     - "db/schema.rb"
-  TargetRubyVersion: 2.3
   # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
   # to ignore them, so only the ones explicitly set in this file are enabled.
   DisabledByDefault: true
@@ -29,8 +30,35 @@ Capybara/FeatureMethods:
 FactoryBot/AttributeDefinedStatically:
   Enabled: true
 
+Layout/EmptyLineAfterGuardClause:
+  Enabled: true
+
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+
+Layout/ExtraSpacing:
+  Enabled: true
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: true
+
 Layout/IndentationConsistency:
-  EnforcedStyle: rails
+  EnforcedStyle: indented_internal_methods
 
 Layout/IndentationWidth:
   Enabled: true
@@ -40,6 +68,9 @@ Layout/EmptyLines:
 
 Layout/EndOfLine:
   EnforcedStyle: lf
+
+Layout/MultilineBlockLayout:
+  Enabled: true
 
 Layout/SpaceAfterColon:
   Enabled: true
@@ -114,7 +145,22 @@ Layout/TrailingBlankLines:
 Layout/TrailingWhitespace:
   Enabled: true
 
+Lint/AmbiguousRegexpLiteral:
+  Enabled: true
+
+Lint/DuplicateMethods:
+  Enabled: true
+
 Lint/LiteralAsCondition:
+  Enabled: true
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: true
+
+Lint/ShadowingOuterLocalVariable:
+  Enabled: true
+
+Lint/StringConversionInInterpolation:
   Enabled: true
 
 Lint/UselessAssignment:
@@ -133,11 +179,43 @@ Rails/ApplicationJob:
 Rails/ApplicationRecord:
   Enabled: true
 
+Rails/CreateTableWithTimestamps:
+  Enabled: true
+  Exclude:
+    - "db/migrate/201[5-8]*"
+
 Rails/Date:
+  Enabled: true
+
+Rails/DynamicFindBy:
+  Enabled: true
+  Severity: refactor
+
+Rails/EnumUniqueness:
+  Enabled: true
+
+Rails/EnvironmentComparison:
+  Enabled: true
+
+Rails/FindBy:
+  Enabled: true
+
+Rails/FindEach:
   Enabled: true
 
 Rails/HttpPositionalArguments:
   Enabled: true
+
+Rails/NotNullColumn:
+  Enabled: true
+  Exclude:
+    - "db/migrate/201[5-7]*"
+
+Rails/OutputSafety:
+  Enabled: true
+  Severity: warning
+  Exclude:
+    - app/helpers/text_with_links_helper.rb
 
 Rails/PluralizationGrammar:
   Enabled: true
@@ -151,9 +229,16 @@ Rails/RelativeDateConstant:
 Rails/RequestReferer:
   Enabled: true
 
+Rails/ReversibleMigration:
+  Enabled: true
+
 Rails/SafeNavigation:
   Enabled: true
   ConvertTry: true
+
+Rails/SaveBang:
+  Enabled: true
+  Severity: refactor
 
 Rails/TimeZone:
   Enabled: true
@@ -176,6 +261,10 @@ RSpec/AroundBlock:
 RSpec/BeforeAfterAll:
   Enabled: true
 
+RSpec/DescribedClass:
+  Enabled: true
+  EnforcedStyle: explicit
+
 RSpec/EmptyExampleGroup:
   Enabled: true
   Exclude:
@@ -194,6 +283,12 @@ RSpec/Focus:
 
 RSpec/HookArgument:
   Enabled: true
+
+RSpec/InstanceVariable:
+  Enabled: true
+  Exclude:
+    - spec/controllers/concerns/has_filters_spec.rb
+    - spec/controllers/concerns/has_orders_spec.rb
 
 RSpec/LetBeforeExamples:
   Enabled: true
@@ -219,7 +314,16 @@ RSpec/ScatteredSetup:
 RSpec/VoidExpect:
   Enabled: true
 
+Security/Eval:
+  Enabled: true
+
+Style/BlockDelimiters:
+  Enabled: true
+
 Style/PercentLiteralDelimiters:
+  Enabled: true
+
+Style/SafeNavigation:
   Enabled: true
 
 Style/StringLiterals:

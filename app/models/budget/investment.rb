@@ -97,13 +97,23 @@ class Budget
     scope :by_heading,        ->(heading_id)  { where(heading_id: heading_id) }
     scope :by_admin,          ->(admin_id)    { where(administrator_id: admin_id) }
     scope :by_tag,            ->(tag_name)    { tagged_with(tag_name) }
-    scope :by_valuator,       ->(valuator_id) { where("budget_valuator_assignments.valuator_id = ?", valuator_id).joins(:valuator_assignments) }
-    scope :by_tracker,        ->(tracker_id) { where("budget_tracker_assignments.tracker_id = ?",
-                                                     tracker_id).joins(:tracker_assignments) }
-    scope :by_valuator_group, ->(valuator_group_id) { where("budget_valuator_group_assignments.valuator_group_id = ?", valuator_group_id).joins(:valuator_group_assignments) }
 
     scope :for_render, -> { includes(:heading) }
 
+    def self.by_valuator(valuator_id)
+      where("budget_valuator_assignments.valuator_id = ?", valuator_id).joins(:valuator_assignments)
+    end
+
+    def self.by_tracker(tracker_id)
+      where("budget_tracker_assignments.tracker_id = ?", tracker_id).joins(:tracker_assignments)
+    end
+
+    def self.by_valuator_group(valuator_group_id)
+      joins(:valuator_group_assignments).
+        where("budget_valuator_group_assignments.valuator_group_id = ?", valuator_group_id)
+    end
+
+    before_create :set_original_heading_id
     before_save :calculate_confidence_score
     after_save :recalculate_heading_winners
     before_validation :set_responsible_name
@@ -141,10 +151,10 @@ class Budget
       results = results.by_valuator(params[:valuator_id])                  if params[:valuator_id].present?
       results = results.by_valuator_group(params[:valuator_group_id])      if params[:valuator_group_id].present?
       results = results.by_admin(params[:administrator_id])                if params[:administrator_id].present?
+      results = results.search_by_title_or_id(params[:title_or_id].strip)  if params[:title_or_id]
       results = advanced_filters(params, results)                          if params[:advanced_filters].present?
-      results = search_by_title_or_id(params[:title_or_id].strip, results) if params[:title_or_id]
 
-      results = results.send(current_filter)                        if current_filter.present?
+      results = results.send(current_filter) if current_filter.present?
       results.includes(:heading, :group, :budget, administrator: :user, valuators: :user)
     end
 
@@ -190,11 +200,11 @@ class Budget
       results.where("budget_investments.id IN (?)", ids)
     end
 
-    def self.search_by_title_or_id(title_or_id, results)
-      return results.where(id: title_or_id) if title_or_id =~ /^[0-9]+$/
+    def self.search_by_title_or_id(title_or_id)
+      with_joins = with_translations(Globalize.fallbacks(I18n.locale))
 
-      results.with_translations(Globalize.fallbacks(I18n.locale)).
-        where("budget_investment_translations.title ILIKE ?", "%#{title_or_id}%")
+      with_joins.where(id: title_or_id).
+        or(with_joins.where("budget_investment_translations.title ILIKE ?", "%#{title_or_id}%"))
     end
 
     def searchable_values
@@ -246,7 +256,7 @@ class Budget
 
     def send_unfeasible_email
       Mailer.budget_investment_unfeasible(self).deliver_later
-      update(unfeasible_email_sent_at: Time.current)
+      update!(unfeasible_email_sent_at: Time.current)
     end
 
     def reason_for_not_being_selectable_by(user)
@@ -257,18 +267,19 @@ class Budget
     end
 
     def reason_for_not_being_ballotable_by(user, ballot)
-      return permission_problem(user)         if permission_problem?(user)
-      return :not_selected                    unless selected?
-      return :no_ballots_allowed              unless budget.balloting?
-      return :different_heading_assigned_html unless ballot.valid_heading?(heading)
-      return :not_enough_money_html           if ballot.present? && !enough_money?(ballot)
-      return :casted_offline                  if ballot.casted_offline?
+      return permission_problem(user)    if permission_problem?(user)
+      return :not_selected               unless selected?
+      return :no_ballots_allowed         unless budget.balloting?
+      return :different_heading_assigned unless ballot.valid_heading?(heading)
+      return :not_enough_money           if ballot.present? && !enough_money?(ballot)
+      return :casted_offline             if ballot.casted_offline?
     end
 
     def permission_problem(user)
       return :not_logged_in unless user
       return :organization  if user.organization?
       return :not_verified  unless user.can?(:vote, Budget::Investment)
+
       nil
     end
 
@@ -287,10 +298,6 @@ class Budget
 
     def can_vote_in_another_heading?(user)
       user.headings_voted_within_group(group).count < group.max_votable_headings
-    end
-
-    def headings_voted_by_user(user)
-      user.votes.for_budget_investments(budget.investments.where(group: group)).votables.map(&:heading_id).uniq
     end
 
     def voted_in?(heading, user)
@@ -402,6 +409,10 @@ class Budget
       def set_denormalized_ids
         self.group_id = heading&.group_id if heading_id_changed?
         self.budget_id ||= heading&.group&.budget_id
+      end
+
+      def set_original_heading_id
+        self.original_heading_id = heading_id
       end
 
       def change_log

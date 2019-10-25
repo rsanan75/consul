@@ -52,7 +52,7 @@ module Abilities
       can :suggest, Debate
       can :suggest, Proposal
       can :suggest, Legislation::Proposal
-      can :suggest, ActsAsTaggableOn::Tag
+      can :suggest, Tag
 
       can [:flag, :unflag], Comment
       cannot [:flag, :unflag], Comment, user_id: user.id
@@ -95,6 +95,8 @@ module Abilities
         can :create, Legislation::Answer
 
         can :create, Budget::Investment,               budget: { phase: "accepting" }
+        can :edit, Budget::Investment,                 budget: { phase: "accepting" }, author_id: user.id
+        can :update, Budget::Investment,               budget: { phase: "accepting" }, author_id: user.id
         can :suggest, Budget::Investment,              budget: { phase: "accepting" }
         can :destroy, Budget::Investment,              budget: { phase: ["accepting", "reviewing"] }, author_id: user.id
         can :vote, Budget::Investment,                 budget: { phase: "selecting" }

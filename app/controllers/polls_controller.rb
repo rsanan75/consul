@@ -25,7 +25,6 @@ class PollsController < ApplicationController
                                                     .where.not(description: "").order(:given_order)
 
     @answers_by_question_id = {}
-    poll_answers = ::Poll::Answer.by_question(@poll.question_ids).by_author(current_user&.id)
 
     @last_pair_question_answers = {}
     @questions.each do |question|
@@ -79,5 +78,4 @@ class PollsController < ApplicationController
     def generate_and_store_new_pair(question)
       Poll::PairAnswer.generate_pair(question, current_user)
     end
-
 end
