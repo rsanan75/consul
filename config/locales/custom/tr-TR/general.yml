@@ -586,11 +586,12 @@ tr:
         remove_answer: Cevabı kaldır
     poster:
       index:
-        title: Önerimi desteklemek
-        poster_subtitle: "için harekete geçin! ;)"
-        intro_text_html: "Daha iyi bir Kıbrıs için önerimi Pusula Platform’unda paylaştım. Sizin desteğinizle, önerim gerçekleşmeye bir adım daha yaklaşacak."
+        title: poster önizlemesi 
+        poster_title: "ÖNERİMİ"
+        poster_subtitle: "DESTEKLEYİN!  ;)"
+        intro_text_html: "Pusula’da önerimi paylaştım ve gerçekleşmesi için desteğinize ihtiyacım var! Platform’da sadece birkaç tıklama ile önerimi destekleyebilirsiniz!"
         proposal_code: "Öneri kodu: %{code}"
-        support: Önerimi destekle
+        support: "  "
         footer_html: "<strong> %{link} </strong> adresine giderek bu öneriyi destekleyebilirsiniz. Teşekkürler!"
       new:
         title: Önerinizin görseli

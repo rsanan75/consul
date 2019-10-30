@@ -592,11 +592,11 @@ en:
     poster:
       index:
         title: Poster preview
-        poster_title: "Take action to support "
-        poster_subtitle: "my proposal! ;)"
-        intro_text_html: "<strong>I have submitted my proposal on the Pusula/ Ππούσουλας Platform for a better Cyprus. Through your support, my proposal is one step closer to becoming a reality."
+        poster_title: "SUPPORT MY "
+        poster_subtitle: "PROPOSAL! ;)"
+        intro_text_html: "I have submitted my proposal on Pusula/ Ππούσουλας and I need your support to make it a reality! With just a few clicks on the Platform, you can support my idea!  "
         proposal_code: "Code of the proposal: %{code}"
-        support: Support my proposal
+        support: "  "
         footer_html: "<strong>Visit %{link} and support this proposal.</strong> Thank you!"
       new:
         title: Poster of your proposal

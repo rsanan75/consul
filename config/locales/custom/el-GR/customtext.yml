@@ -7,14 +7,14 @@ el:
       poll_title: Ψηφίστε 
       main_title: Ονειρευτείτε μια καλύτερη Κύπρο. Μαζί κάνουμε τα όνειρα σας πραγματικότητα.   
     proposal_pages:
-      created_date_label: Created Date GR
-      tags_label: Tags
+      created_date_label: Ημερομηνία δημιουργίας
+      tags_label: Ετικέτες 
       proposal_shortlink_label: Προβολή Προτάσεων
       active_tab_label: Ενεργά
       completed_tab_label: Ολοκληρωμένα
       description_note: (έως 6,000 χαρακτήρες)
     common_forms:
-      mandatory_form: Bu alanları doldurmanız gerekiyor.
+      mandatory_form: Όλα τα πεδία είναι υποχρεωτικά
     sitemessages:
       page_title: ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ
       tagline: Βοηθήστε την Κύπρο να βρει τον Ππούσουλα της και κάντε τις ιδέες σας πραγματικότητα!
@@ -24,8 +24,8 @@ el:
       label_email: Email
       label_message: Το μήνυμά σας
       label_date: Ημερομηνία υποβολής
-      label_submit: Gönder
-      connect_with: Bizimle iletişime geçin
+      label_submit: Υποβολή
+      connect_with: Συνδεθείτε μαζί μας
       admin_label_message: μήνυμά
     registration_page:
       general_click_here: Κάντε κλικ ΕΔΩ
@@ -44,8 +44,8 @@ el:
       label_native_language: Μητρική Γλώσσα 
       label_education: Εκπαίδευση 
       label_education_suffix:   – pick highest level achieved
-      label_user_id: User ID
-      label_created: Created
+      label_user_id: Αριθμός Ταυτότητας Χρήστη
+      label_created: Δημιουργήθηκε 
       select_options_gender:
         male: Γυναίκα
         female: Άντρας 
@@ -85,10 +85,10 @@ el:
         other: Άλλο
     campaigns:
       title: ΚΑΛΕΣΜΑ ΥΠΟΒΟΛΗΣ ΠΡΟΤΑΣΕΩΝ
-      retired_title: Retired Campaigns
-      end_date: Ended on
+      retired_title: Αποσυρμένα Καλέσματα Υποβολής Προτάσεων
+      end_date: Ολοκληρώθηκε
     admin:
       sitemessages:
         title: Επικοινωνήστε μαζί μας
       download_users:
-        title: Download users
+        title: Πραγματοποίηση λήψης χρηστών 

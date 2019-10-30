@@ -7,8 +7,8 @@ tr:
       poll_title: Önerilere oy ver
       main_title: Siz daha iyi bir Kıbrıs hayal edin, hep birlikte gerçekleştirelim.
     proposal_pages:
-      created_date_label: Paylaşıldığı tarih
-      tags_label: Tags
+      created_date_label: Oluşturma tarihi
+      tags_label: Etiketler
       proposal_shortlink_label: Önerileri görüntüle
       active_tab_label: Etkin
       completed_tab_label: Tamamlanmış
@@ -44,8 +44,8 @@ tr:
       label_native_language: Ana dil
       label_education: Eğitim durumu 
       label_education_suffix:  – tamamladığınız en yüksek dereceyi seçiniz
-      label_user_id: User ID
-      label_created: Created
+      label_user_id: Kullanıcı kodu
+      label_created: Oluşturuldu
       select_options_gender:
         male: Erkek 
         female: Kadın
@@ -85,10 +85,10 @@ tr:
         other: Diğer
     campaigns:
       title: ÖNERİ ÇAĞRISI
-      retired_title: Retired Campaigns
-      end_date: Ended on
+      retired_title: Tamamlanmış Öneri Çağrıları
+      end_date: Tamamlanma tarihi
     admin:
       sitemessages:
         title: Bize ulaşın listesi
       download_users:
-        title: Download users
+        title: Kullanıcıları indir
