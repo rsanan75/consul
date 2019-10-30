@@ -594,10 +594,10 @@ en:
         title: Poster preview
         poster_title: "SUPPORT MY "
         poster_subtitle: "PROPOSAL! ;)"
-        intro_text_html: "I have submitted my proposal on Pusula/ Ππούσουλας and I need your support to make it a reality! With just a few clicks on the Platform, you can support my idea!  "
+        intro_text: "I have submitted my proposal on Pusula/ Ππούσουλας and I need your support to make it a reality! With just a few clicks on the Platform, you can support my idea!  "
         proposal_code: "Code of the proposal: %{code}"
         support: "  "
-        footer_html: "<strong>Visit %{link} and support this proposal.</strong> Thank you!"
+        footer: "<strong>Visit %{link} and support this proposal.</strong> Thank you!"
       new:
         title: Poster of your proposal
       options:

@@ -589,10 +589,10 @@ tr:
         title: poster önizlemesi 
         poster_title: "ÖNERİMİ"
         poster_subtitle: "DESTEKLEYİN!  ;)"
-        intro_text_html: "Pusula’da önerimi paylaştım ve gerçekleşmesi için desteğinize ihtiyacım var! Platform’da sadece birkaç tıklama ile önerimi destekleyebilirsiniz!"
+        intro_text: "Pusula’da önerimi paylaştım ve gerçekleşmesi için desteğinize ihtiyacım var! Platform’da sadece birkaç tıklama ile önerimi destekleyebilirsiniz!"
         proposal_code: "Öneri kodu: %{code}"
         support: "  "
-        footer_html: "<strong> %{link} </strong> adresine giderek bu öneriyi destekleyebilirsiniz. Teşekkürler!"
+        footer: "<strong> %{link} </strong> adresine giderek bu öneriyi destekleyebilirsiniz. Teşekkürler!"
       new:
         title: Önerinizin görseli
       options:
