@@ -984,7 +984,7 @@ en:
     add: "Add related content"
     label: "Link to related content"
     placeholder: "%{url}"
-    help: "You can add links of %{models} inside of %{org}."
+    help: "You can add links to articles, blogs, videos, etc."
     submit: "Add"
     error: "Link not valid. Remember to start with %{url}."
     error_itself: "Link not valid. You cannot relate a content to itself."

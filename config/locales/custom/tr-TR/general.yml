@@ -977,7 +977,7 @@ tr:
     add: "İlgili içerik ekle"
     label: "İlgili içeriğe bağlantı"
     placeholder: "%{url}"
-    help: "Siz %{org} içinden %{models} bağlantıları ekleyebilirsiniz."
+    help: "Makaleler, bloglar ve videolarla ilgili bağlantılar ekleyebilirsiniz."
     submit: "Ekle"
     error: "Bağlantı geçerli değil. %{url} ile başlamayı unutmayın."
     error_itself: "Bağlantı geçerli değil. Bir içeriği kendisiyle ilişkilendiremezsiniz."

@@ -7,7 +7,7 @@ el:
       confirm: Είστε βέβαιοι;
       confirm_hide: Επιβεβαίωση μέτρησης
       hide: Απόκρυψη
-      hide_author: Απόκρυψη συντάκτη
+      hide_author: Απόκρυψη δημιουργού
       restore: Επαναφορά
       mark_featured: Προτεινόμενα
       unmark_featured: Ξεμαρκάρισμα των επιλεγμένων

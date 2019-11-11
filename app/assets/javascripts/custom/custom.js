@@ -28,4 +28,10 @@ jQuery(document).ready(function () {
   jQuery('.menu-icon').on('click', function () {
     jQuery('#responsive-menu').toggle();
   });
+  if (jQuery('.proposals-listing').length) {
+    jQuery('ul.tags li').each(function () {
+      jQuery('ul.categories').append(jQuery(this).clone());
+    });
+  }
+  
 });

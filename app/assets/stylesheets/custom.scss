@@ -1216,6 +1216,12 @@ details.retired-campaign summary {
     background: #e7f2fc;
     padding: 10px;
 }
+.categories li.inline-block {
+    margin: 0 10px;
+}
+a[aria-controls="tab-milestones"] {
+    display: none;
+}
 h6.campaign-title-preview {
     display: inline-block;
 }

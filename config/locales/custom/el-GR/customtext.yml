@@ -30,7 +30,7 @@ el:
     registration_page:
       general_click_here: Κάντε κλικ ΕΔΩ
       select_placeholder: Επέλεξε ένα
-      welcome_title: Καλως ΗΡΘΑΤΕ!
+      welcome_title: ’Καλώς Ήρθατε!
       page_title: Δημιουργήστε το λογαριασμό σας
       welcome_subtitle: Βοηθήστε την Κύπρο να βρει τον Ππούσουλα της και κάντε τις ιδέες σας πραγματικότητα! 
       mandatory_text: Ολα τα πεδία είναι υποχρεωτικά.
@@ -42,8 +42,8 @@ el:
       label_date_of_birth: Ημερομηνία Γέννησης
       label_gender: Φύλο
       label_native_language: Μητρική Γλώσσα 
-      label_education: Εκπαίδευση 
-      label_education_suffix:   – pick highest level achieved
+      label_education: Εκπαίδευση - 
+      label_education_suffix: επιλέξτε το υψηλότερο επίπεδο μόρφωσης σας 
       label_user_id: Αριθμός Ταυτότητας Χρήστη
       label_created: Δημιουργήθηκε 
       select_options_gender:

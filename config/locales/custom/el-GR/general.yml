@@ -2,8 +2,8 @@ el:
   account:
     show:
       change_credentials_link: Αλλαγή των στοιχείων πρόσβασης μου
-      email_on_comment_label: Επιθυμώ να λαμβάνω ειδοποίηση μέσω email όταν κάποιος σχολιάζει προτάσεις ή συζητήσεις μου.
-      email_on_comment_reply_label: Επιθυμώ να λαμβάνω ειδοποίηση μέσω email όταν κάποιος απαντά σε σχόλια μου.
+      email_on_comment_label: Επιθυμώ να λαμβάνω ειδοποίηση μέσω e-mail όταν κάποιος χρήστης εισαγάγει σχόλιο στις προτάσεις ή συζητήσεις μου.
+      email_on_comment_reply_label: Επιθυμώ να λαμβάνω ειδοποίηση μέσω e-mail όταν κάποιος χρήστης απαντάει σε σχόλιο μου
       erase_account_link: Διαγράψτε το λογαριασμό μου
       finish_verification: Ολοκλήρωση επιβεβαίωσης
       notifications: Ειδοποιήσεις
@@ -11,20 +11,20 @@ el:
       organization_responsible_name_placeholder: Εκπρόσωπος της οργάνωσης/συλλόγου
       personal: Προσωπικά στοιχεία
       phone_number_label: Αριθμός τηλεφώνου
-      public_activity_label: Επιθυμώ η λίστα των δραστηριοτήτων μου να εμφανίζεται δημοσίως.
-      public_interests_label: Επιθυμώ οι ετικέτες των στοιχείων που ακολουθώ να εμφανίζονται δημοσίως
+      public_activity_label: Να εμφανίζεται η  λίστα των δράσεων μου δημόσια
+      public_interests_label: Να εμφανίζονται τα στοιχεία που ακολουθώ δημόσια
       public_interests_my_title_list: Ετικέτες στοιχείων που ακολουθείτε
       public_interests_user_title_list: Ετικέτες στοιχείων που ακολουθεί αυτός ο χρήστης
       save_changes_submit: ΑΠΟΘΗΚΕΥΣΗ ΑΛΛΑΓΩΝ
-      subscription_to_website_newsletter_label: Επιθυμώ να λαμβάνω ειδοποίηση μέσω emai για γενικές πληροφορίες σχετικές με την ιστοσελίδα.
-      email_on_direct_message_label: Επιθυμώ να λαμβάνω email σχετικά με τα άμεσα μηνύματα
-      email_digest_label: Επιθυμώ να λαμβάνω μέσω email περίληψη των ειδοποιήσεων σχετικά με τις πρότασης.
+      subscription_to_website_newsletter_label: Επιθυμώ να λαμβάνω μέσω e-mail πληροφορίες σχετικά με τον Ππούσουλα
+      email_on_direct_message_label: Επιθυμώ να λαμβάνω  ειδοποίηση μέσω e-mail όταν κάποιος χρήστης μου στείλει προσωπικό μήνυμα 
+      email_digest_label: Επιθυμώ να λαμβάνω περίληψη των ειδοποιήσεων σχετικά με τις προτάσεις
       official_position_badge_label: Εμφάνιση σήματος επίσημης θέσης
       recommendations: Συστάσεις
       show_debates_recommendations: Εμφάνιση συστάσεων για συζητήσεις
       show_proposals_recommendations: Προβολή συστάσεων για προτάσεις
       title: Ο λογαριασμός μου
-      user_permission_debates: Συμμετέχετε στις συζητήσεις
+      user_permission_debates: Συμμετάσχετε στις συζητήσεις
       user_permission_info: Με το λογαριασμό σας, μπορείτε να...
       user_permission_proposal: Δημιουργήσετε νέες προτάσεις
       user_permission_support_proposal: Υποστήριξετε προτάσεις
@@ -44,7 +44,7 @@ el:
     verify_account: επαλήθευση του λογαριασμού σας
     comment:
       admin: Διαχειριστής
-      author: Συντάκτης
+      author: Δημιουργός
       deleted: Αυτό το σχόλιο έχει διαγραφεί
       moderator: Συντονιστής
       responses:
@@ -73,7 +73,7 @@ el:
       newest: Πιο πρόσφατα πρώτα
       oldest: Παλαιότερα πρώτα
       most_commented: Οι περισσότεροι σχολίασαν
-    select_order: Ταξινόμηση κατά
+    select_order: Ταξινόμηση
     show:
       return_to_commentable: "Πήγαινε πίσω στο "
   comments_helper:
@@ -166,7 +166,7 @@ el:
       flag: Αυτή η συζήτηση έχει επισημανθεί ως ακατάλληλη από πολλούς χρήστες.
       login_to_comment: Πρέπει να %{signin} ή %{signup} για να αφήσετε ένα σχόλιο.
       share: Μοιραστείτε
-      author: Συγγραφέας
+      author: Δημιουργός
     update:
       form:
         submit_button: Αποθηκεύστε τις αλλαγές
@@ -469,7 +469,7 @@ el:
       no_notifications: "Η παρούσα πρόταση δεν έχει ειδοποιήσεις."
       embed_video_title: "Βίντεο στην %{proposal}"
       title_video_url: "Εξωτερικό βίντεο"
-      author: Συγγραφέας
+      author: Δημιουργός
       draft: Προσχέδιο πρότασης. Δεν είναι ακόμα δυνατή η υποστήριξη, ούτε εμφανίζεται στη λίστα των προτάσεων.
     update:
       form:
@@ -749,9 +749,9 @@ el:
     check_all: Όλα
     check_none: Κανένα
     collective: Συλλογικός
-    flag: Επισήμανση ως ακατάλληλου
+    flag: Επισήμανση ως ακατάλληλο
     follow: "Ακολουθήστε"
-    following: "Ακολουθεί"
+    following: "Ακολουθείτε"
     follow_entity: "Ακολουθήστε %{entity}"
     followable:
       budget_investment:
@@ -966,10 +966,10 @@ el:
     timestamp_error_message: "Λυπούμαστε, αυτό ήταν πολύ γρήγορο! Υποβάλετε ξανά."
   related_content:
     title: "Σχετικό περιεχόμενο"
-    add: "Πρόσθεσε σχετικό περιεχόμενο"
+    add: "Προσθέστε σχετικό περιεχόμενο"
     label: "Σύνδεσμος για σχετικό περιεχόμενο"
     placeholder: "%{url}"
-    help: "Μπορείτε να προσθέσετε συνδέσμους %{models} μέσα στο %{org}."
+    help: "Προσθήκη συνδέσμων σε άρθρα, μπλογκ, βίντεο, κτλ."
     submit: "Προσθέστε"
     error: "Ο σύνδεσμος δεν είναι έγκυρος. Θυμηθείτε να ξεκινήσετε με %{url}."
     error_itself: "Ο σύνδεσμος δεν είναι έγκυρος. Δεν μπορείτε να συσχετίσετε ένα περιεχόμενο με τον εαυτό του."
@@ -1005,7 +1005,7 @@ el:
   communities:
     show:
       surveys: Δημοσκοπήσεις
-      complete_survey: Ολοκλήρωση της δημοσκόπησης
+      complete_survey: ΣΥΜΜΕΤΟΧΗ ΣΤΗ ΔΗΜΟΣΚΟΠΗΣΗ
     subnav:
       surveys: Δημοσκοπήσεις
     poll:
