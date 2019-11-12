@@ -4,8 +4,9 @@
 
   <%= render "shared/errors", resource: @proposal %>
 
-  <div class="small-12 medium-6 column">
-    <%= f.select :campaing_id, campaing_select_options %>
+  <div class="small-12 medium-12 column">
+    <%=f.label :campaing_id, t("customtext.campaigns.admin_title") %>
+    <%= f.select :campaing_id, campaing_select_options, label: false %>
   </div>
 
   <div class="row column">
@@ -13,7 +14,7 @@
       <div class="small-12 column">
         <%= translations_form.text_field :title,
               maxlength: Proposal.title_max_length,
-              placeholder: t("proposals.form.proposal_title"),
+              placeholder: t("customtext.proposals_edit.proposal_title"),
               data: { js_suggest_result: "js_suggest_result",
                       js_suggest: ".js-suggest",
                       js_url: suggest_proposals_path } %>

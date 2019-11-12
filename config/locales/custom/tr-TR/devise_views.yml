@@ -3,8 +3,8 @@ tr:
     confirmations:
       new:
         email_label: E-posta
-        submit: Tekrar-gönder talimatları
-        title: Tekrar-gönder onay talimatları
+        submit: TALİMATLARI TEKRAR GÖNDER
+        title: Onay talimatlarını tekrar gönder
       show:
         instructions_html: Hesabı e-posta ile onaylama %{email}
         new_password_confirmation_label: Erişim şifresini tekrarla
@@ -41,7 +41,7 @@ tr:
         new:
           email_label: E-posta
           organization_name_label: Organizasyonun adı
-          password_confirmation_label: Şifreyi onayla
+          password_confirmation_label: Şifreyi tekrar yaz
           password_label: Şifre
           phone_number_label: Telefon numarası
           responsible_name_label: Topluluktan sorumlu kişinin tam adı
@@ -109,12 +109,12 @@ tr:
           email_label: E-posta
           organization_signup: Bir organizasyonu ya da topluluğu mu temsil ediyorsunuz? %{signup_link}
           organization_signup_link: Buradan kaydolun
-          password_confirmation_label: Şifreyi onayla
+          password_confirmation_label: Şifreyi tekrar yaz
           password_label: Şifre
           redeemable_code: Doğrulama kodu e-posta ile alındı (isteğe bağlı)
           submit: Kayıt Ol
           terms: Kayıt yaparak %{terms} kabul etmiş sayılırsınız
-          terms_link: şartlar ve kullanım koşulları
+          terms_link: şartlar ve kullanım koşullarını 
           terms_title: Kayıt yaparak şartları ve kullanım koşullarını kabul etmiş sayılırsınız
           title: Kayıt Ol
           username_is_available: Kullanıcı adı kullanılabilir

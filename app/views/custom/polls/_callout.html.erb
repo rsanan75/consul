@@ -1,0 +1,24 @@
+<% unless can?(:answer, @poll) %>
+  <% if current_user.nil? %>
+    <div class="callout primary">
+      <%= t("customtext.login_to_poll.start") %>
+      <%= link_to t("customtext.unauthenticated.login"), new_user_session_path %>
+      <%= t("customtext.login_to_poll.middle") %>
+      <%= link_to t("customtext.unauthenticated.signup"), new_user_registration_path %>
+      <%= t("customtext.login_to_poll.end") %>
+    </div>
+  <% elsif current_user.unverified? %>
+    <div class="callout warning">
+      <%= sanitize(t("polls.show.cant_answer_verify",
+            verify_link: link_to(t("polls.show.verify_link"), verification_path))) %>
+    </div>
+  <% elsif @poll.expired? %>
+    <div class="callout alert">
+      <%= t("polls.show.cant_answer_expired") %>
+    </div>
+  <% else %>
+    <div class="callout warning">
+      <%= t("polls.show.cant_answer_wrong_geozone") %>
+    </div>
+  <% end %>
+<% end %>

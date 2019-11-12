@@ -9,7 +9,7 @@ tr:
       attachment_label: Belge seç
       delete_button: Belgeyi kaldır
       cancel_button: İptal
-      note: "Her biri en fazla %{max_file_size} MB olmak üzere, %{accepted_content_types} formatında %{max_documents_allowed} adet belge ekleyebilirsiniz."
+      note: "Μπορείτε να ανεβάσετε μέχρι 3 έγγραφα των ακόλουθων τύπων περιεχομένου: %{accepted_content_types}, %{max_file_size} MB ανά αρχείο."
       add_new_document: Yeni belge ekle
     actions:
       destroy:

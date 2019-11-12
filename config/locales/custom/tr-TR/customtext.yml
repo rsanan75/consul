@@ -1,5 +1,20 @@
 tr:
   customtext:
+    unauthenticated:
+      login: συoturum açmanızνδεθείτε
+      signup: kayıt olmanız
+    login_to_comment:
+      start: Devam etmek için  
+      middle: veya 
+      end: gerekir.
+    login_to_vote:
+      start: Devam etmek için 
+      middle: veya  
+      end: gerekir.
+    login_to_vote:
+      start: Devam etmek için 
+      middle: veya  
+      end: gerekir.
     footer:
       legal: Yasal çerçeve
     blue_section:
@@ -14,7 +29,7 @@ tr:
       completed_tab_label: Tamamlanmış
       description_note: (En fazla 6,000 karakter)
     common_forms:
-      mandatory_form:  Όλα τα πεδία είναι υποχρεωτικά
+      mandatory_form:  Tüm alanları doldurmanız gerekiyor.
     sitemessages:
       page_title: İLETİŞİM FORMU
       tagline: Fikirlerinizi hayata geçirirken, Kıbrıs'ın yön bulmasına yardımcı olun!
@@ -24,20 +39,20 @@ tr:
       label_email: E-posta adresi
       label_message: Bize mesajınız
       label_date: İletilen Tarih
-      label_submit: Αποστολή’
-      connect_with: Συνδεθείτε μαζί μάς
+      label_submit: Gönder
+      connect_with: Bizimle iletişime geçin
       admin_label_message: Mesajınız
     registration_page:
-      general_click_here: Buraya TIKLAYIN
+      general_click_here: Buraya tıklayın
       select_placeholder: Birini seç
       welcome_title: Hoşgeldiniz!
       page_title: Hesabını oluştur
       welcome_subtitle: Fikirlerinizi hayata geçirirken, Kıbrıs'ın yön bulmasına yardımcı olun!
-      mandatory_text: Tüm alanlar zorunlu.
-      age_consent: Bize kayıt olmak için 18 yaşında veya daha büyük olmanız gerekir
+      mandatory_text: Tüm alanların doldurulması zorunludur.
+      age_consent: Pusula’ya kayıt olmak için en az 18 yaşında olmanız gerekir.
       label_name: İsim 
       label_surname: Soyisim
-      label_residence: Yaşadığı yer
+      label_residence: İkamet yeri
       label_identify_yourself: Kendinizi nasıl tanımlarsınız?
       label_date_of_birth: Doğum tarihi
       label_gender: Cinsiyet
@@ -87,6 +102,9 @@ tr:
       title: ÖNERİ ÇAĞRISI
       retired_title: Tamamlanmış Öneri Çağrıları
       end_date: Tamamlanma tarihi
+      admin_title: Öneri Çağrısı
+    proposals_edit:
+      proposal_title: Öneri başlığı
     admin:
       sitemessages:
         title: Bize ulaşın listesi

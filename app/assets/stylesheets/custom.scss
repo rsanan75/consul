@@ -396,7 +396,7 @@ hr.footer-devider {
 }
 }
 .login-box-left h2{
-    font-size: 48px;
+    font-size: 46px;
     color: #fff;
     font-weight: 800;
     text-align: center;
@@ -650,6 +650,7 @@ hr.footer-devider {
     padding: 15px;
     text-decoration: none;
     float: left;
+    text-transform: unset;
 }
 .auth-form {
     padding-top: 6rem;
@@ -1249,12 +1250,19 @@ min-height: 258px;
     font-size: 17px;
     margin: 0 auto;
 }
+.proposal-dashboard .button {
+    word-wrap: break-word;
+}
 form .checkbox, form .radio {
     display: inline;
 }
 .error {
     clear:both;
     float:left;
+}
+.dashboard-poster-preview .poster-header .intro {
+    text-align: center !important;
+    text-transform: unset;
 }
 @media print, screen and (min-width: 40em) {
     html[lang="el"] .subnavigation ul li {

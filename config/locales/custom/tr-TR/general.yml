@@ -25,11 +25,11 @@ tr:
       show_proposals_recommendations: Öneri tavsiyelerini göster
       title: Hesabım
       user_permission_debates: Tartışmalara katıl
-      user_permission_info: Hesabınızla şunları yapabilirsiniz...
+      user_permission_info: Hesabınızla yapabilecekleriniz…...
       user_permission_proposal: Yeni öneriler oluştur
       user_permission_support_proposal: Önerileri destekle
       user_permission_title: Katılım
-      user_permission_verify: Tüm eylemleri gerçekleştirmek için hesabınızı doğrulayın.
+      user_permission_verify: Yukarda belirtilen işlemler için hesabınızı doğrulayın.
       user_permission_verify_info: "* Sadece Pusula’daki kullanıcılar için."
       user_permission_votes: Son oylamaya katıl
       username_label: Kullanıcı adı
@@ -44,7 +44,7 @@ tr:
     verify_account: hesabınızı doğrulayın
     comment:
       admin: Yönetici
-      author: Fikir sahibi
+      author: Öneri sahibi
       deleted: Bu yorum silindi
       moderator: Moderatör
       responses:
@@ -175,7 +175,7 @@ tr:
       user_not_found: Kullanıcı bulunamadı
       invalid_date_range: "Geçersiz tarih aralığı"
   form:
-    accept_terms: Ben %{policy} ve %{conditions} 'ı kabul ediyorum
+    accept_terms: Ben %{policy} ve %{conditions} 'nı kabul ediyorum.
     accept_terms_title: Gizlilik Politikasını ve Kullanım Şartlarını ve koşullarını kabul ediyorum
     conditions: Kullanım şartları ve koşulları
     debate: Tartışma
@@ -213,7 +213,7 @@ tr:
       proposal_totals:
         active_resources: Aktif kaynaklar
         community: Toplumunuzdaki katılımcılar
-        show_proposal: Öneriyi göster
+        show_proposal: Öneriyi gör
         preview_proposal: Öneri önizlemesi
         current_goal: Mevcut hedef
         supports:
@@ -306,7 +306,7 @@ tr:
       name: Twitter
     info_sign_in: "Bununla oturum aç:"
     info_sign_up: "Bununla kaydol:"
-    or_fill: "Veya aşağıdaki formu doldur:"
+    or_fill: "Veya, aşağıdaki formu doldurun:"
   proposals:
     create:
       form:
@@ -326,7 +326,7 @@ tr:
       editing: Öneriyi düzenle
       form:
         submit_button: Değişiklikleri kaydet
-      show_link: Öneriyi göster
+      show_link: Öneriyi gör
     retire_form:
       title: Öneriyi geri çek
       warning: "Öneriyi çekseniz bile yine de destek almaya devam edebilir, ancak bu öneri ana listeden kaldırılacak ve yazarın söz konusu önerinin artık desteklenmemesi gerektiğini düşündüğünü belirten bir mesaj tüm kullanıcılar tarafından görülebilecektir"
@@ -439,7 +439,7 @@ tr:
       supports:
         zero: Destek yok
         one: 1 destek
-        other: "%{count} destekler"
+        other: "%{count} destek"
       votes:
         zero: Hiç oy yok
         one: 1 oy
@@ -469,7 +469,7 @@ tr:
       no_notifications: "Bu öneriyle ilgili herhangi bir bildirim bulunmamaktadır."
       embed_video_title: "%{proposal} ile ilgili video"
       title_video_url: "Harici video"
-      author: Fikir sahibi
+      author: Öneri sahibi
       draft: Öneri taslak aşamasında. Henüz destek alamıyor, teklif listesinde de görünmüyor.
     update:
       form:
@@ -479,12 +479,13 @@ tr:
       my_proposal: Önerimi düzenle
       progress: İlerleme
       resources: Kaynaklar
-      community: Toplum
+      community: Topluluk
       polls: Anketler
       mailing: E-posta
-      poster: Görsel
+      poster: Poster
       recommended_actions: Önerilen eylemler
       messages: Kullanıcılara mesajlar
+      related_content: İlgili içerik
     form:
       request: Talep
     create_request:
@@ -555,6 +556,7 @@ tr:
         create: Anket oluştur
         succesfull: Yanıt başarıyla oluşturuldu
         count:
+          zero: Henüz bir anket oluşturmadınız.
           one: '%{count} anket oluşturdunuz.'
           other: '%{count} anket oluşturdunuz.'
         links: Bağlantılar
@@ -586,7 +588,7 @@ tr:
         remove_answer: Cevabı kaldır
     poster:
       index:
-        title: poster önizlemesi 
+        title: Poster önizlemesi 
         poster_title: "ÖNERİMİ"
         poster_subtitle: "DESTEKLEYİN!  ;)"
         intro_text: "Pusula’da önerimi paylaştım ve gerçekleşmesi için desteğinize ihtiyacım var! Platform’da sadece birkaç tıklama ile önerimi destekleyebilirsiniz!"
@@ -594,7 +596,7 @@ tr:
         support: "  "
         footer: "<strong> %{link} </strong> adresine giderek bu öneriyi destekleyebilirsiniz. Teşekkürler!"
       new:
-        title: Önerinizin görseli
+        title: Önerinizin posteri
       options:
         preview: Önizleme
         download: İndir
@@ -604,23 +606,23 @@ tr:
       new:
         title: Gönderilecek e-posta örneği
       mailing_options:
-        send: '%{address}’e gönder'
+        send: '%{address} ADRESİNE GÖNDER'
         preview: Önizleme
       create:
         sent: E-posta gönderildi
     mailer:
       forward:
-        subtitle_html: "Başarmak için desteğinize <br> ihtiyacım var."
+        subtitle_html: "Pusula’daki önerimi<br> destekleyin!"
         support_button: Bu öneriyi destekle
         share_in: Paylaş
         hi: "Merhaba!"
-        introduction: Ben, daha iyi bir Kıbrıs için fikirlerimizi paylaşabileceğimiz Pusula Platformu’na katıldım. Yeni bir öneri paylaştım ve sizin desteğinize ihtiyacım var! 
-        support: "Önerimi okuduktan sonra yapmanız gereken tek şey ‘Bu öneriyi destekle’ butonuna tıklamak. Eğer isterseniz, önerimi sosyal medya üzerinde de paylaşabilirsiniz. En fazla oy alan öneri gerçeğe dönüştürülecek. Bunu aşarmam için bana destek olacağınızı umuyorum."
-        share: "Ayrıca önerimi sosyal medyada arkadaşlarınız, aileniz ve kişilerinizle paylaşırsanız harika olur!"
+        introduction: Ben, daha iyi bir Kıbrıs için önerilerimizi paylaşabileceğimiz Pusula Platformu’na katıldım. Önerimi paylaştım ve sizin desteğinize ihtiyacım var!
+        support: "Önerimi okuduktan sonra yapmanız gereken tek şey ‘Bu öneriyi destekle’ butonuna tıklamak. Eğer isterseniz, önerimi sosyal medya üzerinde de paylaşabilirsiniz. En fazla oy alan öneri gerçeğe dönüştürülecek. Bunu başarmam için bana destek olacağınızı umuyorum."
+        share: "Ayrıca önerimi sosyal medyada arkadaşlarınız, aileniz ve bağlantılarınızla paylaşırsanız çok sevinirim!"
   polls:
     all: "Tüm"
     no_dates: "tarih belirtilmemiş"
-    dates: "%{open_at} 'ten %{closed_at} 'e"
+    dates: "%{open_at} - %{closed_at}"
     final_date: "Son yeniden sayımlar/Sonuçlar"
     index:
       filters:
@@ -663,7 +665,7 @@ tr:
       comments_tab: Yorumlar
       login_to_comment: Yorum paylaşmak için %{signin} veya %{signup} yapmalısınız.
       signin: Oturum aç
-      signup: Kaydol
+      signup: Kayıt olun
       cant_answer_verify_html: "Cevaplamak için %{verify_link} yapmanız gerekiyor."
       verify_link: "hesabınızı doğrulayın"
       cant_answer_expired: "Bu anket tamamlandı."
@@ -695,7 +697,7 @@ tr:
   poll_questions:
     show:
       vote_answer: "Oy %{answer}"
-      voted: "%{answer} 'a oy verdiniz"
+      voted: "%{answer} önerisine oy verdiniz."
       add_answer: "Cevap ekle"
     description:
       multiple: "En fazla %{maximum} cevap seçebilirsiniz."
@@ -713,7 +715,7 @@ tr:
       title_label: "Başlık"
       body_label: "Mesaj"
       submit_button: "Mesaj gönder"
-      info_about_receivers_html: "Bu mesaj <strong>%{count} kişiye gönderilecek ve öneriler sayfasında yayınlanacaktır.<br> Mesajlar kullancılara doğrudan gönderilmez, tüm öneri bildirimlerini içeren ve düzenli olarak gönderilen bir e-posta aracılığıyla gönderilir."
+      info_about_receivers: "Bu mesaj <strong>%{count} kişiye</strong> gönderilecek ve %{proposal_page}nda yayınlanacaktır.<br> Mesajlar kullancılara doğrudan gönderilmez, tüm öneri bildirimlerini içeren ve düzenli olarak gönderilen bir e-posta aracılığıyla gönderilir."
       proposal_page: "öneri'ler sayfası"
     show:
       back: "Faaliyetlerime geri dön"
@@ -744,13 +746,21 @@ tr:
     author_info:
       author_deleted: Kullanıcı silindi
       email_deleted: E-posta silindi
+    translations:
+      select_language_prompt: Dil seçiniz
+      remove_language: Dili kaldır
+      add_language: Dil ekle
+      languages_in_use:
+        zero: "<span class='js-languages-count'>0</span> kullanılan dil"
+        one: "<span class='js-languages-count'>1</span> kullanılan dil"
+        other: "<span class='js-languages-count'>%{count}</span> kullanılan dil"
     back: Geri git
     check: Seç
     check_all: Tüm
     check_none: Yok
     collective: Kolektif
     flag: Uygunsuz olarak işaretle
-    follow: "Takip et"
+    follow: "TAKİP ET"
     following: "Takip ediliyor"
     follow_entity: "%{entity} Takip et"
     followable:
@@ -825,7 +835,7 @@ tr:
       select_language_prompt: Dil seç
       remove_language: Dil seçimini kaldır
       add_language: Dil ekle
-      languages_in_use_html:
+      languages_in_use:
         zero: "<span class='js-languages-count'>0</span> kullanılan diller"
         one: "<span class='js-languages-count'>1</span> kullanılan dil"
         other: "<span class='js-languages-count'>%{count}</span> kullanılan diller"
@@ -864,7 +874,7 @@ tr:
         verify_account: hesabınızı doğrulayın
         authenticate: Devam etmek için %{signin} veya %{signup} yapmalısınız.
         signin: oturum aç
-        signup: kaydol
+        signup: Kayıt olun
       show:
         receiver: Mesaj %{receiver} 'a gönderildi
     show:
@@ -913,7 +923,7 @@ tr:
     disagree: Kabul etmiyorum
     organizations: Organizasyonların oy kullanmalarına izin verilmez
     signin: Oturum aç
-    signup: Kaydol
+    signup: Kayıt olun
     supports: Destekler
     unauthenticated: Devam etmek için %{signin} veya %{signup} yapmalısınız.
     verified_only: Yalnızca doğrulanan kullanıcılar önerilere oy verebilir; %{verify_account}.
@@ -997,7 +1007,7 @@ tr:
       alt: Yorum yapmak istediğiniz metni seçin ve kalemle düğmeye basın.
       text: Bu belgeye yorum yapmak için %{sign_in} veya %{sign_up} yapmalısınız. Ardından yorumlamak istediğiniz metni seçin ve kalemle düğmeye basın.
       text_sign_in: oturum aç
-      text_sign_up: kaydol
+      text_sign_up: Kayıt olun
       title: Ben bu belgeye nasıl yorum yapabilirim?
   links:
     form:

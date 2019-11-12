@@ -57,4 +57,4 @@ el:
         recommendation_three: Απολαύστε αυτό το χώρο και τις φωνές που τον γεμίζουν. Ανήκει σε εσας επίσης.
   topics:
     show:
-      login_to_comment: Για σχολιάσετε %{signin} ή %{signup} 
+      login_to_comment: Για να συνεχίσετε, %{signin} στο λογαριασμό σας ή %{signup} στον Ππούσουλα.

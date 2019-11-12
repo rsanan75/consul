@@ -1,5 +1,20 @@
 en:
   customtext:
+    unauthenticated:
+      login: Sign in
+      signup: Sign up
+    login_to_comment:
+      start: You must 
+      middle: or 
+      end: to leave a comment.
+    login_to_vote:
+      start: You must 
+      middle: or 
+      end: to continue.
+    login_to_poll:
+      start: You must 
+      middle: or 
+      end: participate.
     footer:
       legal: Legal
     blue_section:
@@ -87,6 +102,9 @@ en:
       title: Campaigns
       retired_title: Retired Campaigns
       end_date: Ended on
+      admin_title: Campaign
+    proposals_edit:
+      proposal_title: Proposals title
     admin:
       sitemessages:
         title: Contact us list

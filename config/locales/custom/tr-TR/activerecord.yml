@@ -69,7 +69,7 @@ tr:
         one: Oy verme formu
         other: Oy verme formu
       proposal:
-        one: "Vatandaş önerisi"
+        one: "ÖNERİYİ "
         other: "Vatandaş önerileri"
       site_customization/page:
         one: Kişisel sayfa

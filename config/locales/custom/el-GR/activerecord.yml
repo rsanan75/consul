@@ -69,7 +69,7 @@ el:
         one: Φύλλο ψηφοφορίας
         other: Φύλλο ψηφοφορίας
       proposal:
-        one: "Πρόταση πολίτη"
+        one: "ΑΥΤΗ ΤΗΝ ΠΡΟΤΑΣΗ"
         other: "Πρόταση πολίτη"
       site_customization/page:
         one: Προσαρμοσμένη σελίδα

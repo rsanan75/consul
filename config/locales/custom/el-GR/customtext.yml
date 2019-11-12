@@ -1,5 +1,20 @@
 el:
   customtext:
+    unauthenticated:
+      login: συνδεθείτε
+      signup: εγγραφείτε
+    login_to_comment:
+      start: Για να προσθέσετε σχόλιο, 
+      middle: στο λογαριασμό σας ή 
+      end: στον Ππούσουλα. 
+    login_to_vote:
+      start: Για να συνεχίσετε, 
+      middle: στο λογαριασμό σας ή 
+      end: στον Ππούσουλα.
+    login_to_vote:
+      start: Για να συνεχίσετε, 
+      middle: στο λογαριασμό σας ή 
+      end: στον Ππούσουλα.
     footer:
       legal: Νομικό πλαίσιο
     blue_section:
@@ -87,6 +102,9 @@ el:
       title: ΚΑΛΕΣΜΑ ΥΠΟΒΟΛΗΣ ΠΡΟΤΑΣΕΩΝ
       retired_title: Αποσυρμένα Καλέσματα Υποβολής Προτάσεων
       end_date: Ολοκληρώθηκε
+      admin_title: Κάλεσμα Υποβολής Προτάσεων
+    proposals_edit:
+      proposal_title: Τίτλος πρότασης
     admin:
       sitemessages:
         title: Επικοινωνήστε μαζί μας

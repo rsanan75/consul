@@ -5,7 +5,7 @@ tr:
       description:
         proposal: Bu öneriyle iligli kullanıcı topluluğuna katıl.
         investment: Bu yatırımla ilgili kullanıcı topluluğuna katıl.
-      button_to_access: Topluluğa erişim
+      button_to_access: TOPLULUĞA KATIL
     show:
       title:
         proposal: Öneri topluluğu
