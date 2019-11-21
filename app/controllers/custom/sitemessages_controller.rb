@@ -9,6 +9,8 @@ class SitemessagesController < ApplicationController
     if @sitemessage.save
       SitemessagesMailer.contact_email(@sitemessage).deliver_later
       redirect_to root_path, notice: "Thanks for your message! We will get back to you."
+    else
+      render :new
     end
   end
   private
