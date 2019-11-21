@@ -10,6 +10,11 @@ ProposalsController.class_eval do
     else 
       @resources = @resources.from_current_campaigns
     end
+    if params[:retired].present?
+      @campaigns = Campaing.where(":date >= ends_at", date: Time.current).order(ends_at: :desc)
+    else 
+      @campaigns = Campaing.current.order(ends_at: :desc)
+    end
     @resources = @current_order == "recommendations" && current_user.present? ? @resources.recommendations(current_user) : @resources.for_render
     @resources = @resources.search(@search_terms) if @search_terms.present?
     @resources = @advanced_search_terms.present? ? @resources.filter(@advanced_search_terms) : @resources
@@ -26,7 +31,7 @@ ProposalsController.class_eval do
     set_resource_votes(@resources)
 
     set_resources_instance
-    @remote_translations = detect_remote_translations(@resources, featured_proposals)
+    @remote_translations = detect_remote_translations(@resources, featured_proposals, @campaigns)
 
     respond_to do |format|
       format.html

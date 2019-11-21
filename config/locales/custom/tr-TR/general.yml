@@ -612,7 +612,7 @@ tr:
         sent: E-posta gönderildi
     mailer:
       forward:
-        subtitle_html: "Pusula’daki önerimi<br> destekleyin!"
+        subtitle: "Pusula’daki önerimi<br> destekleyin!"
         support_button: Bu öneriyi destekle
         share_in: Paylaş
         hi: "Merhaba!"

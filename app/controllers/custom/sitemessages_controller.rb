@@ -7,6 +7,7 @@ class SitemessagesController < ApplicationController
   def create
     @sitemessage = Sitemessage.new(sitemessage_params)
     if @sitemessage.save
+      SitemessagesMailer.contact_email(@sitemessage).deliver_later
       redirect_to root_path, notice: "Thanks for your message! We will get back to you."
     end
   end

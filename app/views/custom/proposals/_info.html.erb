@@ -46,7 +46,7 @@
       <span class="icon-video"></span>&nbsp;
       <strong><%= t("proposals.show.title_video_url") %></strong>
     </p>
-    <%= text_with_links @proposal.video_url %>
+    <%= sanitize_and_auto_link @proposal.video_url %>
   </div>
 <% end %>
 
@@ -56,7 +56,7 @@
       <%= t("proposals.show.retired") %>:
       <%= t("proposals.retire_options.#{@proposal.retired_reason}") unless @proposal.retired_reason == "other" %>
     </h2>
-    <%= simple_format text_with_links(@proposal.retired_explanation), {}, sanitize: false %>
+    <%= simple_format sanitize_and_auto_link(@proposal.retired_explanation), {}, sanitize: false %>
   </div>
 <% end %>
 
