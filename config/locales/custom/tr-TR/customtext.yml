@@ -110,3 +110,9 @@ tr:
         title: Bize ulaşın listesi
       download_users:
         title: Kullanıcıları indir
+      polls:
+        desc_mand: Lütfen cevaba açıklama girin.
+    disclaimer:
+      title: Duyuru
+      text: Pusula, tüm katılımcılar arasında doğrudan ve zamanında iletişimi sağlamak için otomatik bir çeviri aracı kullanmaktadır. Lütfen her dilin kendine özgü olduğunu ve diğer dillerde bulunmayan farklı metafor, sokak dili ve terimler içerebileceğini unutmayın. Çeviri yerel lehçe nedeniyle de anlam kaymasına uğrayabilir. Bu nedenle, otomatik çeviriler ile  katılımcılar tarafından gerçekte ne kastedildiği arasında bazı farklılıklar olabilir. Bu gibi farklılıkları önlemek için, herkesi mümkün olduğunca İngilizce kullanmaya teşvik ediyoruz. Mümkün olmayan hallerde ise, 'satır aralarını okumak' her zaman işe yarayabilir! Anlayışınız ve işbirliğiniz için şimdiden teşekkür ederiz.
+    

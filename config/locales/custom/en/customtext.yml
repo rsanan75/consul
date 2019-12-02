@@ -110,6 +110,12 @@ en:
         title: Contact us list
       download_users:
         title: Download users
+      polls:
+        desc_mand: Please enter description to the answer.
+    disclaimer:
+      title: Disclaimer
+      text: Pusula / Ππούσουλας uses an automatic translation tool in order to accommodate direct and timely communication among all participants. Please keep in mind that each language is unique and may employ different metaphors, slang and terminology which may not exist in other languages. The translation may also suffer due to the local dialect. Thus, there may be some discrepancies between the automatic translations and what is actually meant by the users. To avoid such discrepancies, we would like to encourage everyone to use English where possible. If not, 'reading between the lines' always does the trick! Thank you for your understanding and collaboration in advance. 
+    
     
 
       

@@ -1038,3 +1038,9 @@ el:
     title: Τύπος προτεραιότητας
     borda: Βαθμολογία Borda
     dowdall: Βαθμολογία Dowdall
+  remote_translations:
+    text: Το περιεχόμενο αυτής της σελίδας δεν είναι διαθέσιμο στη γλώσσα σας. 
+    all_remote_translations_enqueued_text: Οι μεταφράσεις έχουν ζητηθεί ορθά. Κάντε κλικ στο κουμπί ανανέωσης σελίδας στο πρόγραμμα περιήγησής σας.
+    create:
+      enqueue_remote_translation: Οι μεταφράσεις έχουν ζητηθεί ορθά
+    button: Μετάφραση σελίδας

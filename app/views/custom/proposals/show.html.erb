@@ -26,7 +26,9 @@
         <div class="small-12 medium-9 column">
         <% end %>
         <%= back_link_to proposals_path unless preview %>
-
+        <% if current_user && @proposal.editable_by?(current_user) %>
+          <%= link_to t('proposals.edit.editing'), [:edit, @proposal], :class => 'back float-right' %>
+        <% end %>
         <h1><%= @proposal.title %></h1>
         <span><%= t("customtext.campaigns.title") %>: </span><h5 class="campaign-title"><%= @proposal.campaing.title %></h5>
         <% if @proposal.retired? %>

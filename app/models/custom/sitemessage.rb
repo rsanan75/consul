@@ -1,6 +1,9 @@
 require 'csv'
 
 class Sitemessage < ApplicationRecord
+
+  validates :name, :email, :message, presence: true
+  
   def self.to_csv(options = {})
     desired_columns = ["id", "name", "email", "created_at", "message"]
     CSV.generate(options) do |csv|

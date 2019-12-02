@@ -1264,6 +1264,16 @@ form .checkbox, form .radio {
     text-align: center !important;
     text-transform: unset;
 }
+.disclaimer {
+    padding: 8px 0;
+    line-height: 18px;
+}
+.answer-description {
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: red;
+}
 @media print, screen and (min-width: 40em) {
     html[lang="el"] .subnavigation ul li {
         margin: 0 15px;

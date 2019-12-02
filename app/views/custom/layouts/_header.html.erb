@@ -4,6 +4,9 @@
   <% end %>
 
   <div class="top-links">
+    <div class="disclaimer row">
+      <strong><%= t('customtext.disclaimer.title') %>: </strong><%= t('customtext.disclaimer.text') %>
+    </div>
     <div class="row">
       <%= render "shared/locale_switcher" %>
       <div class="hide-for-small-only">
