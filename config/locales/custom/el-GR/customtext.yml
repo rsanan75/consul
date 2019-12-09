@@ -42,6 +42,7 @@ el:
       label_submit: Υποβολή
       connect_with: Συνδεθείτε μαζί μας
       admin_label_message: μήνυμά
+      success_message: Σας ευχαριστούμε για το μήνυμά σας! Θα σας απαντήσουμε το συντομότερο δυνατόν
     registration_page:
       general_click_here: Κάντε κλικ ΕΔΩ
       select_placeholder: Επέλεξε ένα

@@ -42,6 +42,7 @@ tr:
       label_submit: Gönder
       connect_with: Bizimle iletişime geçin
       admin_label_message: Mesajınız
+      success_message: Mesajınız için teşekkürler! Size en kısa sürede cevap vereceğiz.
     registration_page:
       general_click_here: Buraya tıklayın
       select_placeholder: Birini seç

@@ -8,7 +8,7 @@ class SitemessagesController < ApplicationController
     @sitemessage = Sitemessage.new(sitemessage_params)
     if @sitemessage.save
       SitemessagesMailer.contact_email_all(@sitemessage.name, @sitemessage.email, @sitemessage.message).deliver_later
-      redirect_to root_path, notice: "Thanks for your message! We will get back to you."
+      redirect_to root_path, notice: t("customtext.sitemessages.success_message")
     else
       render :new
     end
