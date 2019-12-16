@@ -16,8 +16,8 @@ tr:
       confirmation_instructions:
         confirm_link: Hesabımı onayla
         text: "E-posta hesabınızı aşağıdaki bağlantıdan onaylayabilirsiniz:"
-        title: Hoş geldiniz
-        welcome: Hoş geldiniz
+        title: Hoşgeldiniz
+        welcome: Hoşgeldiniz
       reset_password_instructions:
         change_link: Şifremi değiştir
         hello: Merhaba
@@ -78,9 +78,9 @@ tr:
         new_confirmation: Hesabınızı etkinleştirmek için talimatları almadınız mı?
         new_password: Şifrenizi mi unuttunuz?
         new_unlock: Kilit kaldırma talimatlarını almadınız mı?
-        signin_with_provider: Lütfen sosyal medya hesabınızı kullanarak giriş yapın veya formu kullanın
+        signin_with_provider: Lütfen sosyal medya hesabınızı veya formu kullanarak giriş yapın.
         signup: Bir hesabınız yok mu? %{signup_link}
-        signup_link: Kaydol
+        signup_link: Kayıt olun
     unlocks:
       new:
         email_label: E-posta
@@ -89,9 +89,9 @@ tr:
     users:
       registrations:
         delete_form:
-          erase_reason_label: Sebep
-          info: Bu eylem geri alınamaz. Lütfen istediğin şeyin bu olduğundan emin ol.
-          info_reason: Eğer isterseniz, bize bir neden söyleyin (isteğe bağlı)
+          erase_reason_label: Açıklama
+          info: Bu işlemi daha sonra geri alamazsınız. Lütfen hesabınızı silmek istediğinizden emin olun.
+          info_reason: Hesabı silme nedeni (İsteğe bağlı olarak belirtilebilirsiniz)
           submit: Hesabımı sil
           title: Hesap silme
         edit:

@@ -19,7 +19,7 @@ tr:
       last_attempt: "Hesabınız engellenmeden önce bir kez daha deneyebilirsiniz."
       not_found_in_database: "Geçersiz %{authentication_keys} veya şifre."
       timeout: "Oturumunuzun süresi doldu. Devam etmek için lütfen tekrar oturum açın."
-      unauthenticated: "Devam etmek için oturum açmanız veya kaydolmanız gerekir."
+      unauthenticated: "Yorum yapmak için oturum açmanız veya kayıt olmanız gerekir."
       unconfirmed: "Devam etmek için, lütfen size e-posta yoluyla gönderdiğimiz onay bağlantısına tıklayın"
     mailer:
       confirmation_instructions:

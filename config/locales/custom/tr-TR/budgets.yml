@@ -99,7 +99,7 @@ tr:
           create: "Bütçe yatırımı oluşturun"
           not_logged_in: "Yeni bir bütçe yatırımı oluşturmak istiyorsanız %{sign_in} ya da %{sign_up}."
           sign_in: "oturum aç"
-          sign_up: "kaydol"
+          sign_up: "Kayıt olun"
           by_feasibility: Uygulanabilirlik kriterine göre
           feasible: Uygulanabilir projeler
           unfeasible: Uygulanabilir olmayan projeler

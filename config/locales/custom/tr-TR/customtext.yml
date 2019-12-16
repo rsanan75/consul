@@ -1,18 +1,18 @@
 tr:
   customtext:
     unauthenticated:
-      login: συoturum açmanızνδεθείτε
+      login: oturum açmanız
       signup: kayıt olmanız
     login_to_comment:
-      start: Devam etmek için  
+      start: Yorum yapmak için 
       middle: veya 
       end: gerekir.
     login_to_vote:
-      start: Devam etmek için 
+      start: Yorum yapmak için 
       middle: veya  
       end: gerekir.
     login_to_vote:
-      start: Devam etmek için 
+      start: Yorum yapmak için 
       middle: veya  
       end: gerekir.
     footer:
