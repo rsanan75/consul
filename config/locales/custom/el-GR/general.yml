@@ -67,7 +67,7 @@ el:
     form:
       comment_as_admin: Σχόλιο ως διαχειριστής
       comment_as_moderator: Σχολιάστε ως συντονιστής
-      leave_comment: Σχολιάστε
+      leave_comment: Σχολιάστε (Παρακαλούμε όπως χρησιμοποιείτε το ελληνικό αλφάβητο)
     orders:
       most_voted: Με τις περισσότερες ψήφους 
       newest: Πιο πρόσφατα πρώτα
@@ -345,9 +345,9 @@ el:
       proposal_responsible_name: Πλήρες όνομα του ατόμου που υποβάλλει την πρόταση
       proposal_responsible_name_note: "(ατομικά ή ως εκπρόσωπος ενός συλλόγου, δεν θα εμφανίζεται δημοσίως)"
       proposal_summary: Περίληψη πρότασης
-      proposal_summary_note: "(έως 200 χαρακτήρες)"
+      proposal_summary_note: "(έως 200 χαρακτήρες. Παρακαλούμε όπως χρησιμοποιείτε το ελληνικό αλφάβητο.)"
       proposal_text: Κείμενο πρότασης
-      proposal_title: Τίτλος πρότασης
+      proposal_title: Τίτλος πρότασης (Παρακαλούμε όπως χρησιμοποιείτε το ελληνικό αλφάβητο)
       proposal_video_url: Σύνδεσμος με εξωτερικό βίντεο
       proposal_video_url_note: Μπορείτε να προσθέσετε ένα σύνδεσμο στο YouTube ή στο Vimeo
       tag_category_label: "Κατηγορίες"
