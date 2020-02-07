@@ -32,6 +32,7 @@
         <h1><%= @proposal.title %></h1>
         <span><%= t("customtext.campaigns.title") %>: </span><h5 class="campaign-title"><%= @proposal.campaing.title %></h5>
         <% if @proposal.retired? %>
+          <% if false %>
           <div data-alert class="callout alert margin-top proposal-retired">
             <strong>
               <%= t("proposals.show.retired_warning") %><br>
@@ -39,6 +40,7 @@
                           "#retired_explanation" %>
             </strong>
           </div>
+          <% end %>
         <% elsif @proposal.conflictive? %>
           <div data-alert class="callout alert margin-top">
             <strong><%= t("proposals.show.flag") %></strong>

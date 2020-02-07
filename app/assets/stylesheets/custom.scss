@@ -1281,6 +1281,18 @@ form .checkbox, form .radio {
     margin-bottom: 10px;
     color: red;
 }
+.hide-language select.js-add-language, .hide-language .js-delete-language {
+    display: none;
+}
+.hide-language option[value=''] {
+    display: none;
+}
+.hide-language.for-admin option[value=''] {
+    display: inherit;
+}
+.hide-language.for-admin select.js-add-language, .hide-language.for-admin .js-delete-language {
+    display: inherit;
+}
 @media print, screen and (min-width: 40em) {
     html[lang="el"] .subnavigation ul li {
         margin: 0 15px;

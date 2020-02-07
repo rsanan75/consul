@@ -9,7 +9,11 @@
         <%= t("proposals.new.more_info")%>
       <% end %>
     </div>
-    <%= render "proposals/form", form_url: proposals_url %>
+     <% admin_class = 'hide-language' %>
+     <% if current_user.username == 'admin' %>
+        <% admin_class = 'hide-language for-admin' %>
+     <% end %>
+    <div class="<%= admin_class %>"><%= render "proposals/form", form_url: proposals_url %></div>
   </div>
 
   <div class="small-12 medium-3 column">
