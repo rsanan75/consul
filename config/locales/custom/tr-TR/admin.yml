@@ -695,7 +695,7 @@ tr:
           layouts: "Düzenler"
           mailers: "E-postalar"
           management: "Yönetim"
-          welcome: "Hoş geldiniz"
+          welcome: "Hoşgeldiniz"
         buttons:
           save: "Kaydet"
           content_block:

@@ -57,8 +57,8 @@ tr:
         other: "%{count} yanıt (göster)"
       responses_collapse:
         zero: Hiç yanıt yok
-        one: "1 yanıt (daralt)"
-        other: "%{count} yanıt (daralt)"
+        one: "1 yanıt (gizle)"
+        other: "%{count} yanıt (gizle)"
       user_deleted: Kullanıcı silindi
       votes:
         zero: Hiç oy yok
@@ -182,7 +182,7 @@ tr:
     direct_message: özel mesaj
     error: teknik sorun nedeniyle
     errors: teknik sorun nedeniyle 
-    not_saved_html: "bu %{resource} gönderilemedi. <br>Bu sorunların nasıl düzeltileceğini öğrenmek için lütfen işaretli alanları kontrol edin."
+    not_saved: "bu %{resource} gönderilemedi. <br>Bu sorunların nasıl düzeltileceğini öğrenmek için lütfen işaretli alanları kontrol edin."
     policy: Gizlilik Politikası
     proposal: Öneri
     proposal_notification: "mesajınız"
@@ -305,7 +305,7 @@ tr:
       sign_up: Twitter ile kaydol
       name: Twitter
     info_sign_in: "Bununla oturum aç:"
-    info_sign_up: "Bununla kaydol:"
+    info_sign_up: "Sosyal medya hesabınız ile kaydolun:"
     or_fill: "Veya, aşağıdaki formu doldurun:"
   proposals:
     create:
@@ -766,14 +766,14 @@ tr:
     followable:
       budget_investment:
         create:
-          notice_html: "Şimdi bu yatırım projesini takip ediyorsunuz! </br> Gelişmelerden haberdar olmanız için değişiklikleri size bildireceğiz."
+          notice: "Şimdi bu yatırım projesini takip ediyorsunuz! </br> Gelişmelerden haberdar olmanız için değişiklikleri size bildireceğiz."
         destroy:
-          notice_html: "Bu yatırım projesini takip etmeyi bıraktınız! </br> Artık bu projeyle ilgili bildirimleri almayacaksınız."
+          notice: "Bu yatırım projesini takip etmeyi bıraktınız! </br> Artık bu projeyle ilgili bildirimleri almayacaksınız."
       proposal:
         create:
-          notice_html: "Bu öneriyi takip etmeye başladınız! Gelişmelerden sizi haberdar edeceğiz."
+          notice: "Bu öneriyi takip etmeye başladınız! Öneri hakkında tüm gelişmeleri sizinle paylaşacağız."
         destroy:
-          notice_html: "Bu vatandaş önerisini takip etmeyi bıraktınız! </br> Artık bu öneriyle ilgili bildirimleri almayacaksınız."
+          notice: "Bu vatandaş önerisini takip etmeyi bıraktınız! </br> Artık bu öneriyle ilgili bildirimleri almayacaksınız."
     hide: Gizle
     print:
       print_button: Bu bilgiyi yazdır
@@ -872,7 +872,7 @@ tr:
         title_label: Başlık
         verified_only: Bir özel mesaj göndermek için %{verify_account}
         verify_account: hesabınızı doğrulayın
-        authenticate: Devam etmek için %{signin} veya %{signup} yapmalısınız.
+        authenticate: Yorum yapmak için %{signin} veya %{signup} yapmalısınız.
         signin: oturum aç
         signup: Kayıt olun
       show:
@@ -919,17 +919,17 @@ tr:
   votes:
     agree: Kabul ediyorum
     anonymous: Oy kullanmak için çok fazla isimsiz oy kullanıldı %{verify_account}.
-    comment_unauthenticated: Oy kullanmak için %{signin} veya %{signup} yapmalısınız.
+    comment_unauthenticated: Oy kullanmak için %{signin} veya %{signup} gerekir.
     disagree: Kabul etmiyorum
     organizations: Organizasyonların oy kullanmalarına izin verilmez
     signin: Oturum aç
     signup: Kayıt olun
     supports: Destekler
-    unauthenticated: Devam etmek için %{signin} veya %{signup} yapmalısınız.
+    unauthenticated: Devam etmek için %{signin} veya %{signup} gerekir.
     verified_only: Yalnızca doğrulanan kullanıcılar önerilere oy verebilir; %{verify_account}.
     verify_account: hesabınızı doğrulayın
     budget_investments:
-      not_logged_in: Devam etmek için %{signin} veya %{signup} yapmalısınız.
+      not_logged_in: Devam etmek için %{signin} veya %{signup} gerekir.
       not_verified: Yalnızca doğrulanan kullanıcılar yatırım projelerine oy verebilir; %{verify_account}.
       organization: Organizasyonların oy kullanmalarına izin verilmez
       unfeasible: Uygulanamaz yatırım projeleri desteklenemez

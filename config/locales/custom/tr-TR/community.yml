@@ -18,7 +18,7 @@ tr:
         first_theme: İlk topluluk konusunu oluştur
         sub_first_theme: "Bir tema oluşturmak için %{sign_in} veya %{sign_up} yapmalısın."
         sign_in: "oturum aç"
-        sign_up: "kaydol"
+        sign_up: "Kayıt olun"
       tab:
         participants: Katılımcılar
       sidebar:

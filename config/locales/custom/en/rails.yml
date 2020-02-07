@@ -118,16 +118,16 @@ en:
     format: "%{attribute} %{message}"
     messages:
       accepted: must be accepted
-      blank: can't be blank
+      blank: This field is mandatory
       present: must be blank
       confirmation: doesn't match %{attribute}
-      empty: can't be empty
+      empty: This field is mandatory
       equal_to: must be equal to %{count}
       even: must be even
       exclusion: is reserved
       greater_than: must be greater than %{count}
       greater_than_or_equal_to: must be greater than or equal to %{count}
-      inclusion: is not included in the list
+      inclusion: Please choose an option from the list.
       invalid: is invalid
       less_than: must be less than %{count}
       less_than_or_equal_to: must be less than or equal to %{count}
@@ -214,8 +214,8 @@ en:
       words_connector: ", "
   time:
     am: am
-    formats:
-      datetime: "%Y-%m-%d %H:%M:%S"
+    formats: 
+      datetime: "%d/%m/%Y %H:%M:%S"
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"

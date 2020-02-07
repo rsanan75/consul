@@ -182,7 +182,7 @@ en:
     direct_message: private message
     error: error
     errors: errors
-    not_saved_html: "prevented this %{resource} from being saved. <br>Please check the marked fields to know how to correct them:"
+    not_saved: "prevented this %{resource} from being saved. <br>Please check the marked fields to know how to correct them:"
     policy: Privacy Policy
     proposal: Proposal
     proposal_notification: "Notification"
@@ -330,12 +330,12 @@ en:
         submit_button: Save changes
       show_link: View proposal
     retire_form:
-      title: Retire proposal
+      title: Withdraw proposal
       warning: "If you retire the proposal it would still accept supports, but will be removed from the main list and a message will be visible to all users stating that the author considers the proposal should not be supported anymore"
       retired_reason_label: Reason to retire the proposal
       retired_reason_blank: Choose an option
       retired_explanation_placeholder: Explain shortly why you think this proposal should not receive more supports
-      submit_button: Retire proposal
+      submit_button: Withdraw proposal
     retire_options:
       duplicated: Duplicated
       started: Already underway
@@ -508,7 +508,7 @@ en:
       title: Edition
       edit_proposal_link: Edit proposal
       publish: Publish proposal
-      retire: Retire proposal
+      retire: Withdraw proposal
     new_request:
       links: Links
     resources:
@@ -763,14 +763,14 @@ en:
     followable:
       budget_investment:
         create:
-          notice_html: "You are now following this investment project! </br> We will notify you of changes as they occur so that you are up-to-date."
+          notice: "You are now following this investment project! </br> We will notify you of changes as they occur so that you are up-to-date."
         destroy:
-          notice_html: "You have stopped following this investment project! </br> You will no longer receive notifications related to this project."
+          notice: "You have stopped following this investment project! </br> You will no longer receive notifications related to this project."
       proposal:
           create:
-            notice_html: "Now you are following this citizen proposal! </br> We will notify you of changes as they occur so that you are up-to-date."
+            notice: "You are now following this proposal! </br>We will notify you of changes as they occur so that you are up-to-date."
           destroy:
-            notice_html: "You have stopped following this citizen proposal! </br> You will no longer receive notifications related to this proposal."
+            notice: "You have stopped following this citizen proposal! </br> You will no longer receive notifications related to this proposal."
     hide: Hide
     print:
       print_button: Print this info
