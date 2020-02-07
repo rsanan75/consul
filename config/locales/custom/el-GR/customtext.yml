@@ -111,6 +111,7 @@ el:
         title: Επικοινωνήστε μαζί μας
       download_users:
         title: Πραγματοποίηση λήψης χρηστών 
+        verified_status: Kατάσταση
       polls:
         desc_mand: Παρακαλώ εισάγετε την περιγραφή στην απάντηση.
     disclaimer:

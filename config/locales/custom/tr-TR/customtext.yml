@@ -111,6 +111,7 @@ tr:
         title: Bize ulaşın listesi
       download_users:
         title: Kullanıcıları indir
+        verified_status: Durum
       polls:
         desc_mand: Lütfen cevaba açıklama girin.
     disclaimer:

@@ -25,6 +25,9 @@ a {
     font-size: 0.875rem;
     padding-right: 0.75rem;
 }
+.social-share-button .ssb-google_plus {
+    display: none;
+}
 .locale-form .locale-switcher {
     background: #466b7c;
     border: 0;
@@ -50,6 +53,10 @@ background: #fff;
 }
 .auth-page header {
     margin-bottom: 0px;
+}
+.remote-translations-button.callout.primary.text-center {
+    background-color: yellow;
+    border: 1px solid #ccc;
 }
 .footer {
     background: #fff;

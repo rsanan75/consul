@@ -111,6 +111,7 @@ en:
         title: Contact us list
       download_users:
         title: Download users
+        verified_status: Status
       polls:
         desc_mand: Please enter description to the answer.
     disclaimer:
