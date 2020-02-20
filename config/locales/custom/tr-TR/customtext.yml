@@ -30,6 +30,7 @@ tr:
       description_note: (En fazla 6,000 karakter)
     common_forms:
       mandatory_form:  Tüm alanları doldurmanız gerekiyor.
+      translate_note: (Seçtiğiniz dil Türkçedir.  İngilizce veya Rumca yazmak istiyorsanız, lütfen sayfanın üst kısmında bulunan dil seçeneğini değiştirin.)
     sitemessages:
       page_title: İLETİŞİM FORMU
       tagline: Fikirlerinizi hayata geçirirken, Kıbrıs'ın yön bulmasına yardımcı olun!

@@ -3,7 +3,8 @@
   <div class="small-12 medium-9 column">
     <%= back_link_to %>
 
-    <h1><%= t("proposals.new.start_new") %></h1>
+    <h1><%= t("proposals.new.start_new") %>
+    <p class="help-text" id=""><%= t("customtext.common_forms.translate_note") %></p></h1>
     <div data-alert class="callout primary">
       <%= link_to help_path(anchor: "proposals"), title: t("shared.target_blank_html"), target: "_blank" do %>
         <%= t("proposals.new.more_info")%>

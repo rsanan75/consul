@@ -30,6 +30,7 @@ en:
       description_note: (maximum 6,000 characters)
     common_forms:
       mandatory_form: All fields are mandatory
+      translate_note: (Your selected language is English. If you wish to write in Turkish or Greek, please change it at the top of the page.)
     sitemessages:
       page_title: Contact Us
       tagline: Help Cyprus find its direction while bringing your ideas to life!
