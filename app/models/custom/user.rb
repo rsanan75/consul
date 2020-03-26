@@ -102,9 +102,7 @@ class User < ApplicationRecord
     )
   end
 
-  def givename
-    name
-  end
+   
   def name
     organization? ? organization.name : username
   end

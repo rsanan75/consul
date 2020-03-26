@@ -6,7 +6,7 @@
         <% else %>
             <% verified_status = 'verified' %>
         <% end %>
-          <%= user.id %>,<%= user.created_at.strftime("%d/%m/%Y") %>,<%= user.givename %>,<%= user.surname %>,<%= user.date_of_birth %>,<%= user.gender %>,<%= user.native_language %>,<%= user.residence %>,<%= user.education %>,<%= user.identify_yourself %>,<%= user.email %>,<%= verified_status %>
+          <%= user.id %>,<%= user.created_at.strftime("%d/%m/%Y") %>,<%= user.read_attribute_before_type_cast("name") %>,<%= user.surname %>,<%= user.date_of_birth %>,<%= user.gender %>,<%= user.native_language %>,<%= user.residence %>,<%= user.education %>,<%= user.identify_yourself %>,<%= user.email %>,<%= verified_status %>
       <% end %>
 <% else %>
     <%= t("admin.users.index.no_users") %>
