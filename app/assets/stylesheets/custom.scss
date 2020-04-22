@@ -1157,6 +1157,18 @@ select {
     height: 3rem;
     margin: 0;
 }
+.notifications .icon-circle::before {
+    color: #ecf00b;
+    font-size: 10px;
+}
+.notifications .icon-circle {
+    color: red;
+    font-size: 0.625rem;
+    position: absolute;
+    left: auto;
+    top: 6px;
+    font-size: 15px;
+}
 .login-box-right form .dob-arrange select {
     font-size: 16px;
     font-weight: 600;
