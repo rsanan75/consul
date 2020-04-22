@@ -10,7 +10,7 @@
         <span class="icon-circle" aria-hidden="true"><%= current_user.notifications_count %> </span>
         <span class="icon-notification" aria-hidden="true"
               title="<%= t("layouts.header.notification_item.new_notifications",
-                         count: current_user.notifications_count) %>">
+                         count: current_user.notifications.unread.count) %>">
         </span>
         <span class="show-for-small-only">
           <%= t("layouts.header.notification_item.new_notifications",
