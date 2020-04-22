@@ -33,11 +33,11 @@
             </div>
             <div class="row">
               <div class="small-12 medium-6 column dob-arrange constyle-form-input">
-                <label><%= t("customtext.registration_page.label_date_of_birth") %><span class="required_symb">*</span></label>
+                <label><%= t("customtext.registration_page.label_date_of_birth") %></label>
                 <%= f.text_field :date_of_birth, :placeholder => 'dd/mm/yyyy', label: false, required: true, class: 'datepicker-ui' %>
               </div>
               <div class="small-12 medium-6 column">
-                <label><%= t("customtext.registration_page.label_gender") %><span class="required_symb">*</span></label>
+                <label><%= t("customtext.registration_page.label_gender") %></label>
                 <div class="select-styleOne"><%= f.select :gender, options_for_select([
                                                                         [t("customtext.registration_page.select_options_gender.female"),"Female"], 
                                                                         [t("customtext.registration_page.select_options_gender.male"),"Male"], 
@@ -50,7 +50,7 @@
             </div>
             <div class="row">
               <div class="small-12 medium-6 column ">
-                <label><%= t("customtext.registration_page.label_native_language") %><span class="required_symb">*</span></label>
+                <label><%= t("customtext.registration_page.label_native_language") %></label>
                 <div class="select-styleOne">
                 <%= f.select :native_language, options_for_select([
                                                 [t("customtext.registration_page.select_options_native_language.english"),"English"], 
@@ -64,7 +64,7 @@
                                               include_blank: "-" + t("customtext.registration_page.select_placeholder") + "-" %></div>
               </div>
               <div class="small-12 medium-6 column">
-                <label><%= t("customtext.registration_page.label_residence") %><span class="required_symb">*</span></label>
+                <label><%= t("customtext.registration_page.label_residence") %></label>
                 <div class="select-styleOne"><%= f.select :residence, options_for_select([
                                                                         [t("customtext.registration_page.select_options_residence.nicosia"),"Nicosia"], 
                                                                         [t("customtext.registration_page.select_options_residence.limassol"),"Limassol"], 
@@ -83,7 +83,7 @@
             </div>
             <div class="row">
               <div class="small-12 medium-6 column">
-                <label><%= t("customtext.registration_page.label_education") %><small><%= t("customtext.registration_page.label_education_suffix") %></small><span class="required_symb">*</span></label>
+                <label><%= t("customtext.registration_page.label_education") %><small><%= t("customtext.registration_page.label_education_suffix") %></small></label>
                 <div class="select-styleOne"><%= f.select :education, options_for_select([
                                                                         [t("customtext.registration_page.select_options_education.illiterate"),"None of the below / illiterate"], 
                                                                         [t("customtext.registration_page.select_options_education.primary"),"Completed primary school"], 
@@ -98,7 +98,7 @@
                                                                       include_blank: "-" + t("customtext.registration_page.select_placeholder") + "-" %></div>
               </div>
               <div class="small-12 medium-6 column">
-                <label><%= t("customtext.registration_page.label_identify_yourself") %><span class="required_symb">*</span></label>
+                <label><%= t("customtext.registration_page.label_identify_yourself") %></label>
                 <div class="select-styleOne">
                 <%= f.select :identify_yourself, options_for_select([
                                                                      [t("customtext.registration_page.select_options_identify_yourself.cypriot"),"Cypriot"],
