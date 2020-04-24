@@ -53,6 +53,7 @@ en:
       mandatory_text: All fields are mandatory.
       age_consent: You need to be 18 years or older to register with us
       label_name: Name
+      label_username: User Name
       label_surname: Surname
       label_residence: Place of Residence
       label_identify_yourself: How would you identify yourself?
