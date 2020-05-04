@@ -1,6 +1,6 @@
 class CampaingsController < ApplicationController
   load_and_authorize_resource
   def show
-    @all_proposals = Proposal.where(id: params(:campaing_id))
+    @all_proposals = Proposal.where(campaing_id: params(:id))
   end
 end
