@@ -8,6 +8,8 @@
 
 </div>
 <% if params[:retired].present? && params[:retired] == 'all' %>
-<%= render partial: "proposals/proposal", collection: @winning_proposal %>
+<div class="winning_proposal">
+  <%= render partial: "proposals/proposal", locals: { proposal: proposal } %>
+</div>
   </details>
 <% end %>
