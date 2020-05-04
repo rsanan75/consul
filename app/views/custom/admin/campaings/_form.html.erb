@@ -20,10 +20,10 @@
     <% if @campaing.id.present? %>
     <div class="row">
       <div class="small-12 medium-6 column end">
-        <%= f.collection_select :poll_id, Poll.all, :id, :name, {:prompt => '-- Select a Poll --'} %>
+        <%= f.collection_select :poll_id, Poll.all, :id, :name, {:prompt => '-- Select a Poll --'}, value: @campaing.poll_id? ? @campaing.poll_id : nil %>
       </div>
       <div class="small-12 medium-6 column end">
-        <%= f.collection_select :proposal_id, Proposal.where(campaing_id: @campaing.id), :id, :title, {:prompt => '-- Select a Winning Proposal --'} %>
+        <%= f.collection_select :proposal_id, Proposal.where(campaing_id: @campaing.id), :id, :title, {:prompt => '-- Select a Winning Proposal --'}, value: @campaing.proposal_id? ? @campaing.proposal_id : nil %>
       </div>
     </div>
     <% end %>
