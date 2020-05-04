@@ -1,0 +1,15 @@
+<% if params[:retired].present? && params[:retired] == 'all' %>
+  <details class="retired-campaign">
+    <summary><%= campaing.title %><span class="float-right"><%= t("customtext.campaigns.end_date") %>: <%= campaing.ends_at.strftime("%d/%m/%Y") %></span></summary>
+<% end %>
+<div class="active-campaign proposal-show">
+<h3 class="text-center"><%= campaing.title %></h3>
+<%= auto_link_already_sanitized_html wysiwyg(campaing.description) %>
+
+</div>
+<% if params[:retired].present? && params[:retired] == 'all' %>
+<div class="winning_proposal">
+  <%= render partial: "proposals/proposal", object: @winning_proposal  %>
+</div>
+  </details>
+<% end %>
