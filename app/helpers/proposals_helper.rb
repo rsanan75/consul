@@ -31,6 +31,11 @@ module ProposalsHelper
     Proposal::RETIRE_OPTIONS.collect { |option| [t("proposals.retire_options.#{option}"), option] }
   end
 
+  def proposal_select_options(campaing_id =  nil)
+    options = @proposals.collect do |proposal|
+      [proposal.name, current_path_with_query_params(proposal_id: proposal.id)]
+  end
+
   def empty_recommended_proposals_message_text(user)
     if user.interests.any?
       t("proposals.index.recommendations.without_results")
