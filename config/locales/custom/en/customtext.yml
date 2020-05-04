@@ -27,6 +27,7 @@ en:
       proposal_shortlink_label: View Proposals
       active_tab_label: Active
       completed_tab_label: Completed
+      results_tab_label: Results
       description_note: (maximum 6,000 characters)
     common_forms:
       mandatory_form: All fields are mandatory
