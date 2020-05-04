@@ -21,7 +21,7 @@
       <%# f.select :poll_id, poll_select_options %>
     </div>
     <div class="small-12 medium-3 column end">
-      <%= f.select :proposal_id, proposal_select_options %>
+      <%= f.select :proposal_id, Proposal.all, :id, :name, {:prompt => '-- Select a Winning Proposal --'} %>
     </div>
     
 
