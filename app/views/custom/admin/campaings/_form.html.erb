@@ -21,7 +21,7 @@
       <%= f.collection_select :poll_id, Poll.all, :id, :name, {:prompt => '-- Select a Poll --'} %>
     </div>
     <div class="small-12 medium-3 column end">
-      <%# f.collection_select :proposal_id, Proposal.all, :id, :name, {:prompt => '-- Select a Winning Proposal --'} %>
+      <%= f.collection_select :proposal_id, Proposal.all, :id, :title, {:prompt => '-- Select a Winning Proposal --'} %>
     </div>
     
 
