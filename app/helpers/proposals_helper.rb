@@ -32,8 +32,9 @@ module ProposalsHelper
   end
 
   def proposal_select_options(campaing_id =  nil)
-    options = @proposals.collect do |proposal|
+    options = Proposal::All.collect do |proposal|
       [proposal.name, current_path_with_query_params(proposal_id: proposal.id)]
+    end
   end
 
   def empty_recommended_proposals_message_text(user)
