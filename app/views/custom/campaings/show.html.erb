@@ -1,2 +1,6 @@
 <h1><%= @campaing.title %></h1>
 <%= auto_link_already_sanitized_html wysiwyg(@campaing.description) %>
+
+<% @all_proposals.each do |proposal| %>
+  <%= proposal.title %>
+<% end %>
