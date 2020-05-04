@@ -17,7 +17,6 @@ class PollsController < ApplicationController
     @polls = Kaminari.paginate_array(
       @polls.public_polls.not_budget.send(@current_filter).includes(:geozones).sort_for_list
     ).page(params[:page])
-
   end
 
   def show

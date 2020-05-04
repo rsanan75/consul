@@ -1,7 +1,8 @@
 <h1><%= @campaing.title %></h1>
 <%= auto_link_already_sanitized_html wysiwyg(@campaing.description) %>
+<div class="winning_proposal">
+  <%= render partial: "proposals/proposal", collection: @winning_proposal %>
+</div>
+<%= render partial: "proposals/proposal", collection: @all_proposals %>
 
-<% @all_proposals.each do |proposal| %>
-  <%= proposal.title %>
-<% end %>
-<%= @winning_proposal.title %>
+
