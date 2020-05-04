@@ -2,7 +2,9 @@
 <%= auto_link_already_sanitized_html wysiwyg(@campaing.description) %>
 
 <% @all_proposals.each do |proposal| %>
+  <% if proposal.id == @campaing.proposal_id %>
+    <% win_proposal = proposal %>
+  <% end %>
   <%= proposal.title %>
 <% end %>
-<%= @winning_proposal %>
-<%= @poll %>
+<%= win_proposal.title %>
