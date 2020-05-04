@@ -8,7 +8,7 @@
 
 </div>
 <% if params[:retired].present? && params[:retired] == 'all' %>
-<%= Poll.where(id: campaing.poll_id).name %>
-<%= Proposal.where(id: campaing.proposal_id).title %>
+<%= @poll.name %>
+<%= @winning_proposal.title %>
   </details>
 <% end %>
