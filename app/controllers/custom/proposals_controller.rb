@@ -13,7 +13,7 @@ ProposalsController.class_eval do
     if params[:retired].present?
       @campaigns = Campaing.where(":date >= ends_at", date: Time.current).order(ends_at: :desc)
       @winning_proposals = Hash.new
-      @campaings.each do |campaing|
+      @campaigns.each do |campaing|
         @winning_proposals[campaing.id] = Proposal.where(id: campaing.proposal_id)
       end
     else 
