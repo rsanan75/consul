@@ -1,8 +1,7 @@
 <h1><%= @campaing.title %></h1>
 <%= auto_link_already_sanitized_html wysiwyg(@campaing.description) %>
-<%= @campaing.proposal_id %>
+
 <% @all_proposals.each do |proposal| %>
-  <%= proposal.id %></br>  
   <%= proposal.title %>
 <% end %>
-
+<%= @winning_proposal.title %>
