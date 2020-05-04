@@ -5,7 +5,10 @@
 <div class="active-campaign proposal-show">
 <h3 class="text-center"><%= campaing.title %></h3>
 <%= auto_link_already_sanitized_html wysiwyg(campaing.description) %>
+
 </div>
 <% if params[:retired].present? && params[:retired] == 'all' %>
+<%= @poll.name %>
+<%= @proposal.title %>
   </details>
 <% end %>
