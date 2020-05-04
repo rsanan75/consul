@@ -27,7 +27,6 @@ el:
       proposal_shortlink_label: Προβολή Προτάσεων
       active_tab_label: Ενεργά
       completed_tab_label: Ολοκληρωμένα
-      results_tab_label: Results GR
       description_note: (έως 6,000 χαρακτήρες. Παρακαλούμε όπως χρησιμοποιείτε το ελληνικό αλφάβητο.)
     common_forms:
       mandatory_form: Όλα τα πεδία είναι υποχρεωτικά

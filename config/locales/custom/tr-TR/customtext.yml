@@ -27,7 +27,6 @@ tr:
       proposal_shortlink_label: Önerileri görüntüle
       active_tab_label: Etkin
       completed_tab_label: Tamamlanmış
-      results_tab_label: Results TR
       description_note: (En fazla 6,000 karakter)
     common_forms:
       mandatory_form:  Tüm alanları doldurmanız gerekiyor.

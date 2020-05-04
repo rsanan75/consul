@@ -5,8 +5,6 @@ class Campaing < ApplicationRecord
   include Measurable
 
   has_many :proposals
-  belongs_to :proposal
-  belongs_to :poll
 
   validates :starts_at, presence: true
   validates :ends_at, presence: true

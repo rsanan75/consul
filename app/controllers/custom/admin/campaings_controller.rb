@@ -30,7 +30,7 @@ class Admin::CampaingsController < Admin::BaseController
   private
 
     def campaing_params
-      attributes = [:starts_at, :ends_at, :poll_id, :proposal_id, translation_params(Campaing)]
+      attributes = [:starts_at, :ends_at, translation_params(Campaing)]
 
       params.require(:campaing).permit(*attributes)
     end
