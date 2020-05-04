@@ -8,7 +8,9 @@
 
 </div>
 <% if params[:retired].present? && params[:retired] == 'all' %>
-<%# @poll.name %>
+<%= campaing.poll_id %>
+<%= campaing.proposal_id %>
+<%= @poll.name %>
 <%= @winning_proposal.title %>
   </details>
 <% end %>
