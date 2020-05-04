@@ -17,13 +17,16 @@
                        value: @campaing.ends_at.present? ? l(@campaing.ends_at.to_date) : nil, 
                        class: "js-calendar-full" %>
     </div>
-    <div class="small-12 medium-3 column end">
-      <%= f.collection_select :poll_id, Poll.all, :id, :name, {:prompt => '-- Select a Poll --'} %>
+    <% if @campaing.id.present? %>
+    <div class="row">
+      <div class="small-12 medium-6 column end">
+        <%= f.collection_select :poll_id, Poll.all, :id, :name, {:prompt => '-- Select a Poll --'} %>
+      </div>
+      <div class="small-12 medium-6 column end">
+        <%= f.collection_select :proposal_id, Proposal.where(':campaing_id',@campaing.id), :id, :title, {:prompt => '-- Select a Winning Proposal --'} %>
+      </div>
     </div>
-    <div class="small-12 medium-3 column end">
-      <%= f.collection_select :proposal_id, Proposal.all, :id, :title, {:prompt => '-- Select a Winning Proposal --'} %>
-    </div>
-    
+    <% end %>
 
   </div>
 
