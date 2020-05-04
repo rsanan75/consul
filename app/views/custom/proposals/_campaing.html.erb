@@ -9,7 +9,7 @@
 </div>
 <% if params[:retired].present? && params[:retired] == 'all' %>
 <div class="winning_proposal">
-  <%= render partial: "proposals/proposal", locals: { proposal: proposal } %>
+  <%= render partial: "proposals/proposal", object: @winning_proposal  %>
 </div>
   </details>
 <% end %>
