@@ -97,7 +97,8 @@
         <%= render partial: "proposals/proposal", collection: @winning_proposals %>
       <% else %>
         <% @winning_proposals.each do |proposal| %>
-          <%= render partial: "/proposals/proposal_minimal", locals: { proposal: proposal } %>
+          <%= proposal.inspect %>
+          <%# render partial: "/proposals/proposal_minimal", locals: { proposal: proposal } %>
         <% end %>
       <% end %>
     <% else %>
