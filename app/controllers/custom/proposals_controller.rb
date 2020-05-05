@@ -14,7 +14,7 @@ ProposalsController.class_eval do
       @campaigns = Campaing.where(":date >= ends_at", date: Time.current).order(ends_at: :desc)
       @winning_proposals = Hash.new
       @campaigns.each do |campaing|
-        @winning_proposals[campaing.id] = Proposal.where(id: campaing.proposal_id)
+        @winning_proposals[campaing.id] = @proposals.where(id: campaing.proposal_id)
       end
     else 
       @campaigns = Campaing.current.order(ends_at: :desc)
