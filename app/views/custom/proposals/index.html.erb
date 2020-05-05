@@ -80,7 +80,7 @@
 </ul>
   <% i = 0 %>
   <% @campaigns.each do |campaing| %>
-  <details class="retired-campaign">
+  <details class="retired-campaign <% if i == 0 %> open <% end %>">
     <summary><%= campaing.title %><span class="float-right"><%= t("customtext.campaigns.end_date") %>: <%= campaing.ends_at.strftime("%d/%m/%Y") %></span></summary>
   
     <div class="active-campaign proposal-show">
@@ -90,7 +90,11 @@
     </div>
     <% if i == 0 %>
       <div class="winning_proposal-<%= campaing.id %>">
-        <%= render partial: "/proposals/proposal", object: @winning_proposal %>
+        <h3 class="text-center"> Winning Proposal<h3>
+        <div class="winning_text"><%= auto_link_already_sanitized_html wysiwyg(campaing.win_proposal_text) %></div>
+        <% if @winning_proposal.present? %>
+          <%= render partial: "/proposals/proposal", object: @winning_proposal %>
+        <% end %>
       </div>
     <% end %>
   </details>

@@ -18,11 +18,9 @@
                        class: "js-calendar-full" %>
     </div>
     <% if @campaing.id.present? %>
+    
     <div class="row">
-      <div class="small-12 medium-6 column end">
-        <%= f.collection_select :poll_id, Poll.all, :id, :name, {:prompt => '-- Select a Poll --'}, value: @campaing.poll_id? ? @campaing.poll_id : nil %>
-      </div>
-      <div class="small-12 medium-6 column end">
+      <div class="small-12 medium-12 column end">
         <%= f.collection_select :proposal_id, Proposal.where(campaing_id: @campaing.id), :id, :title, {:prompt => '-- Select a Winning Proposal --'}, value: @campaing.proposal_id? ? @campaing.proposal_id : nil %>
       </div>
     </div>
@@ -39,6 +37,11 @@
 
       <div class="ckeditor small-12 column">
         <%= translations_form.cktext_area :description,
+                                          maxlength: Campaing.description_max_length,
+                                          ckeditor: { language: I18n.locale } %>
+      </div>
+      <div class="ckeditor small-12 column">
+        <%= translations_form.cktext_area :win_proposal_text,
                                           maxlength: Campaing.description_max_length,
                                           ckeditor: { language: I18n.locale } %>
       </div>

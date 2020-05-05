@@ -1,6 +1,7 @@
 class Campaing < ApplicationRecord
   translates :title, touch: true
   translates :description, touch: true
+  translates :win_proposal_text
   include Globalizable
   include Measurable
 
