@@ -92,24 +92,7 @@
   </details>
   <% end %>
   <div class="all-winning-proposal">
-    <% if @proposals.any? || current_user.blank? %>
-      
-        <% if proposals_default_view? %>
-          <% @proposals.each do |proposal| %>
-            <% if @all_winning_proposals.include? proposal.id %>
-              <%= render partial: "proposals/proposal", object: proposal %>
-            <% end %>
-          <% end %>
-        <% else %>
-          <% @proposals.each do |proposal| %>
-            <% if @all_winning_proposals.include? proposal.id %>
-              <%= render partial: "/proposals/proposal_minimal", locals: { proposal: proposal } %>
-            <% end %>
-          <% end %>
-      <% end %>
-    <% else %>
-      <%= empty_recommended_proposals_message_text(current_user) %>
-    <% end %>
+    <%= @all_winning_proposals.inspect %>
   </div>
 <% else %>
 <ul class="no-bullet submenu">
