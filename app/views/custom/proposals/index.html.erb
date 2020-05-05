@@ -87,11 +87,23 @@
     <%= auto_link_already_sanitized_html wysiwyg(campaing.description) %>
 
     </div>
-    <div class="winning_proposal">
-      <%= render partial: "proposals/proposal", object: @winning_proposals[campaing.id]  %>
+    <div class="winning_proposal-<%= campaing.id %>">
     </div>
   </details>
   <% end %>
+  <div class="all-winning-proposal">
+    <% if @winning_proposals.any? || current_user.blank? %>
+      <% if proposals_default_view? %>
+        <%= render partial: "proposals/proposal", collection: @winning_proposals %>
+      <% else %>
+        <% @winning_proposals.each do |proposal| %>
+          <%= render partial: "/proposals/proposal_minimal", locals: { proposal: proposal } %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <%= empty_recommended_proposals_message_text(current_user) %>
+    <% end %>
+  </div>
 <% else %>
 <ul class="no-bullet submenu">
     <li class="inline-block">
