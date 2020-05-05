@@ -78,6 +78,7 @@
           <a href="#proposals"><%= t("customtext.proposal_pages.proposal_shortlink_label") %></a>
         </li>
 </ul>
+  <% i = 0 %>
   <% @campaigns.each do |campaing| %>
   <details class="retired-campaign">
     <summary><%= campaing.title %><span class="float-right"><%= t("customtext.campaigns.end_date") %>: <%= campaing.ends_at.strftime("%d/%m/%Y") %></span></summary>
@@ -87,14 +88,14 @@
     <%= auto_link_already_sanitized_html wysiwyg(campaing.description) %>
 
     </div>
-    <div class="winning_proposal-<%= campaing.id %>">
-    </div>
+    <% if i == 0 %>
+      <div class="winning_proposal-<%= campaing.id %>">
+        <%= render partial: "/proposals/proposal", object: @winning_proposal %>
+      </div>
+    <% end %>
   </details>
+   <% i += 1 %>
   <% end %>
-  <div class="all-winning-proposal">
-	  <%= render partial: "/proposals/proposal", object: @winning_proposal %>
-     
-  </div>
 <% else %>
 <ul class="no-bullet submenu">
     <li class="inline-block">
