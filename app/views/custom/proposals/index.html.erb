@@ -92,7 +92,9 @@
   </details>
   <% end %>
   <div class="all-winning-proposal">
-    <%= @winning_proposals.inspect %>
+    <% @winning_proposals.each do |proposal| %>
+      <%= render partial: "proposals/proposal", object: proposal %>
+    <% end %>
   </div>
 <% else %>
 <ul class="no-bullet submenu">
