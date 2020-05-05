@@ -15,7 +15,7 @@ ProposalsController.class_eval do
       @winning_proposals = Hash.new
       @campaigns.each do |campaing|
         if campaing.proposal_id.present?
-          @winning_proposals[campaing.id] = Proposal.find(params[campaing.proposal_id])
+          @winning_proposals[campaing.id] = Proposal.find(campaing.proposal_id)
         end
       end
     else 
