@@ -454,7 +454,7 @@ en:
       selected: "Selected proposal"
     show:
       author_deleted: User deleted
-      campaing: "Campaing:"
+      campaing: "Campaign:"
       code: "Proposal code:"
       comments:
         one: 1 comment

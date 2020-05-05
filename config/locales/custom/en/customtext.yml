@@ -26,8 +26,10 @@ en:
       tags_label: Tags
       proposal_shortlink_label: View Proposals
       active_tab_label: Active
-      completed_tab_label: Completed
+      completed_tab_label: Completed/Results
       description_note: (maximum 6,000 characters)
+      view_all_campaing: View all proposals
+      winning_title: Winning Proposal
     common_forms:
       mandatory_form: All fields are mandatory
       translate_note: (Your selected language is English. If you wish to write in Turkish or Greek, please change it at the top of the page.)

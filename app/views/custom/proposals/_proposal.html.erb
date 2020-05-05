@@ -51,7 +51,7 @@
               <%= t("customtext.proposal_pages.created_date_label") %>:<%= proposal.created_at.strftime("%d/%m/%Y") %>              
             </p>
             <% if proposal.retired? %>
-                <span><%= t ("proposals.show.campaing")%> <h6 class="campaign-title-preview"><%= proposal.campaing.title %></h6></span>
+                <span><%= t("proposals.show.campaing")%> <h6 class="campaign-title-preview"><%= proposal.campaing.title %></h6></span>
               <% end %>
             <div class="proposal-description">
               <p><%= proposal.summary %></p>
