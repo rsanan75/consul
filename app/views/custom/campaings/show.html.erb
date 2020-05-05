@@ -2,9 +2,11 @@
         <div class="small-12 column">
 <h1><%= @campaing.title %></h1>
 <%= auto_link_already_sanitized_html wysiwyg(@campaing.description) %>
-<div class="winning_proposal">
-  <%= render partial: "proposals/proposal", object: @winning_proposal  %>
-</div>
+<% if @winning_proposal.present? %>
+  <div class="winning_proposal">
+    <%= render partial: "proposals/proposal", object: @winning_proposal  %>
+  </div>
+<% end %>
 <%= render partial: "proposals/proposal", collection: @all_proposals %>
 </div>
 </div>
