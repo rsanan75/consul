@@ -104,7 +104,7 @@ en:
         other: Other
     campaigns:
       title: Campaigns
-      retired_title: Retired Campaigns
+      retired_title: Completed Campaigns
       end_date: Ended on
       admin_title: Campaign
     proposals_edit:
