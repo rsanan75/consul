@@ -1232,6 +1232,12 @@ details.retired-campaign  {
     font-weight: bold;
     cursor: pointer;
 }
+details.retired-campaign .campaign-show {
+    text-align: center;
+}
+details.retired-campaign .campaign-show ul {
+    text-align: left;
+}
 details.retired-campaign summary {
     background: #e7f2fc;
     padding: 10px;

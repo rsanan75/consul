@@ -26,7 +26,7 @@ en:
       tags_label: Tags
       proposal_shortlink_label: View Proposals
       active_tab_label: Active
-      completed_tab_label: Completed/Results
+      completed_tab_label: Results
       description_note: (maximum 6,000 characters)
       view_all_campaing: View all proposals
       winning_title: Winning Proposal
@@ -104,7 +104,7 @@ en:
         other: Other
     campaigns:
       title: Campaigns
-      retired_title: Completed Campaigns
+      retired_title: Results
       end_date: Ended on
       admin_title: Campaign
     proposals_edit:
