@@ -78,7 +78,6 @@
           <a href="#proposals"><%= t("customtext.proposal_pages.proposal_shortlink_label") %></a>
         </li>
 </ul>
-  <% i = 0 %>
   <% @campaigns.each do |campaing| %>
   <details class="retired-campaign" <% if i == 0 %> open <% end %>>
     <summary><%= campaing.title %>
@@ -91,18 +90,15 @@
     <%= auto_link_already_sanitized_html wysiwyg(campaing.description) %>
 
     </div>
-    <% if i == 0 %>
-      <div class="winning-proposal winning_proposal-<%= campaing.id %>">
+      <div class="winning-proposal">
         <h3 class="text-center"><%= t("customtext.proposal_pages.winning_title") %><h3>
         <div class="winning_text"><%= auto_link_already_sanitized_html wysiwyg(campaing.win_proposal_text) %></div>
-        <% if @winning_proposal.present? %>
-          <%= render partial: "/proposals/proposal", object: @winning_proposal %>
-        <% end %>
+        <div class="winning_proposal-<%= campaing.id %>"></div>
       </div>
     <% end %>
   </details>
-   <% i += 1 %>
   <% end %>
+  <%= render partial: "proposals/proposal", collection: @all_winning_proposals %>
 <% else %>
 <ul class="no-bullet submenu">
     <li class="inline-block">
@@ -149,10 +145,10 @@
             <% end %>
       <% end %>
       <% if params[:retired].present? && params[:retired] == 'all' %>
-      <div id="proposals" class="proposals-list small-12 medium-12 column">
-            <% else %>
+      
+      <% else %>
             <div id="proposals" class="proposals-list small-12 medium-9 column">
-            <% end %>
+           
 
       <% if @proposals.any? %>
         <div class="show-for-small-only">
@@ -187,6 +183,7 @@
         <% end %>
       </div>
     </div>
+     <% end %>
 <% if params[:retired].present? && params[:retired] == 'all' %>
             <% else %>
     <div class="small-12 medium-3 column">
