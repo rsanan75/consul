@@ -97,8 +97,9 @@
         <div class="winning_proposal-<%= campaing.id %>"></div>
       </div>
     </details>
+    <% i += 1 %>
     <% end %>
-     <% i += 1 %>
+     
   
   <%= render partial: "proposals/proposal", collection: @all_winning_proposals %>
 <% else %>

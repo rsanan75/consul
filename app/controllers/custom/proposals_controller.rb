@@ -13,7 +13,7 @@ ProposalsController.class_eval do
     if params[:retired].present?
       @campaigns = Campaing.where(":date >= ends_at", date: Time.current).order(ends_at: :desc)
       arr = []
-      @campaingns.each do |campaing|
+      @campaigns.each do |campaing|
         if campaing.proposal_id.present?
           arr.push(campaing.proposal_id)
         end
