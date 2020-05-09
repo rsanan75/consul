@@ -93,7 +93,7 @@
       <div class="winning-proposal">
         <h3 class="text-center"><%= t("customtext.proposal_pages.winning_title") %><h3>
         <div class="winning_text"><%= raw campaing.win_proposal_text %></div>
-        <div class="winning_proposal-<% if campaing.proposal_id.present? %><%= campaing.proposal_id %><% else %>no-win<% end %>"></div>
+        <div class="add-winning-proposal" data-proposal-id="<% if campaing.proposal_id.present? %><%= campaing.proposal_id %><% else %>no-win<% end %>"></div>
       </div>
     </details>
     <% i += 1 %>
