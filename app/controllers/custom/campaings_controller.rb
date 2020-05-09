@@ -7,5 +7,7 @@ class CampaingsController < ApplicationController
         @winning_proposal = proposal
       end
     end
+    @all_proposals = Kaminari.paginate_array(@all_proposals)
+                                .page(params[:page]).per(10)
   end
 end
