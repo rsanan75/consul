@@ -34,8 +34,4 @@ jQuery(document).ready(function () {
     });
   }
   
-  jQuery('.add-winning-proposal').each(function () {
-    jQuery('#proposal_' + jQuery(this).data('proposal-id')).appendTo(this);
-  });
-  
 });
