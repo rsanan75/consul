@@ -3,7 +3,8 @@
 <h1><%= @campaing.title %></h1>
 <%= auto_link_already_sanitized_html wysiwyg(@campaing.description) %>
 <% if @winning_proposal.present? %>
-  <div class="winning_proposal">
+  <div class="winning_proposal campaign-winning-proposal">
+    <h3 class="text-center"><%= t("customtext.proposal_pages.winning_title") %><h3>
     <%= render partial: "proposals/proposal", object: @winning_proposal  %>
   </div>
 <% end %>

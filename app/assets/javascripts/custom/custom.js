@@ -33,9 +33,9 @@ jQuery(document).ready(function () {
       jQuery('ul.categories').append(jQuery(this).clone());
     });
   }
-  if (jQuery('.add-winning-proposal').length) {
-    jQuery('.add-winning-proposal').each(function () {
-      jQuery('#proposal_' + jQuery(this).data('proposal-id')).appendTo(this);
-    });
-  }
+  
+  jQuery('.add-winning-proposal').each(function () {
+    jQuery('#proposal_' + jQuery(this).data('proposal-id')).appendTo(this);
+  });
+  
 });
