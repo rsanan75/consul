@@ -17,7 +17,7 @@
   <div class="row margin">
     <div class="small-12 medium-9 column">
       <%= render "callout" %>
-      <% if @poll.voted_by?(current_user) %>
+      <% if @poll.not_voted_by?(current_user) %>
         hey
       <% end %>
       
