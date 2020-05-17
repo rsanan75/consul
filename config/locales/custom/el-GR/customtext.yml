@@ -26,8 +26,10 @@ el:
       tags_label: Ετικέτες 
       proposal_shortlink_label: Προβολή Προτάσεων
       active_tab_label: Ενεργά
-      completed_tab_label: Ολοκληρωμένα
+      completed_tab_label: Αποτελέσματα
       description_note: (έως 6,000 χαρακτήρες. Παρακαλούμε όπως χρησιμοποιείτε το ελληνικό αλφάβητο.)
+      view_all_campaing: Προβολή όλων των προτάσεων
+      winning_title: Νικήτρια πρόταση
     common_forms:
       mandatory_form: Όλα τα πεδία είναι υποχρεωτικά
       translate_note: (Η γλώσσα που έχετε επιλέξει είναι η ελληνική. Εάν θέλετε να γράψετε στα αγγλικά ή τουρκικά, αλλάξτε τη γλώσσα από το μενού στο πάνω μέρος της σελίδας.)
@@ -102,7 +104,7 @@ el:
         other: Άλλο
     campaigns:
       title: ΚΑΛΕΣΜΑ ΥΠΟΒΟΛΗΣ ΠΡΟΤΑΣΕΩΝ
-      retired_title: Αποσυρμένα Καλέσματα Υποβολής Προτάσεων
+      retired_title: Αποτελέσματα
       end_date: Ολοκληρώθηκε
       admin_title: Κάλεσμα Υποβολής Προτάσεων
     proposals_edit:
