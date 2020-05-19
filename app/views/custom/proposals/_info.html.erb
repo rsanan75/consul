@@ -51,13 +51,15 @@
 <% end %>
 
 <% if @proposal.retired? %>
-  <div id="retired_explanation" class="callout">
-    <h2>
-      <%= t("proposals.show.retired") %>:
-      <%= t("proposals.retire_options.#{@proposal.retired_reason}") unless @proposal.retired_reason == "other" %>
-    </h2>
-    <%= simple_format sanitize_and_auto_link(@proposal.retired_explanation), {}, sanitize: false %>
-  </div>
+  <% if false %>
+    <div id="retired_explanation" class="callout">
+      <h2>
+        <%= t("proposals.show.retired") %>:
+        <%= t("proposals.retire_options.#{@proposal.retired_reason}") unless @proposal.retired_reason == "other" %>
+      </h2>
+      <%= simple_format sanitize_and_auto_link(@proposal.retired_explanation), {}, sanitize: false %>
+    </div>
+  <% end %>
 <% end %>
 
 <% if feature?(:allow_attached_documents) %>
