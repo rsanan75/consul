@@ -66,7 +66,7 @@
             
       <% if proposal.retired? %>
           <div id="<%= dom_id(proposal) %>_votes"
-             class="small-12 medium-3 column supports-container">
+             class="small-12 medium-3 column supports-container large-2">
               <div class="padding text-center">
               <strong><%= t("proposals.proposal.supports", count: proposal.total_votes) %></strong>
               <p><%= t("proposals.show.retired_warning") %></p>
@@ -74,7 +74,7 @@
               </div>
       <% else %>
         <div id="<%= dom_id(proposal) %>_votes"
-             class="small-12 medium-3 column supports-container">
+             class="small-12 medium-3 column supports-container large-2">
           <% if proposal.successful? %>
             <div class="padding">
               <div class="supports text-center">
