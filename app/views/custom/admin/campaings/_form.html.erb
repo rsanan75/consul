@@ -49,7 +49,7 @@
   </div>
 
   <div class="row">
-    <div class="documents small-12 column" data-max-documents="3">
+    <div class="documents small-12 column" data-max-documents="<%= I18n.available_locales.count() %>">
       <%= render "documents/nested_documents", documentable: @campaing, f: f %>
     </div>
   </div>
