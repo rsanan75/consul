@@ -30,7 +30,9 @@ class Admin::CampaingsController < Admin::BaseController
   private
 
     def campaing_params
-      attributes = [:starts_at, :proposal_id, :ends_at, translation_params(Campaing)]
+      attributes = [:starts_at, :proposal_id, :ends_at, translation_params(Campaing),
+                    documents_attributes: [:id, :title, :attachment, :cached_attachment,
+                                           :user_id, :_destroy]]
 
       params.require(:campaing).permit(*attributes)
     end
