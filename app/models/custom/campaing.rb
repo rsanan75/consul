@@ -4,6 +4,7 @@ class Campaing < ApplicationRecord
   translates :win_proposal_text
   include Globalizable
   include Measurable
+  include Documentable
 
   has_many :proposals
   belongs_to :proposal
