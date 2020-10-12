@@ -1,4 +1,4 @@
-class Admin::CampaingsController < Admin::BaseController
+class Admin::CampaingsController::ImagesController < Admin::BaseController
   include Translatable
   include ImageAttributes
   load_and_authorize_resource
@@ -8,6 +8,7 @@ class Admin::CampaingsController < Admin::BaseController
 
   def create
     @campaing = Campaing.new(campaing_params)
+    
     if @campaing.save
       redirect_to admin_campaings_path, notice: t("admin.campaings.create.notice")
     else
@@ -24,6 +25,8 @@ class Admin::CampaingsController < Admin::BaseController
   end
 
   def destroy
+    @image = ::Image.find(params[:id])
+    @image.destroy!
     @campaing.destroy
     redirect_to admin_campaings_path, notice: t("admin.campaings.destroy.notice")
   end
@@ -32,7 +35,7 @@ class Admin::CampaingsController < Admin::BaseController
 
     def campaing_params
       attributes = [:starts_at, :proposal_id, :ends_at, translation_params(Campaing),
-                    image_attributes: image_attributes,
+                    images_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy]),
                     documents_attributes: [:id, :title, :attachment, :cached_attachment,
                                            :user_id, :_destroy]]
 
