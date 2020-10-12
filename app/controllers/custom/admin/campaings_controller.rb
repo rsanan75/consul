@@ -1,5 +1,6 @@
 class Admin::CampaingsController < Admin::BaseController
   include Translatable
+  include ImageAttributes
   load_and_authorize_resource
 
   def index
@@ -31,6 +32,7 @@ class Admin::CampaingsController < Admin::BaseController
 
     def campaing_params
       attributes = [:starts_at, :proposal_id, :ends_at, translation_params(Campaing),
+                    image_attributes: image_attributes,
                     documents_attributes: [:id, :title, :attachment, :cached_attachment,
                                            :user_id, :_destroy]]
 

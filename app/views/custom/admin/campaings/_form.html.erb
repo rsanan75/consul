@@ -47,7 +47,11 @@
       </div>
     <% end %>
   </div>
-
+  <div class="row">
+    <div class="images small-12 column" data-max-images="<%= I18n.available_locales.count() %>">
+      <%= render "images/nested_image", imageable: @campaing, f: f %>
+    </div>
+  </div>
   <div class="row">
     <div class="documents small-12 column" data-max-documents="<%= I18n.available_locales.count() %>">
       <%= render "documents/nested_documents", documentable: @campaing, f: f %>

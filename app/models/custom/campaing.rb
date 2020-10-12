@@ -5,6 +5,8 @@ class Campaing < ApplicationRecord
   include Globalizable
   include Measurable
   include Documentable
+  include Imageable
+
 
   has_many :proposals
   belongs_to :proposal
