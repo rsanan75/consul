@@ -35,7 +35,7 @@ class Admin::CampaingsController::ImagesController < Admin::BaseController
 
     def campaing_params
       attributes = [:starts_at, :proposal_id, :ends_at, translation_params(Campaing),
-                    images_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy]),
+                    images_attributes: [:id, :title, :attachment, :cached_attachment, :user_id, :_destroy],
                     documents_attributes: [:id, :title, :attachment, :cached_attachment,
                                            :user_id, :_destroy]]
 
