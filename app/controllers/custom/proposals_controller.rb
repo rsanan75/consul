@@ -19,8 +19,9 @@ ProposalsController.class_eval do
           arr.push(campaing.proposal_id)
         end
         if i == 0
-          if campaing.documents.present?
-            campaing.documents.each do |document|
+          l_campaign = Campaing.where(id: campaing.id)
+          if l_campaign.documents.present?
+            l_campaign.documents.each do |document|
               logger.debug "the docuemnt: #{document.inspect}"
               logger.debug "the language: #{I18n.locale.inspect}"
               if I18n.locale == document.title
