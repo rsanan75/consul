@@ -87,8 +87,11 @@
               <p><%= t("proposals.proposal.archived") %></p>
             </div>
           <% else %>
-            <%# <%= render "votes",
-                      { proposal: proposal, vote_url: vote_proposal_path(proposal, value: "yes") } %> %>
+            <% if proposal.retired? %>
+            <% else %>
+              <%= render "votes",
+                      { proposal: proposal, vote_url: vote_proposal_path(proposal, value: "yes") } %>
+            <% end %>
           <% end %>
         </div>
         <% end %>
