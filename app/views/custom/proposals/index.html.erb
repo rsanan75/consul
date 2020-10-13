@@ -80,7 +80,9 @@
 </ul>
 <% i = 0 %>
   <div class="campaign-attachments">
-    <%= @campaign_document.debug %>
+    <% if @campaigns.first.documents.present? %>
+      hey there is a document
+    <% end %>
   </div>
   <% @campaigns.each do |campaing| %>
   <details class="retired-campaign" <% if i == 0 %> open <% end %>>
