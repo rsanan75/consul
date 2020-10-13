@@ -12,11 +12,22 @@ ProposalsController.class_eval do
     end
     if params[:retired].present?
       @campaigns = Campaing.where(":date >= ends_at", date: Time.current).order(ends_at: :desc)
+      i = 0
       arr = []
       @campaigns.each do |campaing|
         if campaing.proposal_id.present?
           arr.push(campaing.proposal_id)
         end
+        if i == 0
+          if campaing.documents.present?
+            campaing.documents.each do |document|
+              if I18n.locale == document.title
+                @campaign_document = document.attachment.url
+              end
+            end
+          end
+        end
+        i += 1
       end
       @all_winning_proposals = Proposal.where(id: arr)
     else 
