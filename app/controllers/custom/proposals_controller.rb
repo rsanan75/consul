@@ -21,6 +21,8 @@ ProposalsController.class_eval do
         if i == 0
           if campaing.documents.present?
             campaing.documents.each do |document|
+              logger.debug "the docuemnt: #{document.inspect}"
+              logger.debug "the language: #{I18n.locale.inspect}"
               if I18n.locale == document.title
                 @campaign_document = document.attachment.url
               end
