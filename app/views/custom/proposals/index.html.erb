@@ -81,7 +81,12 @@
 <% i = 0 %>
   <div class="campaign-attachments">
     <% if @campaigns.first.documents.present? %>
-      hey there is a document
+      <% @campaigns.first.documents.each do |document| %>
+      <%= I18n.locale %>
+        <% if document.title == 'en' %>
+          <%= document.attachment.url %>
+        <% end %>
+      <% end %>
     <% end %>
   </div>
   <% @campaigns.each do |campaing| %>
