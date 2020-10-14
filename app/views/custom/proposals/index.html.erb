@@ -85,21 +85,17 @@
         <div class="small-12 medium-3 column">
           <% if @campaigns.first.image.present? %>
             <div class="report-desc-img">
-              <img src="<%= @campaigns.first.image_url %>">
+              <img src="<%= @campaigns.first.image_url(:large) %>">
             </div>
-            
           <% end %>
         </div>
         <div class="small-12 medium-9 column">
           <%= raw @campaigns.first.report_description %>
           <%= I18n.locale %>
           <% @campaigns.first.documents.each do |document| %>
-          <% if I18n.locale.squish!.downcase! == document.title.squish!.downcase! %>
-            <a target=_blank href="<%= document.attachment.url %>">Download Report</a>
+            <a class="doc-<%= document.title %>" target=_blank href="<%= document.attachment.url %>"><%= t("customtext.campaigns.report_download") %></a>
           <% end %>
-        <% end %>
         </div>
-        
       <% end %>
     </div>
   </div>
