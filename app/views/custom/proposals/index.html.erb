@@ -79,13 +79,24 @@
         </li> -->
 </ul>
 <% i = 0 %>
-  <div class="campaign-attachments">
+  <div class="campaign-report">
     <% if @campaigns.first.documents.present? %>
-      <% @campaigns.first.documents.each do |document| %>
+      <div class="small-12 medium-3 column">
+        <% if @campaigns.first.image.present? %>
+          <%= link_to t("admin.shared.show_image"), @campaigns.first.image_url(:medium),
+                      title: @campaigns.first.image.title, target: "_blank" %>
+        <% end %>
+      </div>
+      <div class="small-12 medium-9 column">
+        <%= raw @campaigns.first.reports_description %>
+        <%= I18n.locale %>
+        <% @campaigns.first.documents.each do |document| %>
         <% if I18n.locale == document.title %>
           <a target=_blank href="<%= document.attachment.url %>">Download Report</a>
         <% end %>
       <% end %>
+      </div>
+      
     <% end %>
   </div>
   <% @campaigns.each do |campaing| %>
