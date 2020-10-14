@@ -1,6 +1,6 @@
 en:
   admin:
-    campaigns:
+    campaings:
       create:
         notice: New Campaign was created succesfully!
       destroy:
