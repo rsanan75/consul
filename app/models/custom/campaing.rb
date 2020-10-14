@@ -19,6 +19,13 @@ class Campaing < ApplicationRecord
 
   scope :current, -> { where("starts_at <= :date AND :date <= ends_at", date: Time.current)}
 
+  def documentables_note(documentable)
+      doc_note = t "documents.form.note", max_documents_allowed: max_documents_allowed(documentable),
+                             accepted_content_types: documentable_humanized_accepted_content_types(documentable.class),
+                             max_file_size: max_file_size(documentable.class)
+      doc_note.concat(t "customtext.campaigns.report_doc_desc")
+  end
+
   private
 
     def check_dates

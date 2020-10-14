@@ -1317,6 +1317,11 @@ html[lang="el"] a.doc-el,
 html[lang="tr"] a.doc-tr {
     display:block;
 }
+.report-docs .title label {
+    visibility: hidden;
+}
+
+.report-docs .title label::before {content: 'Language Code';visibility: visible;}
 .button.button-report {
     max-width: 250px;
     float: right;
