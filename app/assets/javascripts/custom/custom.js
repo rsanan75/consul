@@ -33,5 +33,11 @@ jQuery(document).ready(function () {
       jQuery('ul.categories').append(jQuery(this).clone());
     });
   }
+  if (jQuery('.report-doc-description').length && jQuery('.report-docs .documents-list .help-text').length) {
+    jQuery('.report-docs .documents-list .help-text').append(jQuery('.report-doc-description').text());
+  }
+  if (jQuery('.report-image-description').length && jQuery('.report-images .images .help-text').length) {
+    jQuery('.report-images .images .help-text').append(jQuery('.report-image-description').text());
+  }
   
 });

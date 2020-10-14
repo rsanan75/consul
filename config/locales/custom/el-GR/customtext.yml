@@ -109,6 +109,7 @@ el:
       admin_title: Κάλεσμα Υποβολής Προτάσεων
       report_download: Λήψη αναφοράς
       report_doc_desc: "Please note: while uploading the document; please enter language as el for Greek, tr for Turkish and en for English. System will accept only one document per language."
+      report_img_desc: "Please upload the images of minimum width 100px and height 100px."
     proposals_edit:
       proposal_title: Τίτλος πρότασης (Παρακαλούμε όπως χρησιμοποιείτε το ελληνικό αλφάβητο)
     admin:
