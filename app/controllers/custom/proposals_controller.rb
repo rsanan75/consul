@@ -49,6 +49,16 @@ ProposalsController.class_eval do
     end
   end
 
+  def create
+    @proposal = Proposal.new(proposal_params.merge(author: current_user))
+    if @proposal.save
+      @proposal.publish
+      redirect_to share_proposal_path(@proposal), notice: t("proposals.notice.published")
+    else
+      render :new
+    end
+  end
+
   private
 
     def set_campaings

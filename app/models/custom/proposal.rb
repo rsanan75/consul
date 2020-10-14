@@ -7,6 +7,6 @@ Proposal.class_eval do
   scope :from_current_campaigns, -> { joins(:campaing).merge(Campaing.current) }
   validates :campaing_id, presence: true
   def editable_by?(user)
-    (author_id == user.id || user&.administrator?) && editable?
+    (user&.administrator?) && editable?
   end
 end

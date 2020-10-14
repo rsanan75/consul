@@ -39,8 +39,7 @@ class ProposalsController < ApplicationController
   def create
     @proposal = Proposal.new(proposal_params.merge(author: current_user))
     if @proposal.save
-      @proposal.publish
-      redirect_to share_proposal_path(@proposal), notice: t("proposals.notice.published")
+      redirect_to created_proposal_path(@proposal), notice: I18n.t("flash.actions.create.proposal")
     else
       render :new
     end
