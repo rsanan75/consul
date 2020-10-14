@@ -107,6 +107,7 @@ el:
       retired_title: Αποτελέσματα
       end_date: Ολοκληρώθηκε
       admin_title: Κάλεσμα Υποβολής Προτάσεων
+      report_download: Λήψη αναφοράς
     proposals_edit:
       proposal_title: Τίτλος πρότασης (Παρακαλούμε όπως χρησιμοποιείτε το ελληνικό αλφάβητο)
     admin:

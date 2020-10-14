@@ -1309,6 +1309,18 @@ html[lang="el"] .about-box-left .about-t-sec, html[lang="el"] .about-box-right .
 min-height: 258px;
 }
 
+a.doc-el,a.doc-en,a.doc-tr {
+    display:none;
+}
+html[lang="en"] a.doc-en,
+html[lang="el"] a.doc-el,
+html[lang="tr"] a.doc-tr {
+    display:block;
+}
+.button.button-report {
+    max-width: 250px;
+    float: right;
+}
 .shared-order-links .submenu li:last-child {
     display: none;
 }

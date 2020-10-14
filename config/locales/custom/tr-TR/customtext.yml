@@ -107,6 +107,7 @@ tr:
       retired_title: Sonuçlar
       end_date: Tamamlanma tarihi
       admin_title: Öneri Çağrısı
+      report_download: Raporu İndir
     proposals_edit:
       proposal_title: Öneri başlığı
     admin:

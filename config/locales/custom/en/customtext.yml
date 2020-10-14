@@ -107,6 +107,7 @@ en:
       retired_title: Results
       end_date: Ended on
       admin_title: Campaign
+      report_download: Download Report
     proposals_edit:
       proposal_title: Proposals title
     admin:
