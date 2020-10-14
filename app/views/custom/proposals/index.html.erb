@@ -82,9 +82,8 @@
   <div class="campaign-attachments">
     <% if @campaigns.first.documents.present? %>
       <% @campaigns.first.documents.each do |document| %>
-      <%= I18n.locale %>
-        <% if document.title == 'en' %>
-          <%= document.attachment.url %>
+        <% if I18n.locale == document.title %>
+          <a target=_blank href="<%= document.attachment.url %>">Download Report</a>
         <% end %>
       <% end %>
     <% end %>

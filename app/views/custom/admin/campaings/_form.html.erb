@@ -45,6 +45,11 @@
                                           maxlength: Campaing.description_max_length,
                                           ckeditor: { language: I18n.locale } %>
       </div>
+      <div class="ckeditor small-12 column">
+        <%= translations_form.cktext_area :report_description,
+                                          maxlength: Campaing.description_max_length,
+                                          ckeditor: { language: I18n.locale } %>
+      </div>
     <% end %>
   </div>
   <div class="row">
