@@ -49,13 +49,13 @@ class Proposal < ApplicationRecord
   validates_translation :title, presence: true, length: { in: 4..Proposal.title_max_length }
   validates_translation :description, length: { maximum: Proposal.description_max_length }
   validates_translation :summary, presence: true
-  validates_translation :retired_explanation, presence: true, unless: -> { retired_at.blank? }
+  #validates_translation :retired_explanation, presence: true, unless: -> { retired_at.blank? }
 
   validates :author, presence: true
   validates :responsible_name, presence: true, unless: :skip_user_verification?
 
   validates :responsible_name, length: { in: 6..Proposal.responsible_name_max_length }, unless: :skip_user_verification?
-  validates :retired_reason, presence: true, inclusion: { in: RETIRE_OPTIONS }, unless: -> { retired_at.blank? }
+  #validates :retired_reason, presence: true, inclusion: { in: RETIRE_OPTIONS }, unless: -> { retired_at.blank? }
 
   validates :terms_of_service, acceptance: { allow_nil: false }, on: :create
 
