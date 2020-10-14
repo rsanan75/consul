@@ -80,24 +80,28 @@
 </ul>
 <% i = 0 %>
   <div class="campaign-report">
-    <% if @campaigns.first.documents.present? %>
-      <div class="small-12 medium-3 column">
-        <% if @campaigns.first.image.present? %>
-          <%= link_to t("admin.shared.show_image"), @campaigns.first.image_url(:medium),
-                      title: @campaigns.first.image.title, target: "_blank" %>
+    <div class="row">
+      <% if @campaigns.first.documents.present? %>
+        <div class="small-12 medium-3 column">
+          <% if @campaigns.first.image.present? %>
+            <div class="report-desc-img">
+              <img src="<%= @campaigns.first.image_url %>">
+            </div>
+            
+          <% end %>
+        </div>
+        <div class="small-12 medium-9 column">
+          <%= raw @campaigns.first.report_description %>
+          <%= I18n.locale %>
+          <% @campaigns.first.documents.each do |document| %>
+          <% if I18n.locale.squish!.downcase! == document.title.squish!.downcase! %>
+            <a target=_blank href="<%= document.attachment.url %>">Download Report</a>
+          <% end %>
         <% end %>
-      </div>
-      <div class="small-12 medium-9 column">
-        <%= raw @campaigns.first.reports_description %>
-        <%= I18n.locale %>
-        <% @campaigns.first.documents.each do |document| %>
-        <% if I18n.locale == document.title %>
-          <a target=_blank href="<%= document.attachment.url %>">Download Report</a>
-        <% end %>
+        </div>
+        
       <% end %>
-      </div>
-      
-    <% end %>
+    </div>
   </div>
   <% @campaigns.each do |campaing| %>
   <details class="retired-campaign" <% if i == 0 %> open <% end %>>
