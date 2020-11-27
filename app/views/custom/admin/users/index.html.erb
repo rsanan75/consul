@@ -13,8 +13,29 @@
 <% if @users.any? %>
 <h3 class="inline-block"><%= @users.count %> items</h3>
 <%= link_to "Download Users", url_for(params.permit(:page).merge(:format => "csv")), class: "small float-right clear" %>
+<%= javascript_include_tag 'http://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js' %>
+<%= stylesheet_link_tag 'http://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css' %>
+<%= javascript_include_tag 'http://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js' %>
+<%= stylesheet_link_tag 'http://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css' %>
 
-  <table>
+<style>
+    table.dataTable thead .sorting {
+        background-image: none;
+    }
+    table.dataTable thead .sorting_asc {
+        background-image: none;
+    }
+    table.dataTable thead .sorting_desc {
+        background-image: none;
+    }
+    table.dataTable thead .sorting_asc_disabled {
+        background-image: none;
+    }
+    table.dataTable thead .sorting_desc_disabled {
+        background-image: none;
+    }
+</style>
+  <table id="users_list">
     <thead>
       <tr>
         <th><%= t("customtext.registration_page.label_name") %></th>
@@ -43,7 +64,34 @@
     </tbody>
   </table>
 
+ <script>
+    
+
+  // Setup - add a text input to each footer cell
+    $('#user_list thead tr').clone(true).appendTo( '#user_list thead' );
+    $('#user_list thead tr:eq(1) th').each( function (i) {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
  
+        $( 'input', this ).on( 'keyup change', function () {
+            if ( table.column(i).search() !== this.value ) {
+                table
+                    .column(i)
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+    } );
+ 
+    var table = $('#user_list').DataTable( {
+        "order": [ [ 1, "asc" ] ],
+        "columnDefs": [ { "targets": 3, "orderable": false } ]
+        orderCellsTop: true,
+        fixedHeader: true
+    } );
+
+</script>
+
 <% else %>
   <div class="callout primary">
     There are no Users.
