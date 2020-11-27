@@ -12,7 +12,7 @@
   
 <% if @users.any? %>
 <h3 class="inline-block"><%= page_entries_info @users, entry_name: 'items' %></h3>
-<%= link_to "Download Users", url_for(params.merge(:format => "csv")), class: "small float-right clear" %>
+<%= link_to "Download Users", url_for(params.permit(:page).merge(:format => "csv")), class: "small float-right clear" %>
 
   <table>
     <thead>
