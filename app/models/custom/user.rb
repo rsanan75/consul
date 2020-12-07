@@ -2,7 +2,8 @@ class User < ApplicationRecord
 
   include Verification
 
-  devise :database_authenticatable, :registerable, :confirmable, :recoverable, :rememberable,
+  # :confirmable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable,
          :trackable, :validatable, :omniauthable, :password_expirable, :secure_validatable,
          authentication_keys: [:login]
 
