@@ -1,11 +1,11 @@
 <% if @users.any? %>
   <h3 class="margin"><%= page_entries_info @users %></h3>
-<%= javascript_include_tag 'https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js' %>
-<%= stylesheet_link_tag 'https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css' %>
-<%= javascript_include_tag 'https://cdn.datatables.net/v/bs/dt-1.10.22/datatables.min.js' %>
-<%= stylesheet_link_tag 'https://cdn.datatables.net/v/bs/dt-1.10.22/datatables.min.css' %>
+<%= javascript_include_tag '//cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js' %>
+<%= stylesheet_link_tag '//cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css' %>
+<%= javascript_include_tag '//cdn.datatables.net/v/bs/dt-1.10.22/datatables.min.js' %>
+<%= stylesheet_link_tag '//cdn.datatables.net/v/bs/dt-1.10.22/datatables.min.css' %>
 
-<style>
+<style type="text/css">
     table.dataTable thead .sorting {
         background-image: none;
     }
@@ -50,7 +50,7 @@
 </div>
 </div>
 
-<script>
+<script type="text/javascript">
     
 
   // Setup - add a text input to each footer cell
