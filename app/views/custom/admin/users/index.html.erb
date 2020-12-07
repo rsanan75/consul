@@ -13,10 +13,10 @@
 <% if @users.any? %>
 <h3 class="inline-block"><%= @users.count %> items</h3>
 <%= link_to "Download Users", url_for(params.permit(:page).merge(:format => "csv")), class: "small float-right clear" %>
-<%= javascript_include_tag 'http://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js' %>
-<%= stylesheet_link_tag 'http://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css' %>
-<%= javascript_include_tag 'http://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js' %>
-<%= stylesheet_link_tag 'http://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css' %>
+<%= javascript_include_tag 'https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js' %>
+<%= stylesheet_link_tag 'https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css' %>
+<%= javascript_include_tag 'https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js' %>
+<%= stylesheet_link_tag 'https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css' %>
 
 <style>
     table.dataTable thead .sorting {
