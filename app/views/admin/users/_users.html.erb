@@ -1,12 +1,11 @@
 <% if @users.any? %>
-<% ActionController::Base.asset_host = "" %>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
   <h3 class="margin"><%= page_entries_info @users %></h3>
-<%= javascript_include_tag 'https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js' %>
-<%= stylesheet_link_tag 'https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css' %>
-<%= javascript_include_tag 'https://cdn.datatables.net/v/bs/dt-1.10.22/datatables.min.js' %>
-<%= stylesheet_link_tag 'https://cdn.datatables.net/v/bs/dt-1.10.22/datatables.min.css' %>
-
-<style>
+<style rel="stylesheet" type="text/css">
     table.dataTable thead .sorting {
         background-image: none;
     }
@@ -51,7 +50,7 @@
 </div>
 </div>
 
-<script>
+<script type="text/javascript">
     
 
   // Setup - add a text input to each footer cell
