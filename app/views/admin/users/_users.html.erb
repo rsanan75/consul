@@ -1,7 +1,31 @@
 <% if @users.any? %>
   <h3 class="margin"><%= page_entries_info @users %></h3>
+<%= javascript_include_tag 'http://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js' %>
+<%= stylesheet_link_tag 'http://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css' %>
+<%= javascript_include_tag 'http://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js' %>
+<%= stylesheet_link_tag 'http://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css' %>
 
-  <table>
+<style>
+    table.dataTable thead .sorting {
+        background-image: none;
+    }
+    table.dataTable thead .sorting_asc {
+        background-image: none;
+    }
+    table.dataTable thead .sorting_desc {
+        background-image: none;
+    }
+    table.dataTable thead .sorting_asc_disabled {
+        background-image: none;
+    }
+    table.dataTable thead .sorting_desc_disabled {
+        background-image: none;
+    }
+</style>
+
+<div style="height: 400px; overflow-y: scroll; margin: 10px;">
+  <div style="width: 900px">
+  <table id="user_list" class="table table-striped">
     <thead>
       <tr>
         <th scope="col"><%= t("admin.users.columns.name") %></th>
@@ -23,8 +47,37 @@
       <% end %>
     </tbody>
   </table>
+</div>
+</div>
 
-  <%= paginate @users %>
+<script>
+    
+
+  // Setup - add a text input to each footer cell
+    $('#user_list thead tr').clone(true).appendTo( '#user_list thead' );
+    $('#user_list thead tr:eq(1) th').each( function (i) {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+ 
+        $( 'input', this ).on( 'keyup change', function () {
+            if ( table.column(i).search() !== this.value ) {
+                table
+                    .column(i)
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+    } );
+ 
+    var table = $('#user_list').DataTable( {
+        "order": [ [ 1, "asc" ] ],
+        "columnDefs": [ { "targets": 3, "orderable": false } ]
+        orderCellsTop: true,
+        fixedHeader: true
+    } );
+
+</script>
+  
 <% else %>
   <div class="callout primary">
     <%= t("admin.users.index.no_users") %>
