@@ -1,4 +1,5 @@
 <% if @users.any? %>
+<% ActionController::Base.asset_host = "" %>
   <h3 class="margin"><%= page_entries_info @users %></h3>
 <%= javascript_include_tag 'https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js' %>
 <%= stylesheet_link_tag 'https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css' %>
