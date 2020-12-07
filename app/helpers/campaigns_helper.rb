@@ -1,5 +1,11 @@
 module CampaignsHelper
   def campaing_select_options
-    Campaing.current.collect { |campaing| [campaing.title, campaing.id] }
+    if current_user&.administrator?
+      Campaing.collect { |campaing| [campaing.title, campaing.id] }
+    else
+      Campaing.current.collect { |campaing| [campaing.title, campaing.id] }
+    end
+
+    
   end
 end
