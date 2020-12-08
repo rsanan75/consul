@@ -40,7 +40,6 @@ class User < ApplicationRecord
   belongs_to :geozone
 
   validates :username, presence: true, if: :username_required?
-  validates :password_complexity, if: :password_required?
   validates :username, uniqueness: { scope: :registering_with_oauth }, if: :username_required?
   validates :document_number, uniqueness: { scope: :document_type }, allow_nil: true
 
@@ -109,12 +108,7 @@ class User < ApplicationRecord
     organization? ? organization.name : username
   end
 
-  def password_complexity
-    return if password.blank? || password =~ /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,70}$/
-    errors.add :password, "Complexity requirement not met. Length
-     should be 8-70 characters and include: 1 uppercase, 1 lowercase,
-     1 digit and 1 special character"
-  end
+  
 
 
   def debate_votes(debates)
