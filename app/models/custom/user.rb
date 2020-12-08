@@ -41,7 +41,6 @@ class User < ApplicationRecord
 
   validates :username, presence: true, if: :username_required?
   validates :password_complexity, if: :password_required?
-  validates :is_email_valid
   validates :username, uniqueness: { scope: :registering_with_oauth }, if: :username_required?
   validates :document_number, uniqueness: { scope: :document_type }, allow_nil: true
 
@@ -109,10 +108,7 @@ class User < ApplicationRecord
   def name
     organization? ? organization.name : username
   end
-  def is_email_valid 
-    return if email.blank? || email =~ /^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$/
-      errors.add :email, "Email is invalid."
-  end
+
   def password_complexity
     return if password.blank? || password =~ /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,70}$/
     errors.add :password, "Complexity requirement not met. Length
