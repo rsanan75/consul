@@ -2,9 +2,7 @@
 
   <% if current_page?(new_user_session_path) %>
 
-  <div class="small-12 medium-12 large-4 column pad-r-0">
-    <div class="login-box-left">
-      <h2><%= t("devise_views.mailer.confirmation_instructions.title") %></h2>
+  
       <p><%= t("devise_views.shared.links.signin_with_provider") %></p>
       <ul>
         <% if feature? :google_login %>
@@ -23,8 +21,7 @@
           <% end %>
         </li>
       </ul>
-    </div>
-  </div>
+    
     
 
   <% elsif current_page?(new_user_registration_path) %>

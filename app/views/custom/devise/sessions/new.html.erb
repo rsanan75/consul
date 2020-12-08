@@ -1,7 +1,12 @@
 <% provide :title do %><%= t("devise_views.sessions.new.title") %><% end %>
 
 
-<%= render "devise/omniauth_form" %>
+<div class="small-12 medium-12 large-4 column pad-r-0">
+    <div class="login-box-left">
+      <h2><%= t("devise_views.mailer.confirmation_instructions.title") %></h2>
+      <%= render "devise/omniauth_form" %>
+    </div>
+</div>
 
 <div class="small-12 medium-12 large-8 column pad-l-0">
           <div class="login-box-right">
