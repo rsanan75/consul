@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  App.Polls = {
+  App.PollsCustom = {
     generateToken: function() {
       var strings;
       strings = Array.apply(null, {
@@ -13,10 +13,10 @@
     replaceToken: function(token) {
       $(".js-question-answer").each(function() {
         var token_param;
-        if (!this.search && jQuery(this).data('answer-url')) {
-          token_param = jQuery(this).data('answer-url').slice(-6);
+        if (!this.search && $(this).data('answer-url')) {
+          token_param = $(this).data('answer-url').slice(-6);
           if (token_param === "token=") {
-            jQuery(this).data('answer-url') = jQuery(this).data('answer-url') + token;
+            $(this).data('answer-url') = jQuery(this).data('answer-url') + token;
           }
         } else {
           token_param = this.search.slice(-6);
