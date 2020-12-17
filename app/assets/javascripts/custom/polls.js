@@ -28,8 +28,8 @@
     },
     initialize: function() {
       var token;
-      token = App.Polls.generateToken();
-      App.Polls.replaceToken(token);
+      token = App.PollsCustom.generateToken();
+      App.PollsCustom.replaceToken(token);
       $(".zoom-link").on("click", function(event) {
         var answer;
         answer = $(event.target).closest("div.answer");
