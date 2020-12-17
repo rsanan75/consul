@@ -1323,6 +1323,14 @@ html[lang="tr"] a.doc-tr {
     font-size: larger;
     font-weight: bold;
 }
+.answered_already.poll-answer-vote {
+    cursor: pointer;
+    background-color: #ccc;  
+}
+.answered-font {
+    color: red;
+    font-weight: bold;
+}
 .report-docs .title label {
     visibility: hidden;
 }

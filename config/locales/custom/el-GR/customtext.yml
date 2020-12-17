@@ -126,4 +126,6 @@ el:
     mail_footer:
       us_click_here: Click here to
       us_link_text: unsubscribe.
+    pollvote:
+      answered_already: You have submitted your answer already GR.
     
