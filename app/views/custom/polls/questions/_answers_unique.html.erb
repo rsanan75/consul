@@ -7,13 +7,12 @@
           <%= answer.title %>
         </span>
       <% else %>
-        <%= link_to answer.title,
-          answer_question_path(question, answer: answer.title, token: token),
-          method: :post,
-          remote: true,
-          title: t("poll_questions.show.vote_answer", answer: answer.title),
-          class: "button secondary hollow js-question-answer" %>
+        <span data-answer-url="<%= answer_question_path(question, answer: answer.title, token: token) %>" class="secondary hollow js-question-answer button can-vote"><%= answer.title %></span>
       <% end %>
+    <% end %>
+    <% if @answers_by_question_id[question.id].empty? %>
+      <button class="voting-submit button small"><%= t("customtext.sitemessages.label_submit") %></button>
+    <% else %>
     <% end %>
   <% elsif !user_signed_in? %>
     <% answers.order(id: :desc).each do |answer| %>
