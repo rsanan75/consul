@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  App.PollsCustom = {
+  App.Polls = {
     generateToken: function() {
       var strings;
       strings = Array.apply(null, {
@@ -28,8 +28,8 @@
     },
     initialize: function() {
       var token;
-      token = App.PollsCustom.generateToken();
-      App.PollsCustom.replaceToken(token);
+      token = App.Polls.generateToken();
+      App.Polls.replaceToken(token);
       $(".zoom-link").on("click", function(event) {
         var answer;
         answer = $(event.target).closest("div.answer");
