@@ -16,7 +16,7 @@
         if (!this.search && $(this).data('answer-url')) {
           token_param = $(this).data('answer-url').slice(-6);
           if (token_param === "token=") {
-            $(this).data('answer-url') = jQuery(this).data('answer-url') + token;
+            $(this).data('answer-url',$(this).data('answer-url') + token);
           }
         } else {
           token_param = this.search.slice(-6);
