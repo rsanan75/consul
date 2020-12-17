@@ -14,7 +14,7 @@
       <button class="voting-submit button small"><%= t("customtext.sitemessages.label_submit") %></button>
     <% else %>
     <div class="answered-font"><%= t("customtext.pollvote.answered_already") %></div>
-    <% else %>
+    
     <% end %>
   <% elsif !user_signed_in? %>
     <% answers.order(id: :desc).each do |answer| %>
