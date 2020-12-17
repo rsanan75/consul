@@ -12,7 +12,7 @@ jQuery(document).ready(function () {
     }
   });
   jQuery("a.title.disabled-title").each(function() {
-    console.log("hey");
+    
     jQuery(this).removeAttr('href');
   });
   jQuery("a.title.disabled-title").on('click',function(e){

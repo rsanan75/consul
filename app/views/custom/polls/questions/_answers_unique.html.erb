@@ -7,7 +7,7 @@
           <%= answer.title %>
         </span>
       <% else %>
-        <span data-answer-url="<%= answer_question_path(question, answer: answer.title, token: token) %>" class="secondary hollow js-question-answer button can-vote"><%= answer.title %></span>
+        <span data-answer-url="<%= answer_question_path(question, answer: answer.title, token: token) %>" class=" <%= @answers_by_question_id[question.id].empty? 'no-answer' : 'anwered_already' %> secondary poll-answer-vote hollow js-question-answer button can-vote"><%= answer.title %></span>
       <% end %>
     <% end %>
     <% if @answers_by_question_id[question.id].empty? %>

@@ -1317,6 +1317,12 @@ html[lang="el"] a.doc-el,
 html[lang="tr"] a.doc-tr {
     display:block;
 }
+.poll-question-answers .voting-submit {
+    clear: both;
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+}
 .report-docs .title label {
     visibility: hidden;
 }

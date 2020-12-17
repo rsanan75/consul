@@ -30,6 +30,19 @@
       var token;
       token = App.Polls.generateToken();
       App.Polls.replaceToken(token);
+      $('.poll-question-answers .poll-answer-vote').on('click',function(){
+        $('.poll-question-answers .poll-answer-vote').removeClass('answered');
+        $(this).addClass('answered');
+      });
+      $(".voting-submit").on("click",function(e){
+        if($('.poll-question-answers .poll-answer-vote.answered')) {
+          $.post( $('.poll-question-answers .poll-answer-vote.answered').data('answer-url'), function( data ) {
+            
+          });
+          } else {
+            alert("Please select an option.");
+          }
+      });
       $(".zoom-link").on("click", function(event) {
         var answer;
         answer = $(event.target).closest("div.answer");
