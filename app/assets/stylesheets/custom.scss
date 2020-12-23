@@ -1331,13 +1331,15 @@ html[lang="tr"] a.doc-tr {
     color: red;
     font-weight: bold;
 }
-.poll-question-answers .button.answered.answered_already {
+.poll-question-answers .button.answered.answered_already,
+.poll-question-answers .button.answered_already {
     border: 2px solid #ccc;
     background-color: #ccc;
     cursor: no-drop;
 }
 
-.poll-question-answers .button.answered.answered_already:before,.poll-question-answers .button.answered.answered_already::after {
+.poll-question-answers .button.answered.answered_already:before,
+.poll-question-answers .button.answered.answered_already::after {
     display: none;
 }
 .report-docs .title label {
