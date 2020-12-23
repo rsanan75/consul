@@ -108,7 +108,7 @@ en:
       end_date: Ended on
       admin_title: Campaign
       report_download: Download Report
-      report_doc_desc: "Please note: while uploading the document; please enter language as el for Greek, tr for Turkish and en for English. System will accept only one document per language."
+      report_doc_desc: "<strong>Please note:</strong> while uploading the document; please enter language as el for Greek, tr for Turkish and en for English. System will accept only one document per language."
       report_img_desc: "Please upload the images of minimum width 100px and height 100px."
     proposals_edit:
       proposal_title: Proposals title
