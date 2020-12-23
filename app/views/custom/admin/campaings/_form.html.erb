@@ -53,14 +53,16 @@
     <% end %>
   </div>
   <div class="row report-images">
-    <div class="hide report-image-description"><%= t("customtext.campaigns.report_img_desc") %></div>
+    
     <div class="images small-12 column" data-max-images="<%= I18n.available_locales.count() %>">
+      <div class="hide report-image-description"><%= t("customtext.campaigns.report_img_desc") %></div>
       <%= render "images/nested_image", imageable: @campaing, f: f %>
     </div>
   </div>
   <div class="row report-docs">
-    <div class="hide report-doc-description"><%= t("customtext.campaigns.report_doc_desc") %></div>
+    
     <div class="documents small-12 column" data-max-documents="<%= I18n.available_locales.count() %>">
+      <div class="hide report-doc-description"><%= t("customtext.campaigns.report_doc_desc") %></div>
       <%= render "documents/nested_documents", documentable: @campaing, f: f %>
     </div>
   </div>
