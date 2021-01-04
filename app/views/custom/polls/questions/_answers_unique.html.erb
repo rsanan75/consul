@@ -2,8 +2,6 @@
     
 
     <div class="small-12 medium-9 column" data-equalizer-watch>
-      
-        <h3 id="<%= question.title.parameterize %>"><%= question.title %></h3>
         <table id="question_<%= question.id %>_results_table">
           <tbody>
           <%- question.question_answers.visibles.each do |answer| %>
@@ -28,7 +26,7 @@
 
     </div>
   </div>
-  
+
 <div class="poll-question-answers">
   <% if can?(:answer, question) && !question.poll.voted_in_booth?(current_user) %>
     <% answers&.each do |answer| %>
