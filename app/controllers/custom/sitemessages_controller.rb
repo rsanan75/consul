@@ -1,5 +1,5 @@
 class SitemessagesController < ApplicationController
-  require 'recaptcha.rb'
+  include Recaptcha::Verify
 
   before_action :verify_recaptcha, only: [:create]
   skip_authorization_check :only => [:create, :new]
@@ -27,16 +27,11 @@ class SitemessagesController < ApplicationController
   def verify_recaptcha
     response = Recaptcha.verify(params)
     session[:sitemessage] = params[:sitemessage].except(:name,:email,:message, :remoteip)
-    if response.code == 200
-      if response['success']
-        flash[:notice] = "Recaptcha verification successful."
-      else
-      redirect_to new_sitemessage_path(sitemessage: params[:sitemessage]),
-      alert: "Recaptcha verification error."
-      end
+    if verify_recaptcha
     else
       redirect_to new_sitemessage_path(sitemessage: params[:sitemessage]),
-      alert: "HTTP connection error."
+      alert: :recaptcha_error
     end
+   
   end
 end
