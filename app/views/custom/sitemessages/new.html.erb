@@ -6,20 +6,20 @@
             <p><%= t("customtext.sitemessages.tagline") %></p>
             <p><%= t("customtext.sitemessages.connect_with") %>:</p>
             <ul>
-              <% if feature? :google_login %>
+              
               <li>
                 <%= link_to image_tag("gmail-icon.png", border: 0), "https://www.youtube.com/#{setting["youtube_handle"]}" , class: "  social-sign-in-icons"  %>
               </li>
-              <% end %>
+              
               <li>
-                <% if feature? :twitter_login %>
+                
                 <%= link_to image_tag("twitter-icon.png", border: 0), "https://twitter.com/CyprusPusula" , class: "  social-sign-in-icons"  %>
-                <% end %>
+                
               </li>
               <li>
-                <% if feature? :facebook_login %>
+                
                 <%= link_to image_tag("fb-icon.png", border: 0), "https://www.facebook.com/PusulaCyprus" , class: "  social-sign-in-icons"  %>
-                <% end %>
+                
               </li>
             </ul>
           </div>
