@@ -6,15 +6,11 @@ class SitemessagesController < ApplicationController
 
   def create
     @sitemessage = Sitemessage.new(sitemessage_params)
-    if verify_recaptcha(model: @sitemessage)
-      if @sitemessage.save
-        SitemessagesMailer.contact_email_all(@sitemessage.name, @sitemessage.email, @sitemessage.message).deliver_later
-        redirect_to root_path, notice: t("customtext.sitemessages.success_message")
-      else
-        render :new
-      end
+    if @sitemessage.save
+      SitemessagesMailer.contact_email_all(@sitemessage.name, @sitemessage.email, @sitemessage.message).deliver_later
+      redirect_to root_path, notice: t("customtext.sitemessages.success_message")
     else
-      flash.now[:alert] = t("Error on the recaptcha")
+      render :new
     end
   end
   private
