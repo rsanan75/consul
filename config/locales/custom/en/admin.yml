@@ -1,5 +1,12 @@
 en:
   admin:
+    users:
+      columns:
+        name: User Name
+        email: Email
+        document_number: Document number
+        roles: Roles
+        verification_level: Verification level
     campaings:
       create:
         notice: New Campaign was created succesfully!
