@@ -37,7 +37,7 @@
       $(".voting-submit").on("click",function(e){
         if($('.poll-question-answers .poll-answer-vote.answered')) {
           $.post( $('.poll-question-answers .poll-answer-vote.answered').data('answer-url'), function( data ) {
-            
+            location.reload();
           });
         } else {
           alert("Please select an option.");
