@@ -6,7 +6,7 @@ class SitemessagesController < ApplicationController
 
   def create
     @sitemessage = Sitemessage.new(sitemessage_params)
-    if @sitemessage.save
+    if @sitemessage.save and verify_recaptcha
       SitemessagesMailer.contact_email_all(@sitemessage.name, @sitemessage.email, @sitemessage.message).deliver_later
       redirect_to root_path, notice: t("customtext.sitemessages.success_message")
     else
