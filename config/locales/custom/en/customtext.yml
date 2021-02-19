@@ -52,7 +52,7 @@ en:
       welcome_title: Welcome!
       page_title: Create your Account
       welcome_subtitle: Help Cyprus find its direction while bringing your ideas to life!
-      mandatory_text: All fields are mandatory.
+      mandatory_text: Fields marked with * are mandatory
       age_consent: You need to be 18 years or older to register with us
       label_name: Name
       label_surname: Surname
