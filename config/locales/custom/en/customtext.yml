@@ -31,7 +31,7 @@ en:
       view_all_campaing: View all proposals
       winning_title: Winning Proposal
     common_forms:
-      mandatory_form: All fields are mandatory
+      mandatory_form: Fields marked with * are mandatory
       translate_note: (Your selected language is English. If you wish to write in Turkish or Greek, please change it at the top of the page.)
     sitemessages:
       page_title: Contact Us

@@ -31,7 +31,7 @@ tr:
       view_all_campaing: Tüm önerileri görüntüle
       winning_title: Kazanan Öneri
     common_forms:
-      mandatory_form:  Tüm alanları doldurmanız gerekiyor.
+      mandatory_form: * ile işaretlenmiş alanların doldurulması zorunludur.
       translate_note: (Seçtiğiniz dil Türkçedir.  İngilizce veya Rumca yazmak istiyorsanız, lütfen sayfanın üst kısmında bulunan dil seçeneğini değiştirin.)
     sitemessages:
       page_title: İLETİŞİM FORMU

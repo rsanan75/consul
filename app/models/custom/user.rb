@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
   # :confirmable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
-         :trackable, :validatable, :omniauthable, :password_expirable, :secure_validatable,
+         :trackable, :validatable, :confirmable, :omniauthable, :password_expirable, :secure_validatable,
          authentication_keys: [:login]
 
   acts_as_voter

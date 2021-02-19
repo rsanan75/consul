@@ -32,7 +32,7 @@
                 <%= form_for @sitemessage, url: {action: "create"}, html: {class: "contactus_form"} do |f| -%>
                   <div class="row"> 
                       <div class="small-12 medium-12 column">
-                          <p class="sm-txt">*<%= t("customtext.common_forms.mandatory_form") %></p>
+                          <p class="sm-txt"><%= t("customtext.common_forms.mandatory_form") %></p>
                       </div>
                     <div class="small-12 medium-12 column constyle-form-input">
                         <label for="user_login"><%= t("customtext.sitemessages.label_name") %><span>*</span></label>
