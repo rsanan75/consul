@@ -31,7 +31,7 @@ tr:
       view_all_campaing: Tüm önerileri görüntüle
       winning_title: Kazanan Öneri
     common_forms:
-      mandatory_form: * ile işaretlenmiş alanların doldurulması zorunludur.
+      mandatory_form:  "* ile işaretlenmiş alanların doldurulması zorunludur."
       translate_note: (Seçtiğiniz dil Türkçedir.  İngilizce veya Rumca yazmak istiyorsanız, lütfen sayfanın üst kısmında bulunan dil seçeneğini değiştirin.)
     sitemessages:
       page_title: İLETİŞİM FORMU
@@ -52,7 +52,7 @@ tr:
       welcome_title: Hoşgeldiniz!
       page_title: Hesabını oluştur
       welcome_subtitle: Fikirlerinizi hayata geçirirken, Kıbrıs'ın yön bulmasına yardımcı olun!
-      mandatory_text: Tüm alanların doldurulması zorunludur.
+      mandatory_text: "* ile işaretlenmiş alanların doldurulması zorunludur."
       age_consent: Pusula’ya kayıt olmak için en az 18 yaşında olmanız gerekir.
       label_name: İsim 
       label_surname: Soyisim
