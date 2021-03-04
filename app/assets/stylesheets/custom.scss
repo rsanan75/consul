@@ -1394,6 +1394,11 @@ form .checkbox, form .radio {
 .hide-language.for-admin select.js-add-language, .hide-language.for-admin .js-delete-language {
     display: inherit;
 }
+.report-image-description, .report-doc-description {
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 0px;
+  }
 .answered_already.button.hollow.secondary:hover, .button.answered_already.hollow.secondary:focus {
 	    background: #ccc;
 	        cursor: default;
