@@ -6,7 +6,6 @@ class SitemessagesController < ApplicationController
 
   def create
     #abort params.inspect
-    abort verify_google_recptcha(Rails.application.secrets.recaptcha_secret_key,params["g-recaptcha-response"]).inspect
 	 status = verify_google_recptcha(Rails.application.secrets.recaptcha_secret_key,params["g-recaptcha-response"])
     @sitemessage = Sitemessage.new(sitemessage_params)
     
@@ -34,7 +33,7 @@ class SitemessagesController < ApplicationController
 
       result = response.body.force_encoding("utf-8")
 
-      JSON.parse(result)
+      JSON.parse(result)['success']
   end
   def sitemessage_params
     params.require(:sitemessage).permit(:name,:email,:message)
