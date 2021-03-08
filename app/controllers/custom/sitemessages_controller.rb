@@ -6,8 +6,8 @@ class SitemessagesController < ApplicationController
 
   def create
     #abort params.inspect
-    abort verify_google_recptcha('6LcTZDcaAAAAAKSJqrzdGH1Okn5RqciXnQEEvJUS',params["g-recaptcha-response"]).inspect
-	 status = verify_google_recptcha('6LcTZDcaAAAAAKSJqrzdGH1Okn5RqciXnQEEvJUS',params["g-recaptcha-response"])
+    abort verify_google_recptcha(Rails.application.secrets.recaptcha_secret_key,params["g-recaptcha-response"]).inspect
+	 status = verify_google_recptcha(Rails.application.secrets.recaptcha_secret_key,params["g-recaptcha-response"])
     @sitemessage = Sitemessage.new(sitemessage_params)
     
     if @sitemessage.save and verify_recaptcha
@@ -27,7 +27,6 @@ class SitemessagesController < ApplicationController
       uri = URI(host + path)
 
       request = Net::HTTP::Get.new(uri)
-      request["Ocp-Apim-Subscription-Key"] = Rails.application.secrets.microsoft_api_key
 
       response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == "https") do |http|
         http.request(request)
@@ -35,7 +34,7 @@ class SitemessagesController < ApplicationController
 
       result = response.body.force_encoding("utf-8")
 
-      JSON.parse(result)["success"]
+      JSON.parse(result)
   end
   def sitemessage_params
     params.require(:sitemessage).permit(:name,:email,:message)
